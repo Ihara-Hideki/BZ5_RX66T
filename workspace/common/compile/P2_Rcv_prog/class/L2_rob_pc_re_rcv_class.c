@@ -537,17 +537,6 @@ void rob_pc_re_rcv_class(void)
 
 
 
-#if 0 //del 2009.07.13
-            if ((gtt_Internal_pack.Data.In.fPulseMode.ALL >> 4) & 0x0f == 0x00) //直流
-            {
-                 guc_Pulse_mode_data = (guc_Pulse_mode_data & 0x80) | 0x03;
-            }
-            if ((gtt_Internal_pack.Data.In.fPulseMode.ALL >> 4) & 0x0f == 0x01) //パルス
-            {
-                 guc_Pulse_mode_data = (guc_Pulse_mode_data & 0x80) | 0x05;
-            }
-#endif
-
        //<><><> ０ｘ６９コマンド関連 <><><>
        if (guc_0x69_rewrite_check_flag1 == 1)              // 0:書き換え無し 1:書き換えのため受信済み 2:内部変数に受信内容を転送済み 可変データ書き換え確認フラグ
        {
