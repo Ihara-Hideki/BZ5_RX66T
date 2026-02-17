@@ -1,0 +1,714 @@
+//--------------------------------------------------------------------------
+//
+// 【ＣＯ２／ＭＡＧ溶接機<YD-400GZ3>】　ＤＳＰ－ＨＰＩ制御クラスタ部[hpiDSP.c]
+//
+//             Original : 2005-12-02(Fri) : H.Ihara & M.Tanigawa
+//
+// Copyright(C)2005 MATSUSHITA Welding Systems Co., Ltd. ALL RIGHT RESERVED
+//--------------------------------------------------------------------------
+#define		__HPI_DSP_PROG
+#include    "custom.h"
+/***
+**  ID     = hpiOpen
+**  name   = ＨＰＩドライバのＯｐｅｎ処理
+**  func   = ＨＰＩドライバのＯｐｅｎモジュール
+**  called = void hpiOpen(void)
+**  io     = none
+**  return = none
+**  using  =                                   :     /          : 
+**  common =                                   :        :   :
+**  note   = 
+**  date   = 2004/05/27 by 西川(R040301RTW-TAWERS)
+**           2005/12/02 by 谷川まさや
+***/
+void hpiOpen(void)
+{
+	hpiFlag = 1;
+return;
+}
+/***
+**  ID     = hpiInit
+**  name   = ＨＰＩ－ＤＰＲのクリア処理
+**  func   = ＨＰＩ－ＤＰＲのクリアモジュール
+**  called = int hpiInit(void)
+**  io     = none
+**  return = int		: エラー情報（０＝正常）
+**  using  =                                   :     /          : 
+**  common =                                   :        :   :
+**  note   = 
+**  date   = 2004/05/27 by 西川(R040301RTW-TAWERS)
+**           2005/12/02 by 谷川まさや
+***/
+int hpiInit(void)
+{
+	int	Cnt = 128+128+8+8+8+8+8+1+64+64+215;
+	int	rc = 0;
+
+	_hpiSetAddress( 0x00000080 );
+	for( ; Cnt ; --Cnt){
+		_hpiPut(0);
+		if(_hpiGet_Next())	rc = -1;
+	}
+return(rc);
+}
+/***
+**  ID     = hpiDownLoad
+**  name   = ＤＳＰプログラムのダウンロード処理
+**  func   = ＤＳＰプログラムのダウンロード・モジュール
+**  called = int hpiDownLoad(void)
+**  io     = none
+**  return = int		: エラー情報（０＝正常）
+**  using  =                                   :     /          : 
+**  common =                                   :        :   :
+**  note   = 
+**  date   = 2004/05/27 by 西川(R040301RTW-TAWERS)
+**           2005/12/02 by 谷川まさや
+***/
+int hpiDownLoad(void)
+{
+	ushort	Data;
+	ushort	*pSOC;
+	int		Cnt;
+	int		rc = 0;
+
+	pSOC = (ushort *)0x00040100;
+///////////////////////////////////////
+//  ６０００～７ＦＦＦまでコピー
+	_hpiSetAddress(0x00006000);
+	for(Cnt = 0x2000 ; Cnt ; --Cnt){
+		Data = *pSOC++;
+		_hpiPut(Data);
+		if(_hpiGet_Next() != Data)	rc = -1;
+		WDG_Clear();
+	}
+///////////////////////////////////////
+//  １８０００～１ＦＦＦＦまでコピー
+	_hpiSetAddress(0x00018000);
+	for(Cnt = 0x8000 ; Cnt ; --Cnt){
+		Data = *pSOC++;
+		_hpiPut(Data);
+		if(_hpiGet_Next() != Data)	rc = -1;
+		WDG_Clear();
+	}
+return( rc );
+}
+/***
+**  ID     = hpiBoot
+**  name   = ＤＳＰプログラムのブート処理
+**  func   = ＤＳＰプログラムをブートアップモジュール
+**  called = void hpiBoot(void)
+**  io     = none
+**  return = none
+**  using  =                                   :     /          : 
+**  common =                                   :        :   :
+**  note   = 
+**  date   = 2004/05/27 by 西川(R040301RTW-TAWERS)
+**           2005/12/02 by 谷川まさや
+***/
+void hpiBoot(void)
+{
+	_hpiSetAddress(0x0000007e);
+	_hpiPut(0x0001);          // XPC（上位アドレス）
+	_hpiPut_Next(0x8000);     //  PC（下位アドレス）
+return;
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      受信処理関数（テスト用）                                            */
+/*  [引数]                                                                  */
+/*      pusint  pBuff   受信バッファ                                        */
+/*  [戻り値]                                                                */
+/*      int                                                                 */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 1  R040301RTW-TAWERS       西川                            */
+/*--------------------------------------------------------------------------*/
+static  int     DummyProc( pusint pBuff )
+{
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      ＤＳＰレディ                                                        */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+static  int     DSPREADY( pusint pBuff )
+{
+
+    gtt_Ctrl_flag.Dsp_ready = ON;  
+    // ifcWrite( &ifFIFO , fifoDSPREADY , pBuff[ 1 ] );
+    // XEvPost( &ifEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      初期化完了                                                          */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+static  int     INDSPINITEND( pusint pBuff )
+{// @-R040301RTW
+    // ifcWrite( &ifFIFO , fifoDSPINITEND , 0 );
+    // XEvPost( &ifEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      溶接電流検出                                                        */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*      2004.10.13  R040701RTW-TAWERS       西川    NY20041013              */
+/*      2005. 4.22  R050309RK1-TAWERSｱｰｸｾﾝｻ   西川                          */
+/*--------------------------------------------------------------------------*/
+static  int     INWLDSTS( pusint pBuff )
+{// @-R040301RTW
+
+    WLDINCUR = pBuff[ 1 ];
+    // ifcWrite( &ifFIFO , fifoWLDIN , WLDINCUR );
+#if false
+    if( WLDINCUR & 0x0001 ) // NY20041013
+    {
+        if( isCD == 0 )     // @-R050309RK1
+        {//既に電流検出中なら処理しない
+//            asnsCD( );
+        }
+        isCD = 1;
+    }
+#endif
+
+
+#if false
+    if( WLDINCUR & 0x0001 ) // NY20041013
+    {
+        isCD = 1;
+    }
+#endif
+
+    if (WLDINCUR & 0x0001)
+    {
+        gtt_Internal_pack.Data.Out.fPowerStatus.Bit1Sw.Cd = ON;  //ロボットに動作することを知らせるためだけに使用する。
+    } else {
+        //gtt_Internal_pack.Data.Out.fPowerStatus.Bit1Sw.Cd = OFF; //2006.11.28　削除
+    }
+
+
+
+//    if( WLDINCUR & 0x0002 )
+//    {
+//        ifdprLiftUpDown( 1 , 0 );
+//    }
+    if( WLDINCUR & 0x0004 )
+    {
+        ctlclsElectrode( );
+        //ここに割り込んだら、ＳＬＯＷ　ＤＯＷＮからＭＡＩＮ　ＷＥＬＤにシーケンスを変える。
+        gtt_Ctrl_flag.Initial_arc_start = ON;
+//        ifdprLiftUpDown( 0 , 0 );
+    }
+//    // XEvPost( &ifEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      サーボフィードバックコマンド                                        */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+static  int     INSRVFEDBACK( pusint pBuff )
+{// @-R040301RTW
+
+    SRVFEADBACK = pBuff[ 1 ];
+    // XEvPost( &wspdEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      溶接電源異常検出                                                    */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*      2004.10.14  R040701RTW-TAWERS       西川    NY20041014              */
+/*--------------------------------------------------------------------------*/
+static  int INWLDPWRERR( pusint pBuff )
+{// @-R040301RTW
+usint   RecvData = pBuff[ 1 ];
+//
+    WLDINPWRERR = RecvData; // 正常でもデータ更新   for データ記録  2004.11.22
+//    if( RecvData == 0 )     // 正常なら無視
+//        return( 0 );
+    // ifcWrite( &errFIFO , ERROR_WLDPWR , WLDINPWRERR );
+    // XEvPost( &ifEvent );
+    if (WLDINPWRERR & 0x0001)
+    {
+        gtt_Ctrl_flag.Second_currnt_err = ON;
+    }
+
+//<><><><><><><><><><> 2007.1.26 移植追加 <><><><><><><><><><>
+#if 0 //2007.1.22削除
+    if (WLDINPWRERR & 0x0004) //2007.1.19追加
+    {
+        gtt_Ctrl_flag.Second_output_err = ON; //二次出力異常 アイドリング中に電流検出をしてしまった。
+    }
+#endif
+
+    if (WLDINPWRERR & 0x0002) //2007.1.19追加
+    {
+        gtt_Ctrl_flag.Arc_start_err1 = ON;  //２次出力電圧未　初期短絡前に電圧は検出出来ない場合
+    }
+
+    if (WLDINPWRERR & 0x0040) //2007.1.19追加
+    {
+        gtt_Ctrl_flag.Arc_start_err2 = ON;  //二次短絡異常　電圧検出線が切れた場合などスタート出力時過電流がでる場合
+    }
+//<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      溶接異常検出                                                        */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+static  int INWLDERR( pusint pBuff )
+{// @-R040301RTW
+
+    WLDINERR = pBuff[ 1 ];
+    
+    if (gtt_Ctrl_flag.Stick_start == ON)
+    {
+        if (WLDINERR & 0x0002)
+        {
+            gtt_Ctrl_flag.Stick_on_off_check = ON;
+        } else {
+            gtt_Ctrl_flag.Stick_on_off_check = OFF;
+        }
+        gtt_Ctrl_flag.Stick_end   = ON;
+        
+     }
+        
+
+    // ifcWrite( &errFIFO , ERROR_WLD , WLDINERR );
+    // XEvPost( &ifEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      サーボエラー                                                        */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 6. 8  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+static  int SRVERROR( pusint pBuff )
+{// @-R040301RTW
+    SRVINERR = pBuff[ 1 ];
+    // ifcWrite( &errFIFO , ERROR_SRV , SRVINERR );
+    // XEvPost( &ifEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      溶接シーケンス１                                                    */
+/*  [引数]                                                                  */
+/*      pusint      pBuff       コマンド＋付随データ                        */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004.10.13  R040701RTW-TAWERS       西川    NY20041013              */
+/*--------------------------------------------------------------------------*/
+static  int INWLDSEQ1( pusint pBuff )
+{
+    WELDSEQ1 = pBuff[ 1 ];
+    gtt_Ctrl_flag.Arc = OFF;
+    // ifcWrite( &ifFIFO , fifoWELDSEQ1 , WELDSEQ1 );
+    // XEvPost( &ifEvent );
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      コマンド定義                                                        */
+/*  [データ説明]                                                            */
+/*      usint       Cmd         コマンド                                    */
+/*      int         Len         データ長(付随データ)                        */
+/*      lint        Addr        コマンド領域書込みアドレス(ＤＰＲＡＭ）     */
+/*--------------------------------------------------------------------------*/
+//typedef int (* FuncPTR)(pusint pBuff);
+typedef struct
+{
+    usint   Cmd;
+    int     Len;
+    long    Addr;
+    int     (*pRxProc)( pusint pBuff );
+    //FuncPTR	pRxProc;
+}CMDTODAT , *PCMDTODAT;
+///////////////////////////////////////
+//コマンド
+static const CMDTODAT       CmdData_Tbl[ ] =
+{
+        {  0      ,  0 , 0              , DummyProc         },
+/*1*/   {  0x0081 ,  1 , DSP_WELDCMD    , DSPREADY          },  //ＤＳＰレディー
+/*2*/   {  0x0001 ,  1 , IF_WELDCMD     , DummyProc         },  //ＩＦレディー
+/*3*/   {  0x0010 ,100 , IF_WELDCMD     , DummyProc         },  //溶接固定パラメータ
+/*4*/   {  0x0011 ,  1 , IF_WELDCMD     , DummyProc         },  //溶接電源動作指令
+/*5*/   {  0x0012 ,126 , IF_WELDCMD     , DummyProc         },  //半固定パラメータ
+/*6*/   {  0x0090 ,  1 , DSP_WELDCMD    , INWLDERR          },  //溶接異常検出
+/*7*/   {  0x0091 ,  1 , DSP_WELDCMD    , INWLDPWRERR       },  //溶接電源異常検出
+/*8*/   {  0x0092 ,  1 , DSP_WELDCMD    , INWLDSTS          },  //電流検出状態
+/*9*/   {  0x0040 ,100 , IF_WELDCMD     , DummyProc         },  //サーボ固定パラメータ
+/*10*/  {  0x0041 ,  1 , IF_SRVCMD      , DummyProc         },  //サーボシーケンス制御
+/*11*/  {  0x00C0 ,  1 , DSP_SRVCMD     , INDSPINITEND      },  //サーボ初期化完了
+/*12*/  {  0x00C1 ,  1 , DSP_SRVCMD     , SRVERROR          },  //サーボエラー
+/*13*/  {  0x00C2 ,  1 , DSP_SRVCMD     , INSRVFEDBACK      },  //サーボフィードバック
+/*14*/  {  0x0013 ,  1 , IF_WELDCMD     , DummyProc         },  //溶接制御出力
+/*15*/  {  0x0014 ,126 , IF_WELDCMD     , DummyProc         },  //半固定パラメータ２ // @-R040701RTW
+/*16*/  {  0x0021 , 10 , IF_WELDCMD     , DummyProc         },  //溶接設定データ１   // @-R040701RTW
+/*17*/  {  0x0095 , 1  , DSP_SRVCMD     , INWLDSEQ1         },  //溶接シーケンス１// NY20041013
+/*18*/  {  0x0016 ,126 , IF_WELDCMD     , DummyProc         },  //半固定パラメータ３　2007.2.13追加 　コマンド１５→１６に変更2007.2.16
+  {   0 , 0 , 0 , DummyProc  }  // END
+};
+//ステータス
+static  CMDTODAT    const   StsData_Tbl[ ] =
+{
+    { 0 , 0 , 0                         , DummyProc },
+    { 0 , 64 ,          0               , DummyProc },  //溶接条件指令
+    { 0 ,  8 , WELDOUTSTS               , DummyProc },  //溶接出力状態
+    { 0 ,  8 , SRVSPDCOND               , DummyProc },  //サーボ速度指令
+    { 0 ,  8 , SRVPLSCNT                , DummyProc },  //サーボパルスカウンタ/モータ電流
+
+    { 0 , 0 , 0 , DummyProc }   // END
+};
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      コマンドからコマンド番号の変換テーブル                              */
+/*      2004. 5.19  R040301RTW-TAWERS       田中                            */
+/*      2004.09.30  R040701RTW-TAWERS       上内    [一元]                  */
+/*      2004.10.13  R040701RTW-TAWERS       西川    NY20041013              */
+/*--------------------------------------------------------------------------*/
+static  char    const   Cmd2No_Tbl[ ] =
+{
+      0 ,   2 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 0Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+    //3 ,   4 ,   5 ,  14 ,  15 ,   0 ,   0 ,   0 , // 1Xh
+    //3 ,   4 ,   5 ,  14 ,  15 ,  18 ,   0 ,   0 , // 1Xh 2007.2.13 18を追加
+      3 ,   4 ,   5 ,  14 ,  15 ,   0 ,  18 ,   0 , // 1Xh 2007.2.13 18を追加 2007.2.16  １８をコマンド１６に変更
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,  16 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 2Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 3Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      9 ,  10 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 4Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 5Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 6Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 7Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   1 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // 8Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      6 ,   7 ,   8 ,   0 ,   0 ,  17 ,   0 ,   0 , // 9Xh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // AXh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // BXh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+     11 ,  12 ,  13 ,   0 ,   0 ,   0 ,   0 ,   0 , // CXh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // DXh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // EXh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 , // FXh
+      0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,   0 ,
+};
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      コマンド領域にデータを書き込む                                      */
+/*  [引数]                                                                  */
+/*      int         CmdNo       コマンド番号                                */
+/*      pusint      pRec        送信データ先頭アドレス(付随データのみ)      */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 5.17  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+void    hpiWrite( int CmdNo , pusint pRec )
+{// @-R040301RTW
+
+
+PCMDTODAT   pDat = (PCMDTODAT)&CmdData_Tbl[ CmdNo ];
+usint   sum;
+
+IMJTICR4  = 0x07; //2006.12.8 割禁　ihara     
+
+    _hpiSetAddress( pDat->Addr );                   //コマンド領域にアドレスセット
+    while( _hpiGet( ) ) ;                           //コマンド領域にデータがなくなるまでループ
+    sum = _hpiWrite_Next_sum( pRec , pDat->Len );   //付随データ転送
+    sum += pDat->Cmd;
+    _hpiPut_Next( sum );                            //サム値を転送
+    _hpiSetAddress( pDat->Addr );                   //コマンド領域にアドレスセット
+    _hpiPut( pDat->Cmd );                           //コマンドを転送
+
+IMJTICR4  = 0x05; //2006.12.8 許可　ihara     
+    return;
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      ステータス領域にデータを書き込む                                    */
+/*  [引数]                                                                  */
+/*      int         StsNo       ステータス番号                              */
+/*      pusint      pRec        送信データ先頭アドレス(付随データのみ)      */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 5.17  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+void    hpiStsWrite( int StsNo , pusint pRec )
+{// @-R040301RTW
+PCMDTODAT   pDat = (PCMDTODAT)&StsData_Tbl[ StsNo ];
+
+IMJTICR4  = 0x07; //2006.12.8 割禁　ihara     
+    _hpiSetAddress( pDat->Addr );       //コマンド領域にアドレスセット
+    _hpiWrite( pRec , pDat->Len );      //付随データ転送
+IMJTICR4  = 0x05; //2006.12.8 許可　ihara     
+    return;
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      ステータス領域からデータを読み込む                                  */
+/*  [引数]                                                                  */
+/*      int         StsNo       ステータス番号                              */
+/*      pusint      pRec        送信データ先頭アドレス(付随データのみ)      */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 5.17  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+void    hpiStsRead( int StsNo , pusint pRec )
+{// @-R040301RTW
+PCMDTODAT   pDat = (PCMDTODAT)&StsData_Tbl[ StsNo ];
+
+IMJTICR4  = 0x07; //2006.12.8 割禁　ihara     
+    _hpiSetAddress( pDat->Addr );       //コマンド領域にアドレスセット
+    _hpiRead( pRec , pDat->Len );       //付随データをリード
+IMJTICR4  = 0x05; //2006.12.8 許可　ihara     
+    return;
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      溶接条件専用書込み                                                  */
+/*  [引数]                                                                  */
+/*      pusint      pRec        送信データ先頭アドレス(付随データのみ)      */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 5.17  R040301RTW-TAWERS       田中                            */
+/*--------------------------------------------------------------------------*/
+void    hpiWcondWrite( pusint pRec )
+{// @-R040301RTW
+PCMDTODAT   pDat = (PCMDTODAT)&StsData_Tbl[ 1 ];
+long    Addr;
+
+IMJTICR4  = 0x07; //2006.12.8 割禁　ihara     
+    _hpiSetAddress( WCONDFLAG );    //溶接条件指令：有効バッファ番号アドレスセット
+    switch( _hpiGet( ) )            //溶接条件指令：有効バッファ番号
+    {
+        case 0:
+            Addr = WELDCOND_1;
+            _hpiPut( 0x0001 );      //有効バッファ番号を１にする
+            break;
+        case 1:
+        default:
+            Addr = WELDCOND_0;
+            _hpiPut( 0x0000 );      //有効バッファ番号を０にする
+            break;
+    }
+    _hpiSetAddress( Addr );         //アドレスセット
+    _hpiWrite( pRec , pDat->Len );  //付随データ転送
+IMJTICR4  = 0x05; //2006.12.8 許可　ihara     
+    return;
+}
+
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      コマンド領域の受信関数                                              */
+/*  [引数]                                                                  */
+/*      lint    dprCMD  コマンド領域アドレス                                */
+/*  [戻り値]                                                                */
+/*      int     エラーコード( ０＝正常 )                                    */
+/*                  １＝未定義コマンド                                      */
+/*                  ２＝チェックサム異常                                    */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 5.17  R040301RTW-TAWERS       田中                            */
+/*      2004.10. 6  R040701RTW-TAWERS       西川                            */
+/*--------------------------------------------------------------------------*/
+static  int     CmdIntr( long dprCMD )
+{// @-R040301RTW
+PCMDTODAT   pDat;
+usint       Cmd , CmdNo , sum;
+
+IMJTICR4  = 0x07; //2007.1.17  スティックタイムアウトエラーが発生したので追加 2007.1.17移植
+
+    _hpiSetAddress( dprCMD );
+    if( ( Cmd = _hpiGet( ) ) == 0x0000 )    //コマンドなしならサーボをチェック
+        return( 0 );
+    CmdNo = Cmd2No_Tbl[ Cmd & 0xff ];
+    if( CmdNo  == 0 )       // 未定義コマンド？
+    {
+//      return( 1 );
+        _hpiSetAddress( dprCMD );   //アドレスセット
+        _hpiPut( 0x0000 );          //コマンド領域クリア
+        return( 0 );
+    }
+    pDat = (PCMDTODAT)&CmdData_Tbl[ CmdNo ];
+    sum = _hpiRead_sum( hpiIntrWork , pDat->Len + 1 );  //コマンド＋付随データ
+    if( sum != _hpiGet( ) )                 //サム値が正しいかチェック
+    {
+        //LED4 = ON; //test 2006.12.8 ihara
+        return( 2 );
+    }
+    pDat->pRxProc( hpiIntrWork );
+    _hpiSetAddress( dprCMD );               //アドレスセット
+    _hpiPut( 0x0000 );                      //コマンド領域クリア
+
+IMJTICR4  = 0x05; //2007.1.17  スティックタイムアウトエラーが発生したので追加 2007.1.17移植
+
+    return( 0 );
+}
+/*--------------------------------------------------------------------------*/
+/*  [概要]                                                                  */
+/*      受信割込み：エントリ                                                */
+/*  [引数]                                                                  */
+/*      なし                                                                */
+/*  [戻り値]                                                                */
+/*      なし                                                                */
+/*  [出力]                                                                  */
+/*      なし                                                                */
+/*  [特記事項]                                                              */
+/*      なし                                                                */
+/*  [更新履歴]                                                              */
+/*      2004. 5.17  R040301RTW-TAWERS       田中                            */
+/*      2004. 9. 2  R040701RTW-TAWERS       田中                            */
+/*      2004.10. 6  R040701RTW-TAWERS       田中     <ALT1>                 */
+/*--------------------------------------------------------------------------*/
+void    hpiIntr( void )
+{// @-R040301RTW
+int     rc1 , rc2;
+
+   IMJTICR4  = 0x07; //2006.12.8 割禁　ihara     
+
+    _hpiClearHINT( );                   // 割り込み要因クリア
+    if( hpiFlag == 0 )
+    {
+        _hpiSetAddress( DSP_WELDCMD );
+        _hpiPut( 0x0000 );
+        _hpiSetAddress( DSP_SRVCMD );
+        _hpiPut( 0x0000 );
+
+	TINIR1	= (TINIR1 & 0x0ef);	// 割り込み要求ステータスビットのクリア @Tny
+
+        return;
+    }
+    rc1 = CmdIntr( DSP_WELDCMD );       // 溶接コマンド領域(DSP→I/FCPU)
+    rc2 = CmdIntr( DSP_SRVCMD );        // サーボコマンド領域(DSP→I/FCPU)
+    if( rc1 || rc2 )
+    {
+// @-R040701RTW <ALT1>
+        // ifcWrite( &errFIFO , ERROR_SRV , 0x0022 );   //ＤＳＰからのチェックサム異常
+        // XEvPost( &ifEvent );
+    }
+
+	TINIR1	= (TINIR1 & 0x0ef);	// 割り込み要求ステータスビットのクリア @Tny
+
+
+IMJTICR4  = 0x05; //2006.12.8 許可　ihara     
+
+    return;
+}
+//------------------------
+//  End of hpiDSP.c
+//------------------------
+

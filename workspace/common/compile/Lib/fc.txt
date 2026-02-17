@@ -1,0 +1,120 @@
+ファイル GD2Snd3.c と D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C を比較しています
+***** GD2Snd3.c
+{
+    IdentificationCode = 0xA0;         //2009.12.28 YC-500BP4コード
+    ComuniPack.Data.From.ucModelCode = IdentificationCode;  // 機種別コード
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+{
+    IdentificationCode = 0x53;         //2009.07.10 YC-300BP4コード
+    ComuniPack.Data.From.ucModelCode = IdentificationCode;  // 機種別コード
+*****
+
+***** GD2Snd3.c
+        else{
+                if((MAX_CURRENT_ABS % 2) != 0){                  //端数が出る場合は、１データ多く送信 2010.01.18 MAX_CURRENT->M
+X_CURRENT_ABS  
+                        DATA_Length_TX = ((MAX_CURRENT_ABS >>1) + 3);// 付随データ 2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT_ABS >> 1) + 2); //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                }
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+        else{
+                if((MAX_CURRENT % 2) != 0){/*端数が出る場合は、１データ多く送信*/
+                        DATA_Length_TX = ((MAX_CURRENT >>1) + 3);/*付随データ */
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT >> 1) + 2);
+                }
+*****
+
+***** GD2Snd3.c
+                else{
+                        DATA_Length_TX = ((MAX_CURRENT_ABS >>1) + 2);//付随データ 2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT_ABS >> 1) + 1); //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                }
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+                else{
+                        DATA_Length_TX = ((MAX_CURRENT >>1) + 2);/*付随データ */
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT >> 1) + 1);
+                }
+*****
+
+***** GD2Snd3.c
+        else{
+                if((MAX_CURRENT_ABS % 4) != 0){//端数が出る場合は、１データ多く送信 2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                        DATA_Length_TX = ((MAX_CURRENT_ABS >>2) + 3);//付随データ 2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT_ABS >> 2) + 2); //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                }
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+        else{
+                if((MAX_CURRENT % 4) != 0){/*端数が出る場合は、１データ多く送信*/
+                        DATA_Length_TX = ((MAX_CURRENT >>2) + 3);/*付随データ */
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT >> 2) + 2);
+                }
+*****
+
+***** GD2Snd3.c
+                else{
+                        DATA_Length_TX = ((MAX_CURRENT_ABS >>2) + 2);//付随データ 2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT_ABS >> 2) + 1); //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                }
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+                else{
+                        DATA_Length_TX = ((MAX_CURRENT >>2) + 2);/*付随データ */
+                        Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT >> 2) + 1);
+                }
+*****
+
+***** GD2Snd3.c
+
+    puc_Max_current = (unsigned int)((MAX_CURRENT_ABS + 2) / 2); //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+
+    puc_Max_current = (unsigned int)((MAX_CURRENT + 2) / 2);
+
+*****
+
+***** GD2Snd3.c
+#if G3_NEW_COM
+                DATA_Length_TX = (unsigned int)((MAX_CURRENT_ABS)+ 4);//付随データ 1 2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                Txd_DATA[ 0 ] = (unsigned char)(puc_Max_current & 0xff);
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+#if G3_NEW_COM
+                DATA_Length_TX = (unsigned int)((MAX_CURRENT)+ 4);/*付随データ 1*/
+                Txd_DATA[ 0 ] = (unsigned char)(puc_Max_current & 0xff);
+*****
+
+***** GD2Snd3.c
+#else
+                DATA_Length_TX = (unsigned int)((MAX_CURRENT_ABS << 1)+ 4);//付随データ 1 2010.01.18 MAX_CURRENT->MAX_CURRENT_A
+S
+                Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT_ABS + 1) & 0xff); //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+                Txd_DATA[ 1 ] = (unsigned char)((MAX_CURRENT_ABS + 1) >> 8);   //2010.01.18 MAX_CURRENT->MAX_CURRENT_ABS
+#endif
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+#else
+                DATA_Length_TX = (unsigned int)((MAX_CURRENT << 1)+ 4);/*付随データ 1*/
+                Txd_DATA[ 0 ] = (unsigned char)((MAX_CURRENT + 1) & 0xff);
+                Txd_DATA[ 1 ] = (unsigned char)((MAX_CURRENT + 1) >> 8);
+#endif
+*****
+
+***** GD2Snd3.c
+
+//--------- EXTERNAL IIF NEW by @Tny 2011/02/21 ------------
+#if false //2009.10.15 del IIF NEW      ← IIF NEW      2010.09.01 by @Tny
+/********************************************************/
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+
+//--------- IIF by @Tny 2008/08/26 ------------
+#if true
+/********************************************************/
+*****
+
+***** GD2Snd3.c
+    gus_Iif_comunication_timer  = 2000; // 200msec
+        gus_Iif_comunication_timer  = 10000; // 200msec // 200msec->1sec <EXTERNAL IIF NEW(Phase 2)>    2011.10.12 by @Tny
+#endif
+***** D:\WORK\MWSC\BP4\VER106\2011_09_01_BP4_ROBCOM[106]\M32_NEW\COMPILE\LIB\GD2SND3.C
+    gus_Iif_comunication_timer  = 2000; // 200msec
+#endif
+*****
+
