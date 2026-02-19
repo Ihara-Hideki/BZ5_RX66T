@@ -10,7 +10,7 @@
                 <option id="com.renesas.smc.toolchain.option.dual" key="com.renesas.smc.toolchain.option.dual.false"/>
             </toolchain>
         </configuration>
-        <platform id="R5F566TKCxFB"/>
+        <platform id="R5F566TKGxFB"/>
         <option id="board" value="user_board"/>
     </general>
     <tool id="Clock">
@@ -26,7 +26,7 @@
             <item enabled="true" id="srcEOI"/>
         </option>
         <option enabled="true" id="mainfrequency" selection="textinputitem">
-            <item enabled="true" id="textinputitem" input="24" value="24.000000"/>
+            <item enabled="true" id="textinputitem" input="12" value="12.000000"/>
         </option>
         <option enabled="true" id="mainwaittime" selection="textinputitem">
             <item enabled="true" id="textinputitem" input="9980" value="9980.000000"/>
@@ -59,36 +59,36 @@
             <item enabled="true" id="textinputitem" input="" value="120"/>
         </option>
         <option enabled="true" id="pllswitcher" selection="pllmain">
-            <item enabled="true" id="pllmain" input="" value="24.0"/>
+            <item enabled="true" id="pllmain" input="" value="12.0"/>
             <item enabled="false" id="pllhoco" input="" value="16"/>
         </option>
         <option enabled="true" id="plldivider" selection="div1-1">
             <item enabled="true" id="div1-1"/>
-            <item enabled="true" id="div1-2"/>
-            <item enabled="true" id="div1-3"/>
+            <item enabled="false" id="div1-2"/>
+            <item enabled="false" id="div1-3"/>
         </option>
-        <option enabled="true" id="pllmul" selection="mul10-1">
+        <option enabled="true" id="pllmul" selection="mul20-1">
             <item enabled="true" id="mul10-1"/>
-            <item enabled="false" id="mul10_5-1"/>
-            <item enabled="false" id="mul11-1"/>
-            <item enabled="false" id="mul11_5-1"/>
-            <item enabled="false" id="mul12-1"/>
-            <item enabled="false" id="mul12_5-1"/>
-            <item enabled="false" id="mul13-1"/>
-            <item enabled="false" id="mul13_5-1"/>
-            <item enabled="false" id="mul14-1"/>
-            <item enabled="false" id="mul14_5-1"/>
-            <item enabled="false" id="mul15-1"/>
-            <item enabled="false" id="mul15_5-1"/>
-            <item enabled="false" id="mul16-1"/>
-            <item enabled="false" id="mul16_5-1"/>
-            <item enabled="false" id="mul17-1"/>
-            <item enabled="false" id="mul17_5-1"/>
-            <item enabled="false" id="mul18-1"/>
-            <item enabled="false" id="mul18_5-1"/>
-            <item enabled="false" id="mul19-1"/>
-            <item enabled="false" id="mul19_5-1"/>
-            <item enabled="false" id="mul20-1"/>
+            <item enabled="true" id="mul10_5-1"/>
+            <item enabled="true" id="mul11-1"/>
+            <item enabled="true" id="mul11_5-1"/>
+            <item enabled="true" id="mul12-1"/>
+            <item enabled="true" id="mul12_5-1"/>
+            <item enabled="true" id="mul13-1"/>
+            <item enabled="true" id="mul13_5-1"/>
+            <item enabled="true" id="mul14-1"/>
+            <item enabled="true" id="mul14_5-1"/>
+            <item enabled="true" id="mul15-1"/>
+            <item enabled="true" id="mul15_5-1"/>
+            <item enabled="true" id="mul16-1"/>
+            <item enabled="true" id="mul16_5-1"/>
+            <item enabled="true" id="mul17-1"/>
+            <item enabled="true" id="mul17_5-1"/>
+            <item enabled="true" id="mul18-1"/>
+            <item enabled="true" id="mul18_5-1"/>
+            <item enabled="true" id="mul19-1"/>
+            <item enabled="true" id="mul19_5-1"/>
+            <item enabled="true" id="mul20-1"/>
             <item enabled="false" id="mul20_5-1"/>
             <item enabled="false" id="mul21-1"/>
             <item enabled="false" id="mul21_5-1"/>
@@ -112,7 +112,7 @@
         </option>
         <option enabled="true" id="sckswitcher" selection="pll">
             <item enabled="true" id="pll" input="" value="2.4E8"/>
-            <item enabled="true" id="main" input="" value="2.4E7"/>
+            <item enabled="true" id="main" input="" value="1.2E7"/>
             <item enabled="false" id="hoco" input="" value="16000000"/>
             <item enabled="false" id="loco" input="" value="240000"/>
         </option>
@@ -234,7 +234,7 @@
             <item enabled="true" id="textoutputitem" input="" value="120"/>
         </option>
         <option enabled="true" id="cacmclk" selection="textoutputitem">
-            <item enabled="true" id="textoutputitem" input="" value="24.0"/>
+            <item enabled="true" id="textoutputitem" input="" value="12.0"/>
         </option>
         <option enabled="true" id="avccinput" selection="textinputitem">
             <item enabled="true" id="textinputitem" input="5" value="5.000"/>
@@ -343,9 +343,9 @@
         <Item currentVect="136" id="S12AD2_S12ADI2" priority="15" usedState="未使用"/>
         <Item currentVect="137" id="S12AD2_S12GBADI2" priority="15" usedState="未使用"/>
         <Item currentVect="138" id="S12AD2_S12GCADI2" priority="15" usedState="未使用"/>
-        <Item currentVect="146" id="TMR0_CMIA0" priority="15" usedState="未使用"/>
-        <Item currentVect="147" id="TMR0_CMIB0" priority="15" usedState="未使用"/>
-        <Item currentVect="148" id="TMR0_OVI0" priority="15" usedState="未使用"/>
+        <Item currentVect="146" id="TMR0_CMIA0" priority="10" usedState="使用中"/>
+        <Item currentVect="147" id="TMR0_CMIB0" priority="10" usedState="未使用"/>
+        <Item currentVect="148" id="TMR0_OVI0" priority="10" usedState="未使用"/>
         <Item currentVect="149" id="TMR1_CMIA1" priority="15" usedState="未使用"/>
         <Item currentVect="150" id="TMR1_CMIB1" priority="15" usedState="未使用"/>
         <Item currentVect="151" id="TMR1_OVI1" priority="15" usedState="未使用"/>
@@ -435,12 +435,9 @@
     <tool id="Pins" version="1.0.1.0">
         <pinItem allocation="7" comments="" direction="None" id="EMLE" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="16" comments="" direction="None" id="XTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="24" comments="" direction="None" id="TMS" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="2" comments="" direction="None" id="MTIOC4A" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
         <pinItem allocation="18" comments="" direction="None" id="EXTAL" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="23" comments="" direction="None" id="TRST#" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="26" comments="" direction="None" id="TCK" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="25" comments="" direction="None" id="TDI" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
-        <pinItem allocation="27" comments="" direction="None" id="TDO" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
+        <pinItem allocation="11" comments="" direction="None" id="FINED" isUsedBySoftware="true" locked="false" operationMode="" status="0"/>
     </tool>
     <tool id="Summary" version="1.0.0.0">
         <option id="com.renesas.smc.code.path" value="src\smc_gen"/>
@@ -523,10 +520,451 @@
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
             <source description="Components supporting Firmware Integration Technology" display="Firmware Integration Technology" id="com.renesas.smc.tools.swcomponent.fit.source"/>
         </configuration>
+        <configuration apiMode="FULL_API" id="cdc3c28b-6efe-40be-a098-d155b3e16207" inuse="true" name="Config_MTU4">
+            <allocatable id="MTU4">
+                <isocket id="MTU_PCLK" selection="Clock.tool_clock_pclkc" value="1.2E8"/>
+                <isocket id="TPU_PCLK" value="6.0"/>
+                <option enabled="true" id="Sync" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="ClrSrc" selection="TGRB">
+                    <item id="Disabled" input="" vlaue="0"/>
+                    <item id="TGRA" input="" vlaue="0"/>
+                    <item id="TGRB" input="" vlaue="0"/>
+                    <item id="TGRC" input="" vlaue="0"/>
+                    <item id="TGRD" input="" vlaue="0"/>
+                    <item id="sync" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="CntClk" selection="Div1">
+                    <item id="Div1" input="" vlaue="0"/>
+                    <item id="Div2" input="" vlaue="0"/>
+                    <item id="Div4" input="" vlaue="0"/>
+                    <item id="Div8" input="" vlaue="0"/>
+                    <item id="Div16" input="" vlaue="0"/>
+                    <item id="Div32" input="" vlaue="0"/>
+                    <item id="Div64" input="" vlaue="0"/>
+                    <item id="Div256" input="" vlaue="0"/>
+                    <item id="Div1024" input="" vlaue="0"/>
+                    <item id="ExtA" input="" vlaue="0"/>
+                    <item id="ExtB" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="ClkEdg" selection="Rise">
+                    <item id="Rise" input="" vlaue="0"/>
+                    <item id="Fall" input="" vlaue="0"/>
+                    <item id="Both" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="ExtNoiseA" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="ExtNoiseB" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="ExtNoiseClk" selection="PCLK">
+                    <item id="PCLK" input="" vlaue="0"/>
+                    <item id="PCLK_2" input="" vlaue="0"/>
+                    <item id="PCLK_8" input="" vlaue="0"/>
+                    <item id="PCLK_32" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tgrc" selection="Out">
+                    <item id="Out" input="" vlaue="0"/>
+                    <item id="Buf" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="BufA" selection="Cmp">
+                    <item id="Cmp" input="" vlaue="0"/>
+                    <item id="Clr" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tgrd" selection="Out">
+                    <item id="Out" input="" vlaue="0"/>
+                    <item id="Buf" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="BufB" selection="Cmp">
+                    <item id="Cmp" input="" vlaue="0"/>
+                    <item id="Clr" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="IOA" selection="Out0t">
+                    <item id="OutDis" input="" vlaue="0"/>
+                    <item id="Out00" input="" vlaue="0"/>
+                    <item id="Out01" input="" vlaue="0"/>
+                    <item id="Out0t" input="" vlaue="0"/>
+                    <item id="Out10" input="" vlaue="0"/>
+                    <item id="Out11" input="" vlaue="0"/>
+                    <item id="Out1t" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="IOBtgrb" selection="OutT">
+                    <item id="Out0" input="" vlaue="0"/>
+                    <item id="Out1" input="" vlaue="0"/>
+                    <item id="OutT" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="IOC" selection="OutDis">
+                    <item id="OutDis" input="" vlaue="0"/>
+                    <item id="Out00" input="" vlaue="0"/>
+                    <item id="Out01" input="" vlaue="0"/>
+                    <item id="Out0t" input="" vlaue="0"/>
+                    <item id="Out10" input="" vlaue="0"/>
+                    <item id="Out11" input="" vlaue="0"/>
+                    <item id="Out1t" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="IODtgrd" selection="Out0">
+                    <item id="Out0" input="" vlaue="0"/>
+                    <item id="Out1" input="" vlaue="0"/>
+                    <item id="OutT" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="PeriodValue" selection="PeriodValue">
+                    <item id="PeriodValue" input="500" vlaue="59999"/>
+                </option>
+                <option enabled="true" id="Unit" selection="us">
+                    <item id="ms" input="" vlaue="0"/>
+                    <item id="us" input="" vlaue="0"/>
+                    <item id="ns" input="" vlaue="0"/>
+                    <item id="cnt" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="TGRAValue" selection="TGRAValue">
+                    <item id="TGRAValue" input="29999" vlaue="29999"/>
+                </option>
+                <option enabled="true" id="TGRBValue" selection="TGRBValue">
+                    <item id="TGRBValue" input="59999" vlaue="59999"/>
+                </option>
+                <option enabled="true" id="TGRCValue" selection="TGRCValue">
+                    <item id="TGRCValue" input="11999" vlaue="11999"/>
+                </option>
+                <option enabled="true" id="TGRDValue" selection="TGRDValue">
+                    <item id="TGRDValue" input="11999" vlaue="11999"/>
+                </option>
+                <option enabled="true" id="TRGAN" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="TRG4ABN" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="TRG4AN" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="CycAValue" selection="CycAValue">
+                    <item id="CycAValue" input="65535" vlaue="65535"/>
+                </option>
+                <option enabled="false" id="CycAbValue" selection="CycAbValue">
+                    <item id="CycAbValue" input="65535" vlaue="65535"/>
+                </option>
+                <option enabled="false" id="TRG4BN" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="CycBValue" selection="CycBValue">
+                    <item id="CycBValue" input="65535" vlaue="65535"/>
+                </option>
+                <option enabled="false" id="CycBbValue" selection="CycBbValue">
+                    <item id="CycBbValue" input="65535" vlaue="65535"/>
+                </option>
+                <option enabled="false" id="ADtf" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tgia" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="PrioA" selection="Level15">
+                    <item id="Level0" input="" vlaue="0"/>
+                    <item id="Level1" input="" vlaue="0"/>
+                    <item id="Level2" input="" vlaue="0"/>
+                    <item id="Level3" input="" vlaue="0"/>
+                    <item id="Level4" input="" vlaue="0"/>
+                    <item id="Level5" input="" vlaue="0"/>
+                    <item id="Level6" input="" vlaue="0"/>
+                    <item id="Level7" input="" vlaue="0"/>
+                    <item id="Level8" input="" vlaue="0"/>
+                    <item id="Level9" input="" vlaue="0"/>
+                    <item id="Level10" input="" vlaue="0"/>
+                    <item id="Level11" input="" vlaue="0"/>
+                    <item id="Level12" input="" vlaue="0"/>
+                    <item id="Level13" input="" vlaue="0"/>
+                    <item id="Level14" input="" vlaue="0"/>
+                    <item id="Level15" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tgib" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="PrioB" selection="Level15">
+                    <item id="Level0" input="" vlaue="0"/>
+                    <item id="Level1" input="" vlaue="0"/>
+                    <item id="Level2" input="" vlaue="0"/>
+                    <item id="Level3" input="" vlaue="0"/>
+                    <item id="Level4" input="" vlaue="0"/>
+                    <item id="Level5" input="" vlaue="0"/>
+                    <item id="Level6" input="" vlaue="0"/>
+                    <item id="Level7" input="" vlaue="0"/>
+                    <item id="Level8" input="" vlaue="0"/>
+                    <item id="Level9" input="" vlaue="0"/>
+                    <item id="Level10" input="" vlaue="0"/>
+                    <item id="Level11" input="" vlaue="0"/>
+                    <item id="Level12" input="" vlaue="0"/>
+                    <item id="Level13" input="" vlaue="0"/>
+                    <item id="Level14" input="" vlaue="0"/>
+                    <item id="Level15" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tgic" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="PrioC" selection="Level15">
+                    <item id="Level0" input="" vlaue="0"/>
+                    <item id="Level1" input="" vlaue="0"/>
+                    <item id="Level2" input="" vlaue="0"/>
+                    <item id="Level3" input="" vlaue="0"/>
+                    <item id="Level4" input="" vlaue="0"/>
+                    <item id="Level5" input="" vlaue="0"/>
+                    <item id="Level6" input="" vlaue="0"/>
+                    <item id="Level7" input="" vlaue="0"/>
+                    <item id="Level8" input="" vlaue="0"/>
+                    <item id="Level9" input="" vlaue="0"/>
+                    <item id="Level10" input="" vlaue="0"/>
+                    <item id="Level11" input="" vlaue="0"/>
+                    <item id="Level12" input="" vlaue="0"/>
+                    <item id="Level13" input="" vlaue="0"/>
+                    <item id="Level14" input="" vlaue="0"/>
+                    <item id="Level15" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tgid" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="PrioD" selection="Level15">
+                    <item id="Level0" input="" vlaue="0"/>
+                    <item id="Level1" input="" vlaue="0"/>
+                    <item id="Level2" input="" vlaue="0"/>
+                    <item id="Level3" input="" vlaue="0"/>
+                    <item id="Level4" input="" vlaue="0"/>
+                    <item id="Level5" input="" vlaue="0"/>
+                    <item id="Level6" input="" vlaue="0"/>
+                    <item id="Level7" input="" vlaue="0"/>
+                    <item id="Level8" input="" vlaue="0"/>
+                    <item id="Level9" input="" vlaue="0"/>
+                    <item id="Level10" input="" vlaue="0"/>
+                    <item id="Level11" input="" vlaue="0"/>
+                    <item id="Level12" input="" vlaue="0"/>
+                    <item id="Level13" input="" vlaue="0"/>
+                    <item id="Level14" input="" vlaue="0"/>
+                    <item id="Level15" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="Tciv" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="PrioV" selection="Level15">
+                    <item id="Level0" input="" vlaue="0"/>
+                    <item id="Level1" input="" vlaue="0"/>
+                    <item id="Level2" input="" vlaue="0"/>
+                    <item id="Level3" input="" vlaue="0"/>
+                    <item id="Level4" input="" vlaue="0"/>
+                    <item id="Level5" input="" vlaue="0"/>
+                    <item id="Level6" input="" vlaue="0"/>
+                    <item id="Level7" input="" vlaue="0"/>
+                    <item id="Level8" input="" vlaue="0"/>
+                    <item id="Level9" input="" vlaue="0"/>
+                    <item id="Level10" input="" vlaue="0"/>
+                    <item id="Level11" input="" vlaue="0"/>
+                    <item id="Level12" input="" vlaue="0"/>
+                    <item id="Level13" input="" vlaue="0"/>
+                    <item id="Level14" input="" vlaue="0"/>
+                    <item id="Level15" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="MultiIntTgiaEnable" selection="UnCheck">
+                    <item id="Check" input="" vlaue="0"/>
+                    <item id="UnCheck" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="MultiIntTgibEnable" selection="UnCheck">
+                    <item id="Check" input="" vlaue="0"/>
+                    <item id="UnCheck" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="MultiIntTgicEnable" selection="UnCheck">
+                    <item id="Check" input="" vlaue="0"/>
+                    <item id="UnCheck" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="MultiIntTgidEnable" selection="UnCheck">
+                    <item id="Check" input="" vlaue="0"/>
+                    <item id="UnCheck" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="MultiIntTcivEnable" selection="UnCheck">
+                    <item id="Check" input="" vlaue="0"/>
+                    <item id="UnCheck" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="ADSM0" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="AdSrc0" selection="NoSrc">
+                    <item id="NoSrc" input="" vlaue="0"/>
+                    <item id="TRGA0N" input="" vlaue="0"/>
+                    <item id="TRGA1N" input="" vlaue="0"/>
+                    <item id="TRGA2N" input="" vlaue="0"/>
+                    <item id="TRGA3N" input="" vlaue="0"/>
+                    <item id="TRGA4N" input="" vlaue="0"/>
+                    <item id="TRGA6N" input="" vlaue="0"/>
+                    <item id="TRGA7N" input="" vlaue="0"/>
+                    <item id="TRG0N" input="" vlaue="0"/>
+                    <item id="TRG4AN" input="" vlaue="0"/>
+                    <item id="TRG4BN" input="" vlaue="0"/>
+                    <item id="TRG4ABN" input="" vlaue="0"/>
+                    <item id="TRG7AN" input="" vlaue="0"/>
+                    <item id="TRG7BN" input="" vlaue="0"/>
+                    <item id="TRG7ABN" input="" vlaue="0"/>
+                    <item id="TRGA9N" input="" vlaue="0"/>
+                    <item id="TRG9N" input="" vlaue="0"/>
+                    <item id="TRG9AEN" input="" vlaue="0"/>
+                    <item id="TRG0AEN" input="" vlaue="0"/>
+                    <item id="TRGA09N" input="" vlaue="0"/>
+                    <item id="TRG09N" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="ADSM1" selection="Disable">
+                    <item id="Enable" input="" vlaue="0"/>
+                    <item id="Disable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="AdSrc1" selection="NoSrc">
+                    <item id="NoSrc" input="" vlaue="0"/>
+                    <item id="TRGA0N" input="" vlaue="0"/>
+                    <item id="TRGA1N" input="" vlaue="0"/>
+                    <item id="TRGA2N" input="" vlaue="0"/>
+                    <item id="TRGA3N" input="" vlaue="0"/>
+                    <item id="TRGA4N" input="" vlaue="0"/>
+                    <item id="TRGA6N" input="" vlaue="0"/>
+                    <item id="TRGA7N" input="" vlaue="0"/>
+                    <item id="TRG0N" input="" vlaue="0"/>
+                    <item id="TRG4AN" input="" vlaue="0"/>
+                    <item id="TRG4BN" input="" vlaue="0"/>
+                    <item id="TRG4ABN" input="" vlaue="0"/>
+                    <item id="TRG7AN" input="" vlaue="0"/>
+                    <item id="TRG7BN" input="" vlaue="0"/>
+                    <item id="TRG7ABN" input="" vlaue="0"/>
+                    <item id="TRGA9N" input="" vlaue="0"/>
+                    <item id="TRG9N" input="" vlaue="0"/>
+                    <item id="TRG9AEN" input="" vlaue="0"/>
+                    <item id="TRG0AEN" input="" vlaue="0"/>
+                    <item id="TRGA09N" input="" vlaue="0"/>
+                    <item id="TRG09N" input="" vlaue="0"/>
+                </option>
+            </allocatable>
+            <component description="このソフトウェアコンポーネントは、マルチファンクションタイマパルスユニット（MTU）または16ビットタイマパルスユニット（TPU）のPWMモードタイマの構成を提供します。&#10;&#10;各 TGR レジスタの設定により、デューティ 0% ～ 100% の PWM 波形が出力できます。" detailDescription="" display="PWMモードタイマ" id="com.renesas.smc.tools.swcomponent.codegenerator.pwmmode" version="1.12.0"/>
+            <allocator channelLevel0="4" channelLevel1="" channelLevel2="" channelLevel3="" channelLevel4="" channelLevel5="" description="MTU4" display="MTU4" id="com.renesas.smc.tools.swcomponent.codegenerator.pwmmode.rx66t.mtu4" type="MTU">
+                <context>
+                    <option enabled="true" id="Mode" selection="Pwm1">
+                        <item enabled="true" id="Pwm1"/>
+                        <item enabled="true" id="Pwm2"/>
+                    </option>
+                </context>
+            </allocator>
+            <source description="コード生成に対応したコンポーネントは、設定に応じた周辺ドライバのコードを小さなコードサイズで出力します。" display="コード生成" id="com.renesas.smc.tools.swcomponent.codegenerator.source"/>
+        </configuration>
+        <configuration apiMode="FULL_API" id="70388fdd-fded-46db-9390-390b7a8b373f" inuse="true" name="Config_TMR0_TMR1">
+            <allocatable id="TMR0">
+                <isocket id="CountingClock" selection="Clock.tool_clock_pclkb" value="6.0E7"/>
+                <option enabled="true" id="CountMode" selection="16bitMode">
+                    <item id="8bitMode" input="" vlaue="0"/>
+                    <item id="16bitMode" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="ClockSourceOption" selection="PCLK">
+                    <item id="PCLK" input="" vlaue="0"/>
+                    <item id="PCLK2" input="" vlaue="0"/>
+                    <item id="PCLK8" input="" vlaue="0"/>
+                    <item id="PCLK32" input="" vlaue="0"/>
+                    <item id="PCLK64" input="" vlaue="0"/>
+                    <item id="PCLK1024" input="" vlaue="0"/>
+                    <item id="PCLK8192" input="" vlaue="0"/>
+                    <item id="ExternalClockRising" input="" vlaue="0"/>
+                    <item id="ExternalClockFalling" input="" vlaue="0"/>
+                    <item id="ExternalClockBoth" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="CounterClearOption" selection="ClearedMatchA">
+                    <item id="Disabled" input="" vlaue="0"/>
+                    <item id="ClearedMatchA" input="" vlaue="0"/>
+                    <item id="ClearedMatchB" input="" vlaue="0"/>
+                    <item id="ClearedRisingReset" input="" vlaue="0"/>
+                    <item id="ClearedResetHigh" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="CompareMatchAValue" selection="CompareMatchAValue">
+                    <item id="CompareMatchAValue" input="100" vlaue="5999"/>
+                </option>
+                <option enabled="true" id="MatchValueOptionA" selection="us">
+                    <item id="ms" input="" vlaue="0"/>
+                    <item id="us" input="" vlaue="0"/>
+                    <item id="ns" input="" vlaue="0"/>
+                    <item id="count" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="S12ADEnable" selection="Disable">
+                    <item id="Disable" input="" vlaue="0"/>
+                    <item id="Enable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="CompareMatchBValue" selection="CompareMatchBValue">
+                    <item id="CompareMatchBValue" input="2" vlaue="119"/>
+                </option>
+                <option enabled="true" id="TMO0OutputEnable" selection="Disable">
+                    <item id="Disable" input="" vlaue="0"/>
+                    <item id="Enable" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="OutputMatchA" selection="Nochange">
+                    <item id="Nochange" input="" vlaue="0"/>
+                    <item id="Output0" input="" vlaue="0"/>
+                    <item id="Output1" input="" vlaue="0"/>
+                    <item id="ToggleOutput" input="" vlaue="0"/>
+                </option>
+                <option enabled="false" id="OutputMatchB" selection="Nochange">
+                    <item id="Nochange" input="" vlaue="0"/>
+                    <item id="Output0" input="" vlaue="0"/>
+                    <item id="Output1" input="" vlaue="0"/>
+                    <item id="ToggleOutput" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="TCORAEnable" selection="Enable">
+                    <item id="Disable" input="" vlaue="0"/>
+                    <item id="Enable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="TCORBEnable" selection="Disable">
+                    <item id="Disable" input="" vlaue="0"/>
+                    <item id="Enable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="TCNTEnable" selection="Disable">
+                    <item id="Disable" input="" vlaue="0"/>
+                    <item id="Enable" input="" vlaue="0"/>
+                </option>
+                <option enabled="true" id="130InterruptOption" selection="Level10">
+                    <item id="Level0" input="" vlaue="0"/>
+                    <item id="Level1" input="" vlaue="0"/>
+                    <item id="Level2" input="" vlaue="0"/>
+                    <item id="Level3" input="" vlaue="0"/>
+                    <item id="Level4" input="" vlaue="0"/>
+                    <item id="Level5" input="" vlaue="0"/>
+                    <item id="Level6" input="" vlaue="0"/>
+                    <item id="Level7" input="" vlaue="0"/>
+                    <item id="Level8" input="" vlaue="0"/>
+                    <item id="Level9" input="" vlaue="0"/>
+                    <item id="Level10" input="" vlaue="0"/>
+                    <item id="Level11" input="" vlaue="0"/>
+                    <item id="Level12" input="" vlaue="0"/>
+                    <item id="Level13" input="" vlaue="0"/>
+                    <item id="Level14" input="" vlaue="0"/>
+                    <item id="Level15" input="" vlaue="0"/>
+                </option>
+            </allocatable>
+            <component description="このソフトウェアコンポーネントは、8 ビットタイマ（TMR）の構成を提供します。&#10;&#10;外部イベントのカウントが可能なほか、2 本のレジスタとのコンペアマッチ信号により、カウンタのクリア、割り込み要求、任意のデューティ比のパルス出力など、多機能タイマとして種々の応用が可能です。" detailDescription="" display="8 ビットタイマ" id="com.renesas.smc.tools.swcomponent.codegenerator.tmr" version="1.10.0"/>
+            <allocator channelLevel0="0" channelLevel1="" channelLevel2="" channelLevel3="" channelLevel4="" channelLevel5="" description="16 ビットタイマ0" display="TMR0_TMR1" id="com.renesas.smc.tools.swcomponent.codegenerator.tmr.rx66t.tmr0_tmr1" type="TMR01">
+                <context>
+                    <option enabled="true" id="CountMode" selection="16bitMode">
+                        <item enabled="true" id="8bitMode"/>
+                        <item enabled="true" id="16bitMode"/>
+                    </option>
+                </context>
+            </allocator>
+            <source description="コード生成に対応したコンポーネントは、設定に応じた周辺ドライバのコードを小さなコードサイズで出力します。" display="コード生成" id="com.renesas.smc.tools.swcomponent.codegenerator.source"/>
+        </configuration>
     </tool>
     <tool id="System">
         <section id="ocd">
-            <option enabled="true" id="debugIF" selection="jtag">
+            <option enabled="true" id="debugIF" selection="fine">
                 <item enabled="true" id="unused"/>
                 <item enabled="true" id="fine"/>
                 <item enabled="true" id="jtag"/>

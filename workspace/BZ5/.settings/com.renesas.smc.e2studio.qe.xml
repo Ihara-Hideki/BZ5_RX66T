@@ -17,7 +17,7 @@
         <Setting id="Series" value="RX600"/>
         <Setting id="Group" value="RX66T"/>
         <Setting id="Board" value="カスタムユーザボード"/>
-        <Setting id="PartNo" value="R5F566TKCxFB"/>
+        <Setting id="PartNo" value="R5F566TKGxFB"/>
         <Setting id="PinCount" value="144"/>
     </Segment>
     <Segment id="Clock">

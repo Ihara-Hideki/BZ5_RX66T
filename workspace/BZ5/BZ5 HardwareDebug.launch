@@ -50,9 +50,9 @@
     <intAttribute key="com.renesas.hardwaredebug.rx.e2lite.hook_work_ram_Addr" value="130512"/>
     <intAttribute key="com.renesas.hardwaredebug.rx.e2lite.hook_work_ram_Size" value="560"/>
     <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.id_code" value="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"/>
-    <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.inputclock" value="24"/>
+    <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.inputclock" value="12"/>
     <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.jtag.clock.freq" value="6.00"/>
-    <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.jtag.or.fine" value="0"/>
+    <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.jtag.or.fine" value="1"/>
     <booleanAttribute key="com.renesas.hardwaredebug.rx.e2lite.le" value="true"/>
     <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.mode" value="0"/>
     <stringAttribute key="com.renesas.hardwaredebug.rx.e2lite.mode_pin" value="0"/>
@@ -74,7 +74,7 @@
     <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="HardwareDebug/BZ5.elf"/>
     <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="BZ5"/>
     <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.renesas.cdt.managedbuild.gcc.rx.configuration.debug.update.872343347"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.renesas.cdt.managedbuild.gcc.rx.configuration.debug.update.457485643"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
         <listEntry value="/BZ5"/>
     </listAttribute>

@@ -133,7 +133,7 @@ Configuration Options
    F            = 0xF             = Without PGA pseudo-differential input, with TSIP-Lite, without USB
    G            = 0x10            = With PGA pseudo-differential input, with TSIP-Lite, with USB
 */
-#define BSP_CFG_MCU_PART_FUNCTION   (0xC) /* Generated value. Do not edit this manually */
+#define BSP_CFG_MCU_PART_FUNCTION   (0x10) /* Generated value. Do not edit this manually */
 
 /* ROM, RAM, and Data Flash Capacity.
    Character(s) = Value for macro = ROM Size/Ram Size/Data Flash Size
