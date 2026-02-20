@@ -1,14 +1,14 @@
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-//@yƒwƒbƒ_–¼z
-//@@@‚ƒ‚•‚“‚”‚‚
-//@yƒwƒbƒ_ƒŒƒxƒ‹z
-//@@@‚k‚d‚u‚d‚kF‚g|‚O
-//  yƒwƒbƒ_à–¾z
-//      —nÚ‹@ŒÅ—Lƒwƒbƒ_
-//  y”õlz
-//      ‚È‚µ
-//  yXV—š—ğz
+//ï¿½@ï¿½yï¿½wï¿½bï¿½_ï¿½ï¿½ï¿½z
+//ï¿½@ï¿½@ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½@ï¿½yï¿½wï¿½bï¿½_ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½z
+//ï¿½@ï¿½@ï¿½@ï¿½kï¿½dï¿½uï¿½dï¿½kï¿½Fï¿½gï¿½|ï¿½O
+//  ï¿½yï¿½wï¿½bï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½z
+//      ï¿½nï¿½Ú‹@ï¿½Å—Lï¿½wï¿½bï¿½_
+//  ï¿½yï¿½ï¿½ï¿½lï¿½z
+//      ï¿½È‚ï¿½
+//  ï¿½yï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½z
 //      2006.07.06  H.Ihara
 //
 //            Copyright(C)2006 MATSUSHITA Welding Systems Co., Ltd. ALL RIGHT RESERVED
@@ -19,8 +19,8 @@
 //-------------------------------------------------
 #define	__YD400GZ3_H
 #define	__M32186
-#define __DEBUG		// ƒfƒoƒbƒO’†II
-					// uFix Me!!v‚àŠm”F‚·‚é‚±‚ÆII
+#define __DEBUG		// ï¿½fï¿½oï¿½bï¿½Oï¿½ï¿½ï¿½Iï¿½I
+					// ï¿½uFix Me!!ï¿½vï¿½ï¿½ï¿½mï¿½Fï¿½ï¿½ï¿½é‚±ï¿½ÆIï¿½I
 
 
 // 2019.09.02
@@ -30,7 +30,7 @@
 #define G3_NEW_COM 1
 #define TBLCNT              72
 //#define REMO_TBLCNT         20
-#define REMO_TBLCNT         15 //2008.07.18@‚Q‚O‚à—v‚ç‚È‚¢‚Æ”»’f‚µ‚P‚T‚É•ÏX
+#define REMO_TBLCNT         15 //2008.07.18ï¿½@ï¿½Qï¿½Oï¿½ï¿½ï¿½vï¿½ï¿½È‚ï¿½ï¿½Æ”ï¿½ï¿½fï¿½ï¿½ï¿½Pï¿½Tï¿½É•ÏX
 #define WELDNAME_TBLCNT     32
 
 
@@ -41,10 +41,10 @@
 //
 #define FRAM_PAKECT         4   // 32/n = TX Byte
 
-#define CPU_di( )               ( DI_imask( ) )//2007.3.9’Ç‰Á
-#define CPU_ei( )               ( EI_imask( ) )//2007.3.9’Ç‰Á
+#define CPU_di( )               ( DI_imask( ) )//2007.3.9ï¿½Ç‰ï¿½
+#define CPU_ei( )               ( EI_imask( ) )//2007.3.9ï¿½Ç‰ï¿½
 
-// Šî–{defineéŒ¾
+// ï¿½ï¿½{defineï¿½éŒ¾
 //
 #define	true            1
 #define	false           0
@@ -58,29 +58,29 @@
 
 //----- Phase22 by @Tny 2008/10/07 -----
 #if true
-//#define CH 17           //ƒƒ‚ƒŠ‹L‰¯—p‚ƒ‚ˆ”  16->17 ‹L‰¯ƒ`ƒƒƒ“ƒlƒ‹‚Í‚P`‚P‚U‚Å‚ ‚é‚½‚ß
-#define CH 51           //ƒƒ‚ƒŠ‹L‰¯—p‚ƒ‚ˆ”  16->17 ‹L‰¯ƒ`ƒƒƒ“ƒlƒ‹‚Í‚P`‚P‚U‚Å‚ ‚é‚½‚ß  2009.03.16 ‚T‚Oƒ`ƒƒƒ“ƒlƒ‹‚É•ÏX
+//#define CH 17           //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  16->17 ï¿½Lï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚Pï¿½`ï¿½Pï¿½Uï¿½Å‚ï¿½ï¿½é‚½ï¿½ï¿½
+#define CH 51           //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  16->17 ï¿½Lï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Í‚Pï¿½`ï¿½Pï¿½Uï¿½Å‚ï¿½ï¿½é‚½ï¿½ï¿½  2009.03.16 ï¿½Tï¿½Oï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½É•ÏX
 #endif
 //--------------------------------------------
-//#define SELECT_DITAL_MAX          50 //Ú×ƒƒjƒ…[‚ÌÅ‘å’l
-//#define SELECT_DITAL_MAX          85 //Ú×ƒƒjƒ…[‚ÌÅ‘å’l 2008.10.10
-//#define SELECT_DITAL_MAX          32 //Ú×ƒƒjƒ…[‚ÌÅ‘å’l 2008.10.10 2009.03.16 2010.03.03 30->32
-#define SELECT_DITAL_MAX          33 //Ú×ƒƒjƒ…[‚ÌÅ‘å’l 2008.10.10 2009.03.16 2010.03.03 30->32		<IIF NEW> 32->33 2011.10.07
-//#define SELECT_DITAL_MAX          12 //Ú×ƒƒjƒ…[‚ÌÅ‘å’l BP4 Phase3 by @Tny 2009.01.15
+//#define SELECT_DITAL_MAX          50 //ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ÌÅ‘ï¿½l
+//#define SELECT_DITAL_MAX          85 //ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ÌÅ‘ï¿½l 2008.10.10
+//#define SELECT_DITAL_MAX          32 //ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ÌÅ‘ï¿½l 2008.10.10 2009.03.16 2010.03.03 30->32
+#define SELECT_DITAL_MAX          33 //ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ÌÅ‘ï¿½l 2008.10.10 2009.03.16 2010.03.03 30->32		<IIF NEW> 32->33 2011.10.07
+//#define SELECT_DITAL_MAX          12 //ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½ÌÅ‘ï¿½l BP4 Phase3 by @Tny 2009.01.15
 
-//“Áêƒpƒ‰ƒ[ƒ^
+//ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
 #define USER_PARAMETER_NO        100 //2008.10.30 10 -> 100
-//ƒT[ƒrƒXƒ}ƒ“
-#define SERVICE_DATA_NO          30 //2008.09.02 b’èŒÂ” 2008.10.30 3->10		BP4 Phase13 by @Tny 2009.02.23
+//ï¿½Tï¿½[ï¿½rï¿½Xï¿½}ï¿½ï¿½
+#define SERVICE_DATA_NO          30 //2008.09.02 ï¿½bï¿½ï¿½Âï¿½ 2008.10.30 3->10		BP4 Phase13 by @Tny 2009.02.23
 //---------------------------------------------------
 // BP4 Phase14 by @Tny 2009.02.24
 //#define RESCUE_DATA_NO			5
 //#define RESCUE_DATA_NO			6
-#define RESCUE_DATA_NO			7	// uŒğ—¬”gŒ`o—Íƒ‚[ƒhv’Ç‰Á	2011.11.08
+#define RESCUE_DATA_NO			7	// ï¿½uï¿½ğ—¬”gï¿½`ï¿½oï¿½Íƒï¿½ï¿½[ï¿½hï¿½vï¿½Ç‰ï¿½	2011.11.08
 //---------------------------------------------------
 
 //20110916_1+++++
- //<><><><><> o—Í“d—¬ã‰ºŒÀ’l 2011.09.16 <><><><><>
+ //<><><><><> ï¿½oï¿½Í“dï¿½ï¿½ï¿½ã‰ºï¿½ï¿½ï¿½l 2011.09.16 <><><><><>
 //#define     MAX_CURRENT_VAL           300	    // 2011.09.16 500BP4 DC,AC_STD,AC_HARD,MIX
 #define     MAX_CURRENT_VAL           400	    // 2011.09.16 500BP4 DC,AC_STD,AC_HARD,MIX			2019.08.21
 #define     MAX_CURRENT_AC_SOFT_VAL   200       // 2011.09.16 500BP4 AC_SOFT
@@ -92,8 +92,8 @@
 #define     MIN_CURRENT_AC_VAL          1       // 2011.09.16 AC_STD,AC_SOFT,MIX					2019.08.21
 #define     MIN_CURRENT_HAND_VAL        4       // 2011.09.16 500BP4 HAND		10->4 2012.05.30
 
-//d ||||||||Ql 300BP4|||||||||||||||
-//d  //<><><><><> o—Í“d—¬ã‰ºŒÀ’l 2010.03.10 by @Tnyy‚m‚n‚P‚Tz(2010.01.12) <><><><><>
+//d ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½Qï¿½l 300BP4ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|ï¿½|
+//d  //<><><><><> ï¿½oï¿½Í“dï¿½ï¿½ï¿½ã‰ºï¿½ï¿½ï¿½l 2010.03.10 by @Tnyï¿½yï¿½mï¿½nï¿½Pï¿½Tï¿½z(2010.01.12) <><><><><>
 //d  #define     MAX_CURRENT_VAL			300			// 300BP4 DC,AC_STD,AC_HARD,MIX
 //d  #define     MAX_CURRENT_AC_SOFT		200			// 300BP4 AC_SOFT
 //d  #define     MAX_CURRENT_HAND		250			// 300BP4 HAND
@@ -104,7 +104,7 @@
 //d  #define     MIN_CURRENT_HAND		  4			// 300BP4 HAND
 //d  //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 //d  
-//d  //<><><><><> o—Í“d—¬ã‰ºŒÀ’l 2010.01.12 <><><><><>
+//d  //<><><><><> ï¿½oï¿½Í“dï¿½ï¿½ï¿½ã‰ºï¿½ï¿½ï¿½l 2010.01.12 <><><><><>
 //d  #define     MAX_CURRENT_VAL           500	    // 2010.01.12 500BP4 DC,AC_STD,AC_HARD,MIX
 //d  #define     MAX_CURRENT_AC_SOFT_VAL   330       // 2010.01.12 500BP4 AC_SOFT
 //d  #define     MAX_CURRENT_HAND_VAL      400       // 2010.01.12 500BP4 HAND
@@ -116,18 +116,18 @@
 
 
 
-//‚d‚mˆêŒ³‰»ŠÖ˜A
-#define EN_VOLT_P           0 //{“dˆ³’l
-#define EN_VOLT_M           1 //|“dˆ³’l
-#define EN_VOLT_0           2 //‚d‚m‚O““dˆ³’l
-#define EN_INIT             0 //‰Šú“d—¬‚Ì‚d‚m”ä—¦ 2008.10.01
-#define EN_MAIN             1 //–{“d—¬‚Ì‚d‚m”ä—¦ 2008.10.01
-#define EN_CRATER           2 //ƒNƒŒ[ƒ^“d—¬‚Ì‚d‚m”ä—¦ 2008.10.01
-#define EN_WAVE             3 //ƒ[ƒpƒ‹ƒX“d—¬‚Ì‚d‚m”ä—¦ 2008.10.10
-#define EN_START            4 //ƒXƒ^[ƒg“d—¬‚Ì‚d‚m”ä—¦ 2008.10.10
-#define EN_Q                5 //ˆêŒ³“dˆ³–â‚¢‡‚í‚¹‚d‚m”ä—¦ 2008.11.28
+//ï¿½dï¿½mï¿½êŒ³ï¿½ï¿½ï¿½Ö˜A
+#define EN_VOLT_P           0 //ï¿½{ï¿½dï¿½ï¿½ï¿½l
+#define EN_VOLT_M           1 //ï¿½|ï¿½dï¿½ï¿½ï¿½l
+#define EN_VOLT_0           2 //ï¿½dï¿½mï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½ï¿½l
+#define EN_INIT             0 //ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ 2008.10.01
+#define EN_MAIN             1 //ï¿½{ï¿½dï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ 2008.10.01
+#define EN_CRATER           2 //ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½dï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ 2008.10.01
+#define EN_WAVE             3 //ï¿½ï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½dï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ 2008.10.10
+#define EN_START            4 //ï¿½Xï¿½^ï¿½[ï¿½gï¿½dï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ 2008.10.10
+#define EN_Q                5 //ï¿½êŒ³ï¿½dï¿½ï¿½ï¿½â‚¢ï¿½ï¿½ï¿½í‚¹ï¿½dï¿½mï¿½ä—¦ 2008.11.28
 
-//BP4—pÚ×ƒƒjƒ…[”Ô† Phase4,Phase5,Phase6,Phase7 by @Tny 2009.01.15-2009.02-16
+//BP4ï¿½pï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ôï¿½ Phase4,Phase5,Phase6,Phase7 by @Tny 2009.01.15-2009.02-16
 #define P_DC_TIG_START      0 //P00
 #define P_HOT_CURR_LEVEL    1 //P01
 #define P_VOLT_DISPLAY      2 //P02
@@ -142,8 +142,8 @@
 #define P_ARC_DRIVE        11 //P11
 #define P_WELD_NAME        12 //P12 2009.03.07
 #define P_LCD_BRIGHT       13 //P13 2009.03.07
-#define P_EXTARNAL_LEVEL_A 14 //P14 2009.03.07 ƒGƒLƒXƒp[ƒgƒ‚[ƒh
-#define P_EXTARNAL_MASK_TIME 15 //P15 2010.01.08 ƒGƒLƒXƒp[ƒgƒ‚[ƒhƒ}ƒXƒNŠÔ
+#define P_EXTARNAL_LEVEL_A 14 //P14 2009.03.07 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½h
+#define P_EXTARNAL_MASK_TIME 15 //P15 2010.01.08 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½}ï¿½Xï¿½Nï¿½ï¿½ï¿½ï¿½
 #define P_REMOCON_SELECT   16 //P16 2009.03.07
 #define P_VARIABLE_CRATER_REPEAT 17 //P17 2009.03.14
 #define P_MAX_OUTPUT       18 //P18 2010.01.08 by @Tny
@@ -151,24 +151,24 @@
 #define P_AC_FRQ_DISP      20 //P20 2010.01.20 by @Tny
 #define P_ARC_ASSIST       21 //P21 2010.02.25
 
-//#define P_SOFT_START_TIME   22 //P22 2011.10.01 ƒ\ƒtƒgƒXƒ^[ƒgŠÔ		uƒ\ƒtƒgƒXƒ^[ƒgŠÔvíœ 2011.10.31
-//#define P_EXECUTE_VOLTAGE_A 23 //P23 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p 2009.03.07
-#define P_DETAIL_DISPLAY    22 //P22 2011.10.03		uƒ\ƒtƒgƒXƒ^[ƒgŠÔvíœ‚É”º‚¤•ÏX 2011.10.31
+//#define P_SOFT_START_TIME   22 //P22 2011.10.01 ï¿½\ï¿½tï¿½gï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½		ï¿½uï¿½\ï¿½tï¿½gï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½Ôvï¿½íœ 2011.10.31
+//#define P_EXECUTE_VOLTAGE_A 23 //P23 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p 2009.03.07
+#define P_DETAIL_DISPLAY    22 //P22 2011.10.03		ï¿½uï¿½\ï¿½tï¿½gï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½Ôvï¿½íœï¿½É”ï¿½ï¿½ï¿½ï¿½ÏX 2011.10.31
 #if true	// <IIF NEW>
-	#define P_IIF_SELECT		23 //P23 <IIF NEW> 2009.11.17 by @Tny	uƒ\ƒtƒgƒXƒ^[ƒgŠÔvíœ‚É”º‚¤•ÏX  	2011.10.31
-	#define P_SOFT_START_TIME   24 //P24 2011.10.01 ƒ\ƒtƒgƒXƒ^[ƒgŠÔ		uƒ\ƒtƒgƒXƒ^[ƒgŠÔvíœ‚É”º‚¤•ÏX 2011.10.31
-	#define P_EXECUTE_VOLTAGE_C 25 //P25 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-	#define P_EXTARNAL_LEVEL_C  26 //P25 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-	#define P_VOLTAGE_SAMPLING  27 //P26 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
+	#define P_IIF_SELECT		23 //P23 <IIF NEW> 2009.11.17 by @Tny	ï¿½uï¿½\ï¿½tï¿½gï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½Ôvï¿½íœï¿½É”ï¿½ï¿½ï¿½ï¿½ÏX  	2011.10.31
+	#define P_SOFT_START_TIME   24 //P24 2011.10.01 ï¿½\ï¿½tï¿½gï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½		ï¿½uï¿½\ï¿½tï¿½gï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½Ôvï¿½íœï¿½É”ï¿½ï¿½ï¿½ï¿½ÏX 2011.10.31
+	#define P_EXECUTE_VOLTAGE_C 25 //P25 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+	#define P_EXTARNAL_LEVEL_C  26 //P25 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+	#define P_VOLTAGE_SAMPLING  27 //P26 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
 	#define P_INPUT_PASS_WORD   28 //P27 2010.02.25
 	#define P_CHENGE_PASS_WORD  29 //P28 2010.02.25
 	#define P_CONTROLLER_LOCK   20 //P29 2010.02.25
 	#define P_SUB_MONITOR       31 //P30 2010.02.25
 	#define P_ADJUST_ITEM       32 //P31 2010.02.25
 #else
-	#define P_EXECUTE_VOLTAGE_C 24 //P24 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-	#define P_EXTARNAL_LEVEL_C  25 //P25 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-	#define P_VOLTAGE_SAMPLING  26 //P26 2010.02.25 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
+	#define P_EXECUTE_VOLTAGE_C 24 //P24 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+	#define P_EXTARNAL_LEVEL_C  25 //P25 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+	#define P_VOLTAGE_SAMPLING  26 //P26 2010.02.25 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
 	#define P_INPUT_PASS_WORD  27 //P27 2010.02.25
 	#define P_CHENGE_PASS_WORD 28 //P28 2010.02.25
 	#define P_CONTROLLER_LOCK  29 //P29 2010.02.25
@@ -176,13 +176,13 @@
 	#define P_ADJUST_ITEM      31 //P31 2010.02.25
 #endif
 
-#if 0 //2010.02.25 ”Ô†‚Ì•ÏX
-#define P_OUTPUT_SELECT     20 //P20 2009.02.16 o—Í•â³—L–³‘I‘ğ
-#define P_EXECUTE_VOLTAGE_A 21 //P21 2009.02.13 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p 2009.03.07
-#define P_EXECUTE_VOLTAGE_C 22 //P22 2009.02.13 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-//#define P_EXTARNAL_LEVEL_A  22 //P22 2009.02.13 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-#define P_EXTARNAL_LEVEL_C  24 //P24 2009.02.13 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
-#define P_VOLTAGE_SAMPLING  25 //P25 2009.02.13 ƒGƒLƒXƒp[ƒgƒ‚[ƒhÀŒ±—p
+#if 0 //2010.02.25 ï¿½Ôï¿½ï¿½Ì•ÏX
+#define P_OUTPUT_SELECT     20 //P20 2009.02.16 ï¿½oï¿½Í•â³ï¿½Lï¿½ï¿½ï¿½Iï¿½ï¿½
+#define P_EXECUTE_VOLTAGE_A 21 //P21 2009.02.13 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p 2009.03.07
+#define P_EXECUTE_VOLTAGE_C 22 //P22 2009.02.13 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+//#define P_EXTARNAL_LEVEL_A  22 //P22 2009.02.13 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+#define P_EXTARNAL_LEVEL_C  24 //P24 2009.02.13 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
+#define P_VOLTAGE_SAMPLING  25 //P25 2009.02.13 ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½p
 
 #define P_INPUT_PASS_WORD  26 //P26 2009.03.16
 #define P_CHENGE_PASS_WORD 27 //P27
@@ -192,7 +192,7 @@
 #endif
 
 //--------------------------------------------------------------------
-// ƒT[ƒrƒXƒ}ƒ“Eƒƒjƒ…[”Ô†		BP4 Phase14 by @Tny 2009.02.24	BP4 Phase16 by @Tny 2003.03.10
+// ï¿½Tï¿½[ï¿½rï¿½Xï¿½}ï¿½ï¿½ï¿½Eï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ôï¿½		BP4 Phase14 by @Tny 2009.02.24	BP4 Phase16 by @Tny 2003.03.10
 #define S_PASSWORD			 0 // S00
 //#define S_PRI_FLOW_TIME	 1 // S01
 #define S_DC_TIG_EN_HOT_I	 1 // S01
@@ -219,19 +219,19 @@
 //--------------------------------------------------------------------
 
 //--------------------------------------------------------------------
-// ƒŒƒXƒLƒ…[Eƒƒjƒ…[”Ô†		BP4 by @Tny 2009.04.8
+// ï¿½ï¿½ï¿½Xï¿½Lï¿½ï¿½ï¿½[ï¿½Eï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ôï¿½		BP4 by @Tny 2009.04.8
 #define R_PASSWORD			 0 // R00
 #define R_ERROR_HIS			 1 // R01
 #define R_REC_LOCK			 2 // R02
 #define R_RAM_ALL_CLEAR		 3 // R03
 #define R_EXT_SW			 4 // R04	2010.01.20 by @Tny
 #define R_ARC_ERR_PRE_CHECK  5 // R05 2010.02.25
-#define R_AC_WAVE_OUT_MODE	 6 // R06 uŒğ—¬”gŒ`o—Íƒ‚[ƒhv’Ç‰Á	2011.11.08
+#define R_AC_WAVE_OUT_MODE	 6 // R06 ï¿½uï¿½ğ—¬”gï¿½`ï¿½oï¿½Íƒï¿½ï¿½[ï¿½hï¿½vï¿½Ç‰ï¿½	2011.11.08
 //--------------------------------------------------------------------
 
 
 
-//Ú×ƒƒjƒ…[”Ô† 2008.09.10
+//ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ôï¿½ 2008.09.10
 #if 0 //2009.03.16 del
 #define P_SLOW_DOWN         0 //P00
 #define P_HOT_VOLTAGE       1 //P01
@@ -271,8 +271,8 @@
 #define P_BURNBACK2        35 //P35
 #define P_INPLSE_START_SW  36 //P36
 #define P_WELD_ENDING      37 //P37
-#define P_DC_CONTROL_TIME  38 //P38 2008.09.22 Œğ—¬’¼—¬§Œä‹æŠÔ
-#define P_ARC_SPOT_SET     39 //P39 2008.10.21’Ç‰Á
+#define P_DC_CONTROL_TIME  38 //P38 2008.09.22 ï¿½ğ—¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#define P_ARC_SPOT_SET     39 //P39 2008.10.21ï¿½Ç‰ï¿½
 #define P_CRATER_DC        40 //P40 2008.11.06
                               //P41
                               //P42
@@ -326,70 +326,70 @@
                               //P89
                               //P90
 #endif
-#define ROBOT_CONNECT      91 //ƒƒ{ƒbƒgÚ‘±‚Ì•\¦ 2008.10.03
+#define ROBOT_CONNECT      91 //ï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½Ú‘ï¿½ï¿½Ì•\ï¿½ï¿½ 2008.10.03
 
 
-#if true // « EXTERNAL IIF NEW	2011.02.21 by @Tny
-	//<><><><><><><><><><> ‚h‚h‚eŠÖ˜Aİ’è <><><><><><><><><><>
+#if true // ï¿½ï¿½ EXTERNAL IIF NEW	2011.02.21 by @Tny
+	//<><><><><><><><><><> ï¿½hï¿½hï¿½eï¿½Ö˜Aï¿½İ’ï¿½ <><><><><><><><><><>
 	//IIF NEW
-	//<><><> Še“ü—Í‚Ì”Ô† <><><>
-	//ƒAƒiƒƒO“ü—Í
-	#define IIF_ANALOG_SERECT		11+1  // ƒAƒiƒƒO“ü—Í‘I‘ğ€–Ú”
+	//<><><> ï¿½eï¿½ï¿½ï¿½Í‚Ì”Ôï¿½ <><><>
+	//ï¿½Aï¿½iï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½
+	#define IIF_ANALOG_SERECT		11+1  // ï¿½Aï¿½iï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½Í‘Iï¿½ï¿½ï¿½ï¿½ï¿½Úï¿½
 	#define IIF_ANALOG_NO_USE        0
-	#define IIF_ANALOG_PR_CUR        1    //—nÚ“d—¬w—ß’l
-	#define IIF_ANALOG_PR_VLT        2    //—nÚ“dˆ³w—ß’l
-	#define IIF_ANALOG_OK_VLT        3    //ˆêŒ³“dˆ³w—ß’l
-	#define IIF_ANALOG_PENET         4    //—n‚¯‚İ’²®
-	#define IIF_ANALOG_FD_RT         5    //ƒƒCƒ„‘—‹‹—Ê”÷’²®
-	#define IIF_ANALOG_WCTRL1        6    //”gŒ`§Œä‚P
-	#define IIF_ANALOG_WCTRL2        7    //”gŒ`§Œä‚Q
-	#define IIF_ANALOG_WIACDC        8    //ƒƒCƒ„‘—‹‹‘¬“x’²®
-	//Ú“_“ü—Í	// <EXTERNAL IIF NEW(Phase 2)>	2011.10.12 by @Tny
+	#define IIF_ANALOG_PR_CUR        1    //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½wï¿½ß’l
+	#define IIF_ANALOG_PR_VLT        2    //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½wï¿½ß’l
+	#define IIF_ANALOG_OK_VLT        3    //ï¿½êŒ³ï¿½dï¿½ï¿½ï¿½wï¿½ß’l
+	#define IIF_ANALOG_PENET         4    //ï¿½nï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½ï¿½ï¿½
+	#define IIF_ANALOG_FD_RT         5    //ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê”ï¿½ï¿½ï¿½ï¿½ï¿½
+	#define IIF_ANALOG_WCTRL1        6    //ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½P
+	#define IIF_ANALOG_WCTRL2        7    //ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½Q
+	#define IIF_ANALOG_WIACDC        8    //ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½
+	//ï¿½Ú“_ï¿½ï¿½ï¿½ï¿½	// <EXTERNAL IIF NEW(Phase 2)>	2011.10.12 by @Tny
 	#define IIF_INPUT_NO_USE         0
-	#define IIF_INPUT_TSW            1    //ƒg[ƒ`‚r‚v
-	#define IIF_INPUT_GAS_CK         2    //ƒKƒXƒ`ƒFƒbƒN
-	#define IIF_INPUT_STKSET         3    //ƒXƒeƒBƒbƒNƒ`ƒFƒbƒN
-	#define IIF_INPUT_EM_STP         4    //”ñí’â~
-	#define IIF_INPUT_BIN1           5    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚P
-	#define IIF_INPUT_BIN2           6    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚Q
-	#define IIF_INPUT_BIN3           7    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚R
-	#define IIF_INPUT_BIN4           8    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚S
-	#define IIF_INPUT_BIN5           9    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚T
-	#define IIF_INPUT_BIN6          10    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚U
-	#define IIF_INPUT_CNT           11    //“ü—Í‹–‰ÂM†
-	#define IIF_INPUT_STB           12    //ƒXƒgƒ[ƒuM†
-	#define IIF_INPUT_STOP1         13    //ˆê’â~‚P
-	#define IIF_INPUT_STOP2         14    //ˆê’â~‚Q
-	#define IIF_INPUT_WIR_CK        15    //ƒCƒ“ƒ`ƒ“ƒO
-	#define IIF_INPUT_RETRCT        16    //ƒŠƒgƒ‰ƒNƒg
-	#define IIF_INPUT_OKCVON        17    //ˆêŒ³^ŒÂ•Ê
-	#define IIF_INPUT_GP_IN1        18    //”Ä—p“ü—Í‚P
-	#define IIF_INPUT_GP_IN2        19    //”Ä—p“ü—Í‚Q
-	#define IIF_INPUT_GP_IN3        20    //”Ä—p“ü—Í‚R
-	#define IIF_INPUT_BIN7          21    //Ä¶‚ƒ‚ˆƒoƒCƒiƒŠ‚V
-	//Ú“_o—Í
+	#define IIF_INPUT_TSW            1    //ï¿½gï¿½[ï¿½`ï¿½rï¿½v
+	#define IIF_INPUT_GAS_CK         2    //ï¿½Kï¿½Xï¿½`ï¿½Fï¿½bï¿½N
+	#define IIF_INPUT_STKSET         3    //ï¿½Xï¿½eï¿½Bï¿½bï¿½Nï¿½`ï¿½Fï¿½bï¿½N
+	#define IIF_INPUT_EM_STP         4    //ï¿½ï¿½ï¿½ï¿½~
+	#define IIF_INPUT_BIN1           5    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½P
+	#define IIF_INPUT_BIN2           6    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½Q
+	#define IIF_INPUT_BIN3           7    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½R
+	#define IIF_INPUT_BIN4           8    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½S
+	#define IIF_INPUT_BIN5           9    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½T
+	#define IIF_INPUT_BIN6          10    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½U
+	#define IIF_INPUT_CNT           11    //ï¿½ï¿½ï¿½Í‹ï¿½ï¿½ÂMï¿½ï¿½
+	#define IIF_INPUT_STB           12    //ï¿½Xï¿½gï¿½ï¿½ï¿½[ï¿½uï¿½Mï¿½ï¿½
+	#define IIF_INPUT_STOP1         13    //ï¿½êï¿½ï¿½~ï¿½P
+	#define IIF_INPUT_STOP2         14    //ï¿½êï¿½ï¿½~ï¿½Q
+	#define IIF_INPUT_WIR_CK        15    //ï¿½Cï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½O
+	#define IIF_INPUT_RETRCT        16    //ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Nï¿½g
+	#define IIF_INPUT_OKCVON        17    //ï¿½êŒ³ï¿½^ï¿½Â•ï¿½
+	#define IIF_INPUT_GP_IN1        18    //ï¿½Ä—pï¿½ï¿½ï¿½Í‚P
+	#define IIF_INPUT_GP_IN2        19    //ï¿½Ä—pï¿½ï¿½ï¿½Í‚Q
+	#define IIF_INPUT_GP_IN3        20    //ï¿½Ä—pï¿½ï¿½ï¿½Í‚R
+	#define IIF_INPUT_BIN7          21    //ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Cï¿½iï¿½ï¿½ï¿½V
+	//ï¿½Ú“_ï¿½oï¿½ï¿½
 	#define IIF_OUTPUT_NO_USE        0
-	#define IIF_OUTPUT_CURDET        1    //“d—¬ŒŸo
-	#define IIF_OUTPUT_ARCOUT        2    //ƒA[ƒNØ‚êˆÙí
-	#define IIF_OUTPUT_STKOUT        3    //ƒXƒeƒBƒbƒNˆÙí
-	#define IIF_OUTPUT_ERR           4    //ƒGƒ‰[
-	#define IIF_OUTPUT_ALM           5    //ƒAƒ‰[ƒ€
-	#define IIF_OUTPUT_WELD          6    //—nÚ’†
-	#define IIF_OUTPUT_GAS_ON        7    //ƒKƒX“®ìŠm”F
-	#define IIF_OUTPUT_GP_OT1        8    //”Ä—po—Í‚P
-	#define IIF_OUTPUT_GP_OT2        9    //”Ä—po—Í‚Q
-	#define IIF_OUTPUT_GP_OT3       10    //”Ä—po—Í‚R
-	//<><><> Å‘å’lAÅ¬’l <><><>
-	//Å‘å’l
-	#define PR_CUR_MAX_VALUE       350    //—nÚ“d—¬w—ß’l
-	#define PR_VLT_MAX_VALUE       500    //—nÚ“dˆ³w—ß’l
-	#define OK_VLT_MAX_VALUE        98    //ˆêŒ³“dˆ³w—ß’l
-	//Å¬’l
-	#define PR_CUR_MIN_VALUE        15    //—nÚ“d—¬w—ß’l
-	#define PR_VLT_MIN_VALUE        50    //—nÚ“dˆ³w—ß’l
-	#define OK_VLT_MIN_VALUE       -98    //ˆêŒ³“dˆ³w—ß’l
+	#define IIF_OUTPUT_CURDET        1    //ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½o
+	#define IIF_OUTPUT_ARCOUT        2    //ï¿½Aï¿½[ï¿½Nï¿½Ø‚ï¿½Ùï¿½
+	#define IIF_OUTPUT_STKOUT        3    //ï¿½Xï¿½eï¿½Bï¿½bï¿½Nï¿½Ùï¿½
+	#define IIF_OUTPUT_ERR           4    //ï¿½Gï¿½ï¿½ï¿½[
+	#define IIF_OUTPUT_ALM           5    //ï¿½Aï¿½ï¿½ï¿½[ï¿½ï¿½
+	#define IIF_OUTPUT_WELD          6    //ï¿½nï¿½Ú’ï¿½
+	#define IIF_OUTPUT_GAS_ON        7    //ï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½mï¿½F
+	#define IIF_OUTPUT_GP_OT1        8    //ï¿½Ä—pï¿½oï¿½Í‚P
+	#define IIF_OUTPUT_GP_OT2        9    //ï¿½Ä—pï¿½oï¿½Í‚Q
+	#define IIF_OUTPUT_GP_OT3       10    //ï¿½Ä—pï¿½oï¿½Í‚R
+	//<><><> ï¿½Å‘ï¿½lï¿½Aï¿½Åï¿½ï¿½l <><><>
+	//ï¿½Å‘ï¿½l
+	#define PR_CUR_MAX_VALUE       350    //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½wï¿½ß’l
+	#define PR_VLT_MAX_VALUE       500    //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½wï¿½ß’l
+	#define OK_VLT_MAX_VALUE        98    //ï¿½êŒ³ï¿½dï¿½ï¿½ï¿½wï¿½ß’l
+	//ï¿½Åï¿½ï¿½l
+	#define PR_CUR_MIN_VALUE        15    //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½wï¿½ß’l
+	#define PR_VLT_MIN_VALUE        50    //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½wï¿½ß’l
+	#define OK_VLT_MIN_VALUE       -98    //ï¿½êŒ³ï¿½dï¿½ï¿½ï¿½wï¿½ß’l
 	//<><><>><><><><><><><><><><><><><><><><><><><><><><><><>
-#endif // ª EXTERNAL IIF NEW	2011.02.21 by @Tny
+#endif // ï¿½ï¿½ EXTERNAL IIF NEW	2011.02.21 by @Tny
 
 
 //#define P_INIT_CURR_ON     28 //P28
@@ -399,12 +399,12 @@
 
 
 
-#include        <stdio.h>       // •W€ƒwƒbƒ_ƒtƒ@ƒCƒ‹i•W€“üo—Íˆ—Œnj
-#include        <stdlib.h>      // •W€ƒwƒbƒ_ƒtƒ@ƒCƒ‹i•W€ˆ—Œnj
-#include        <string.h>      // •W€ƒwƒbƒ_ƒtƒ@ƒCƒ‹i•¶š—ñ^ƒƒ‚ƒŠ‘€ìŒnj
+#include        <stdio.h>       // ï¿½Wï¿½ï¿½ï¿½wï¿½bï¿½_ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½iï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Íï¿½ï¿½ï¿½ï¿½nï¿½j
+#include        <stdlib.h>      // ï¿½Wï¿½ï¿½ï¿½wï¿½bï¿½_ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½iï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½j
+#include        <string.h>      // ï¿½Wï¿½ï¿½ï¿½wï¿½bï¿½_ï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½j
 #if false
-#include        <math.h>        // Zp‰‰Z—pƒwƒbƒ_ƒtƒ@ƒCƒ‹
-#include        <float.h>       // À”’l—pƒwƒbƒ_ƒtƒ@ƒCƒ‹
+#include        <math.h>        // ï¿½Zï¿½pï¿½ï¿½ï¿½Zï¿½pï¿½wï¿½bï¿½_ï¿½tï¿½@ï¿½Cï¿½ï¿½
+#include        <float.h>       // ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½pï¿½wï¿½bï¿½_ï¿½tï¿½@ï¿½Cï¿½ï¿½
 
 #endif
 
@@ -414,22 +414,22 @@ typedef unsigned long                        ulong;
 typedef unsigned char                        ubool;
 typedef volatile unsigned char               *PVUB;
 typedef volatile unsigned short int          *PVUW;
-typedef	unsigned short int                   usint;   // •„†‚È‚µ’Z®”Œ^
-typedef	short int                            sint;    // •„†•t‚«’Z®”Œ^
-typedef	long                                 lint;    // •„†•t‚«’·®”
-typedef	unsigned long                        ulint;   // •„†‚È‚µ’·®”
-typedef unsigned char                        *puchar; // •„†‚È‚µ•¶šŒ^
-typedef short int                            *psint;  // •„†•t‚«’Z®”Œ^
-typedef unsigned short int                   *pusint; // •„†‚È‚µ’Z®”Œ^
-typedef unsigned int                         *puint;  // •„†‚È‚µ®”Œ^
-typedef long                                 *plint;  // •„†•t‚«’·®”
-typedef unsigned long                        *pulint; // •„†‚È‚µ’·®”
+typedef	unsigned short int                   usint;   // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½^
+typedef	short int                            sint;    // ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½^
+typedef	long                                 lint;    // ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+typedef	unsigned long                        ulint;   // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+typedef unsigned char                        *puchar; // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^
+typedef short int                            *psint;  // ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½^
+typedef unsigned short int                   *pusint; // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½^
+typedef unsigned int                         *puint;  // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^
+typedef long                                 *plint;  // ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+typedef unsigned long                        *pulint; // ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-// ƒƒ‚ƒŠƒXƒCƒbƒ`\‘¢‘Ì
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½Cï¿½bï¿½`ï¿½\ï¿½ï¿½ï¿½ï¿½
 //
 typedef union{
 	uchar	ALL;
-	struct{	// ‚PƒrƒbƒgƒXƒCƒbƒ`
+	struct{	// ï¿½Pï¿½rï¿½bï¿½gï¿½Xï¿½Cï¿½bï¿½`
 		ubool	b7		:	1;	// MSB
 		ubool	b6		:	1;
 		ubool	b5		:	1;
@@ -439,7 +439,7 @@ typedef union{
 		ubool	b1		:	1;
 		ubool	b0		:	1;	// LSB
 	} Bit1Sw;
-	struct{	// ‚SƒrƒbƒgƒXƒCƒbƒ`
+	struct{	// ï¿½Sï¿½rï¿½bï¿½gï¿½Xï¿½Cï¿½bï¿½`
 		uchar	fUpper  :	4;	// MSB 4bit
 		uchar	fLower  :	4;	// LSB 4bit
 	} Bit4Sw;
@@ -447,7 +447,7 @@ typedef union{
 
 typedef union{
 	uchar	ALL;
-	struct{	// ‚PƒrƒbƒgƒXƒCƒbƒ`
+	struct{	// ï¿½Pï¿½rï¿½bï¿½gï¿½Xï¿½Cï¿½bï¿½`
 		ubool	Toch_sw		:	1;	// MSB
 		ubool	b6		:	1;
 		ubool	Stick_check	:	1;
@@ -456,13 +456,13 @@ typedef union{
 		ubool	b2		:	1;
 		ubool	b1		:	1;
 		//ubool	b0		:	1;	// LSB
-		ubool	Elrod_check		:	1;	// LSB 2009.07.14 STICK–½—ß‚Å‘ã—p‚·‚é‚Ì‚Å¡Œãg—p‚µ‚È‚¢B
+		ubool	Elrod_check		:	1;	// LSB 2009.07.14 STICKï¿½ï¿½ï¿½ß‚Å‘ï¿½pï¿½ï¿½ï¿½ï¿½Ì‚Åï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½È‚ï¿½ï¿½B
 	} Bit1Sw;
-} WelderCommand; //—nÚ“dŒ¹“®ìw—ß
+} WelderCommand; //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½
 
 typedef union{
 	uchar	ALL;
-	struct{	// ‚PƒrƒbƒgƒXƒCƒbƒ`
+	struct{	// ï¿½Pï¿½rï¿½bï¿½gï¿½Xï¿½Cï¿½bï¿½`
 		ubool	b7		:	1;	// MSB
 		ubool	b6		:	1;
 		ubool	b5		:	1;
@@ -472,11 +472,11 @@ typedef union{
 		ubool	Motor_on	:	1;
 		ubool	Gas_on		:	1;	// LSB
 	} Bit1Sw;
-} WelderCheck;  //—nÚ“dŒ¹ƒ`ƒFƒbƒN
+} WelderCheck;  //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½`ï¿½Fï¿½bï¿½N
 
 typedef union{
 	uchar	ALL;
-	struct{	// ‚PƒrƒbƒgƒXƒCƒbƒ`
+	struct{	// ï¿½Pï¿½rï¿½bï¿½gï¿½Xï¿½Cï¿½bï¿½`
 		ubool	b7		:	1;	// MSB
 		ubool	Cd       	:	1;
 		ubool	b5		:	1;
@@ -486,12 +486,12 @@ typedef union{
 		ubool	b1	        :       1;
 		ubool	b0		:	1;	// LSB
 	} Bit1Sw;
-} PowerStatus;  //—nÚ“dŒ¹ó‘Ô
+} PowerStatus;  //ï¿½nï¿½Ú“dï¿½ï¿½ï¿½ï¿½ï¿½
 
 //<><><> 2009.07.13 <><><>
 typedef union{
     uchar   ALL;
-	struct{	// ‚PƒrƒbƒgƒXƒCƒbƒ`
+	struct{	// ï¿½Pï¿½rï¿½bï¿½gï¿½Xï¿½Cï¿½bï¿½`
 		ubool	Pulse_ctrl   :   1;	// MSB
 		ubool	Elrod_check  :   1;
 		ubool	b5           :   1;
@@ -501,14 +501,14 @@ typedef union{
 		ubool	Ep_start     :   1;
 		ubool	Hf_ctrl	     :   1;	// LSB
 	} Bit1Sw;
-} Control;      //ƒRƒ“ƒgƒ[ƒ‹
+} Control;      //ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½
 //<><><><><><><><><><><><><>
 
 
-//ƒRƒ“ƒgƒ[ƒ‹ƒ[ƒhFgui_Ctrl_word
-// 15:ƒV[ƒPƒ“ƒX’â~  @14:            13:            12:                 11:                10:             9:           8:ƒXƒeƒBƒbƒN•ƒŠƒŠ[ƒX
-//  7:ƒXƒeƒBƒbƒNEƒ^ƒbƒ` 6:‚e‚`‚m§Œä   5:‚ü”g§Œä   4:—nÚ“dŒ¹“®ìw—ß  3:ƒCƒ“ƒo[ƒ^§Œä   2:ƒ‚[ƒ^§Œä   1:ƒKƒX§Œä   0:‚l‚f§Œä
-//<><><><><> 2007.3.28 bit•Ï”‚ğunsigned@char‚É•ÏX<><><><><>
+//ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½Fgui_Ctrl_word
+// 15:ï¿½Vï¿½[ï¿½Pï¿½ï¿½ï¿½Xï¿½ï¿½~  ï¿½@14:            13:            12:                 11:                10:             9:           8:ï¿½Xï¿½eï¿½Bï¿½bï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½X
+//  7:ï¿½Xï¿½eï¿½Bï¿½bï¿½Nï¿½Eï¿½^ï¿½bï¿½` 6:ï¿½eï¿½`ï¿½mï¿½ï¿½ï¿½ï¿½   5:ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½   4:ï¿½nï¿½Ú“dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½  3:ï¿½Cï¿½ï¿½ï¿½oï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½   2:ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½   1:ï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½   0:ï¿½lï¿½fï¿½ï¿½ï¿½ï¿½
+//<><><><><> 2007.3.28 bitï¿½Ïï¿½ï¿½ï¿½unsignedï¿½@charï¿½É•ÏX<><><><><>
 typedef struct{
         ubool    Mg_ctrl_code;
         ubool    Gas_ctrl_code;
@@ -528,7 +528,7 @@ typedef struct{
         ubool    Sequence_ctrl_code;
 }Bit16;
 
-//<><><><><><><><><><> “à•”“®ì‚Ì—¬‚ê‚ğ§Œä‚·‚éƒtƒ‰ƒOŒQ <><><><><><><><><><>
+//<><><><><><><><><><> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì—ï¿½ï¿½ï¿½ğ§Œä‚·ï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½Q <><><><><><><><><><>
 typedef struct{
         ubool    Welder_init_execution;
         ubool    Inching;
@@ -542,14 +542,14 @@ typedef struct{
         ubool    Gas_err;
         ubool    Water_err;
         ubool    Arc_start_err;
-        ubool    Arc_start_err1; //2007.1.19’Ç‰Á 2007.1.26ˆÚA’Ç‰Á
-        ubool    Arc_start_err2; //2007.1.19’Ç‰Á 2007.1.26ˆÚA’Ç‰Á
+        ubool    Arc_start_err1; //2007.1.19ï¿½Ç‰ï¿½ 2007.1.26ï¿½ÚAï¿½Ç‰ï¿½
+        ubool    Arc_start_err2; //2007.1.19ï¿½Ç‰ï¿½ 2007.1.26ï¿½ÚAï¿½Ç‰ï¿½
         ubool    Arc_start_err_set;
         ubool    Temp_err;
         ubool    Temp_err_set; //2009.03.13
         ubool    Second_currnt_err;
         ubool    Second_currnt_err_set;
-        ubool    Second_output_err; //2007.1.19’Ç‰Á 2007.1.26ˆÚA’Ç‰Á
+        ubool    Second_output_err; //2007.1.19ï¿½Ç‰ï¿½ 2007.1.26ï¿½ÚAï¿½Ç‰ï¿½
         ubool    Vp_err;
         ubool    Ts_cancel;
         ubool    Fan_off;
@@ -564,9 +564,9 @@ typedef struct{
         ubool    R8_rcv;
         ubool    R8_send;
         ubool    Err_disp_chenge_timing;
-        ubool    Ver_disp_chenge_timing;  //2007.2.13’Ç‰Á
+        ubool    Ver_disp_chenge_timing;  //2007.2.13ï¿½Ç‰ï¿½
         ubool    Pri_curr_fb1_err;
-        ubool    Pri_curr_fb1_err_unb;  //2007.3.14 ‚o‚n”Å‚æ‚èˆÚA
+        ubool    Pri_curr_fb1_err_unb;  //2007.3.14 ï¿½oï¿½nï¿½Å‚ï¿½ï¿½ÚA
         ubool    Pri_curr_fb2_err;
         ubool    R8_com_err;
         ubool    ErrorCode_set;
@@ -581,11 +581,11 @@ typedef struct{
         ubool    Motor_delay_end;
         ubool    Motor_current_err;
         ubool    Repeat_weld;//REPEAT 2007.1.12
-        ubool    Toch_sw_off_delay_time;//2007.2.24’Ç‰Á
-        ubool    Stick_check_delay_time;//2007.2.24’Ç‰Á
-        ubool    Pri_volt_err_com_delay;//2007.3.6’Ç‰Á 2007.3.13ˆÚA
-        ubool    Pri_volt_err_com_delay_set_flag;//2007.3.6’Ç‰Á 2007.3.13ˆÚA
-        ubool    Emg2_cancel;//2007.3.14 ‚o‚n”Å‚æ‚èˆÚA
+        ubool    Toch_sw_off_delay_time;//2007.2.24ï¿½Ç‰ï¿½
+        ubool    Stick_check_delay_time;//2007.2.24ï¿½Ç‰ï¿½
+        ubool    Pri_volt_err_com_delay;//2007.3.6ï¿½Ç‰ï¿½ 2007.3.13ï¿½ÚA
+        ubool    Pri_volt_err_com_delay_set_flag;//2007.3.6ï¿½Ç‰ï¿½ 2007.3.13ï¿½ÚA
+        ubool    Emg2_cancel;//2007.3.14 ï¿½oï¿½nï¿½Å‚ï¿½ï¿½ÚA
         ubool    Motor_off_slop;//2007.3.20
         ubool    Total_weld_time_reset;//2007.3.30
         ubool    Total_weld_count_reset;//2007.4.5
@@ -594,20 +594,20 @@ typedef struct{
         ubool    Rs232_init;  //2007.4.2
         ubool    Pri_curr_fb1_start_err; //2007.4.17
         ubool    Pri_curr_fb1_err_04_check; //2007.4.17
-        ubool    Second_voltage_err;  //“ñŸ‰ß“dˆ³ˆÙí 2008.11.17
-        ubool    Primary_current_err; //‚PŸ‰ß“d—¬ˆÙí 2008.11.17
+        ubool    Second_voltage_err;  //ï¿½ñŸ‰ß“dï¿½ï¿½ï¿½Ùï¿½ 2008.11.17
+        ubool    Primary_current_err; //ï¿½Pï¿½ï¿½ï¿½ß“dï¿½ï¿½ï¿½Ùï¿½ 2008.11.17
 
-        //<><><>ƒ‚[ƒ^ƒGƒ‰[ŠÖ˜A 2007.8.1<><><>
+        //<><><>ï¿½ï¿½ï¿½[ï¿½^ï¿½Gï¿½ï¿½ï¿½[ï¿½Ö˜A 2007.8.1<><><>
         ubool    Motor_encoder_err;
         ubool    Motor_lock_err;
         ubool    Motor_circuit_break;
         ubool    Motor_circuit_err;
         ubool    Motor_err;
 
-        //<><><> ƒŠƒ‚ƒRƒ“ŠÖ˜A <><><><><><><><><>
-        ubool    Pre_set; //w—ß’l‚ğ’²®’†‚Å‚ ‚é‚±‚Æ‚ğ’m‚ç‚¹‚éB2008.01.22
+        //<><><> ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Ö˜A <><><><><><><><><>
+        ubool    Pre_set; //ï¿½wï¿½ß’lï¿½ğ’²ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½é‚±ï¿½Æ‚ï¿½mï¿½ç‚¹ï¿½ï¿½B2008.01.22
 
-        //‰Šú“d—¬{ƒ[ƒpƒ‹ƒXŠÖ˜A
+        //ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½Ö˜A
         ubool    Init_current_time;  //2008.02.27
 		ubool    Wave_current_time;  //2008.02.27
         ubool    Condition_time_set; //2008.02.27
@@ -617,7 +617,7 @@ typedef struct{
         
         ubool    Srt1;//2008.03.11
 
-        //<><><> ƒV[ƒPƒ“ƒX§ŒäŠÖ˜A <><><><><><><><>
+        //<><><> ï¿½Vï¿½[ï¿½Pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½Ö˜A <><><><><><><><>
         ubool    Sequence_crater;//2008.07.29
         ubool    Arc_spot_time;
         ubool    Arc_spot_time_up;
@@ -626,7 +626,7 @@ typedef struct{
         ubool    After_flow_stop;
         ubool    Start_time; //2008.08.05
 
-        //<><><> ‘I‘ğŠÖ˜A 2008.08.07 <><><><><><><><>
+        //<><><> ï¿½Iï¿½ï¿½ï¿½Ö˜A 2008.08.07 <><><><><><><><>
         ubool    Param_change;
         ubool    Play;
         ubool    Rec;
@@ -635,35 +635,35 @@ typedef struct{
         ubool    Del; //2008.09.09
         ubool    Delete; //2008.09.09
 
-        //<><><> •\¦§ŒäŠÖ˜A <><><>
+        //<><><> ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö˜A <><><>
         ubool    Revers_time; //2008.08.19
         ubool    Ch_app;      //2008.08.19
         ubool    Set_screen_on_off; //2008.08.22
         ubool    Robot_connect_time; //2008.10.06
 
-        //<><><> İ’èƒƒjƒ…[ŠÖ˜A <><><>
-        //***ƒ†[ƒU[***
-        //‘Sƒpƒ‰ƒ[ƒ^ƒŠƒZƒbƒgŠÖ˜A
+        //<><><> ï¿½İ’èƒï¿½jï¿½ï¿½ï¿½[ï¿½Ö˜A <><><>
+        //***ï¿½ï¿½ï¿½[ï¿½Uï¿½[***
+        //ï¿½Sï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½Zï¿½bï¿½gï¿½Ö˜A
         ubool    User_all_parameter_reset;
         ubool    User_all_parameter_reset_exe; //2008.09.04
-        //‹¤’Ê
+        //ï¿½ï¿½ï¿½ï¿½
         ubool    Set_key;
-        //‚h‚h‚eİ’èŠÖ˜A
+        //ï¿½hï¿½hï¿½eï¿½İ’ï¿½Ö˜A
         ubool    Out_function_set_ready;
         ubool    In_function_set_ready; //2008.08.25
         ubool    Analog_function_set_ready; //2008.08.25
-        //ƒJƒŒƒ“ƒ_[ŠÖ˜A
+        //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½[ï¿½Ö˜A
         ubool    Calender_set_ready;   //2008.08.25
-        ubool    Calender_init;        //2008.10.06 ƒJƒŒƒ“ƒ_[‚Ì‰Šú‰»—p
-        //ƒƒ‚ƒŠ[ƒRƒs[ŠÖ˜A
+        ubool    Calender_init;        //2008.10.06 ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½[ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½ï¿½p
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½Rï¿½sï¿½[ï¿½Ö˜A
         ubool Memory_copy_vector; //2008.08.29
 
-        //ˆê’â~“ü—Í‚Ì§Œäƒtƒ‰ƒO 2008.09.01
+        //ï¿½êï¿½ï¿½~ï¿½ï¿½ï¿½Íï¿½ï¿½Ìï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 2008.09.01
         ubool Err_level1;
-        //ƒGƒ‰[ƒŒƒxƒ‹‚Q‚Ì§Œäƒtƒ‰ƒO 2008.11.17
+        //ï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½Qï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 2008.11.17
         ubool Err_level2;
         
-        //ƒT[ƒrƒXƒ}ƒ“ŠÖ˜A
+        //ï¿½Tï¿½[ï¿½rï¿½Xï¿½}ï¿½ï¿½ï¿½Ö˜A
         ubool Service_man; //2008.09.02
         ubool Pass_word_err; //2008.09.02
         ubool Service_reset1; //2008.09.02
@@ -672,20 +672,20 @@ typedef struct{
         ubool Service_reset2_exe; //2008.09.04
         ubool Clr_time;       //2008.09.03
 
-        //ƒKƒX§Œä
+        //ï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½
         ubool Gas_limit_timer;      //2008.09.08
 
-        //ŠO•”‘I‘ğƒ†ƒjƒbƒgŠÖ˜A
+        //ï¿½Oï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½jï¿½bï¿½gï¿½Ö˜A
         ubool Ext_select_cnt;       //2008.09.09
         ubool Ext_select_cnt_bkup;  //2008.09.09
         ubool Ext_select_init;      //2008.09.09
         ubool Ext_select_end;       //2008.09.09
 
-        //Ú×ƒƒjƒ…[ƒpƒXƒ[ƒh
+        //ï¿½Ú×ƒï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½pï¿½Xï¿½ï¿½ï¿½[ï¿½h
         ubool Dital_pass_lock;      //2008.09.10
 
 
-        //Œğ—¬’¼—¬§Œä‹æŠÔ§ŒäŠÖ˜A 2008.09.22
+        //ï¿½ğ—¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôï¿½ï¿½ï¿½Ö˜A 2008.09.22
         ubool AC_control;
         ubool DC_control_timer;
         ubool Dc_control_timer_end;
@@ -694,32 +694,32 @@ typedef struct{
 
         ubool Lift_up_cd; //2008.10.08
 
-        ubool Slow_start; //2008.10.08 ƒCƒ“ƒ`ƒ“ƒOƒXƒ[ƒXƒ^[ƒgƒtƒ‰ƒO
+        ubool Slow_start; //2008.10.08 ï¿½Cï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½Oï¿½Xï¿½ï¿½ï¿½[ï¿½Xï¿½^ï¿½[ï¿½gï¿½tï¿½ï¿½ï¿½O
 
-        ubool Arc_out_err; //2008.10.21 —nÚ’†ƒA[ƒNØ‚ê‚Ì‘Î‰
+        ubool Arc_out_err; //2008.10.21 ï¿½nï¿½Ú’ï¿½ï¿½Aï¿½[ï¿½Nï¿½Ø‚êï¿½Ì‘Î‰ï¿½
 
-        ubool Crater_pulse_non; //2008.11.06ƒNƒŒ[ƒ^’†ƒpƒ‹ƒX—L‚è–³‚µ‚ğŒˆ’è‚·‚éƒtƒ‰ƒO
+        ubool Crater_pulse_non; //2008.11.06ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½Lï¿½è–³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è‚·ï¿½ï¿½tï¿½ï¿½ï¿½O
 
 
-        //“Ë‚«o‚µ’·İ’èŠÖ˜A 2008.11.10
+        //ï¿½Ë‚ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½Ö˜A 2008.11.10
         ubool Ext_condition_set_ready;
 
-        //‹N“®‚Ìƒ‚[ƒ^ƒfƒBƒŒƒC‚Ì‰Á‘¬“x 2008.11.17
+        //ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Ìƒï¿½ï¿½[ï¿½^ï¿½fï¿½Bï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Ì‰ï¿½ï¿½ï¿½ï¿½x 2008.11.17
         ubool Motor_acc1;
 
-        //ƒCƒ“ƒpƒ‹ƒXƒXƒ^[ƒgƒXƒCƒbƒ` 2008.11.26
+        //ï¿½Cï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½Xï¿½^ï¿½[ï¿½gï¿½Xï¿½Cï¿½bï¿½` 2008.11.26
         ubool Inplse_start_sw;
 
-        //‚g‚o‚h“]‘—s‚¤‚½‚ß‚Ìƒtƒ‰ƒO 2008.11.29
+        //ï¿½gï¿½oï¿½hï¿½]ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ß‚Ìƒtï¿½ï¿½ï¿½O 2008.11.29
         ubool Hpi_control;
 
-        //ƒo[ƒ“ƒoƒbƒN‚ğ‚`‚b‚É‚·‚é‚©‚Ç‚¤‚©‚Ì”»’èƒtƒ‰ƒO 2008.12.11
+        //ï¿½oï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½ï¿½ï¿½`ï¿½bï¿½É‚ï¿½ï¿½é‚©ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 2008.12.11
         ubool Burnback_ac;
 
-        //‘æ‚Qƒo[ƒ“ƒoƒbƒN—L‚è–³‚µ‘I‘ğƒtƒ‰ƒO 2008.12.11
+        //ï¿½ï¿½Qï¿½oï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½Lï¿½è–³ï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O 2008.12.11
         ubool Burn_back2;
 
-        //‘æ‚Qƒo[ƒ“ƒoƒbƒNI—¹ƒtƒ‰ƒOi‘æ‚Qƒo[ƒ“ƒoƒbƒN’†‚ÉƒXƒeƒBƒbƒNƒ`ƒFƒbƒN‚ğ‚c‚r‚o‚É‘—‚é‚Ì‚ğ–h‚®‚½‚ßj 2008.12.11
+        //ï¿½ï¿½Qï¿½oï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½Iï¿½ï¿½ï¿½tï¿½ï¿½ï¿½Oï¿½iï¿½ï¿½Qï¿½oï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½ï¿½ï¿½ÉƒXï¿½eï¿½Bï¿½bï¿½Nï¿½`ï¿½Fï¿½bï¿½Nï¿½ï¿½ï¿½cï¿½rï¿½oï¿½É‘ï¿½ï¿½ï¿½Ì‚ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ßj 2008.12.11
         ubool Burn_back2_dsp_end;
 
         //2009.01.28
@@ -727,16 +727,16 @@ typedef struct{
         ubool Current_set_out2;
 
 
-        //***** ‚ü”gŠÖ˜A 2009.01.31 *****
-        ubool Hf_2sec_timer;                    //‚Q•bƒ^ƒCƒ}
-        ubool Hf_30sec_timer;                   //‚R‚O•bƒ^ƒCƒ}
-        ubool Hf_30sec_interval_timer;          //ŠÔŒ‡“®ì‚Ü‚ÅƒCƒ“ƒ^[ƒoƒ‹ƒ^ƒCƒ}
-        ubool Hf_intermittent_on;               //ŠÔŒ‡‹N“®ƒ^ƒCƒ}
-        ubool Hf_intermittent_off;              //ŠÔŒ‡‹N“®ƒ^ƒCƒ}
-        ubool Hf_exec;                          //‚ü”g‹N“®ƒtƒ‰ƒO
-        ubool Hf_intermittent_set;              //ŠÔŒ‡“®ì‹–‰Âƒtƒ‰ƒO
+        //***** ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ö˜A 2009.01.31 *****
+        ubool Hf_2sec_timer;                    //ï¿½Qï¿½bï¿½^ï¿½Cï¿½}
+        ubool Hf_30sec_timer;                   //ï¿½Rï¿½Oï¿½bï¿½^ï¿½Cï¿½}
+        ubool Hf_30sec_interval_timer;          //ï¿½ÔŒï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ÅƒCï¿½ï¿½ï¿½^ï¿½[ï¿½oï¿½ï¿½ï¿½^ï¿½Cï¿½}
+        ubool Hf_intermittent_on;               //ï¿½ÔŒï¿½ï¿½Nï¿½ï¿½ï¿½^ï¿½Cï¿½}
+        ubool Hf_intermittent_off;              //ï¿½ÔŒï¿½ï¿½Nï¿½ï¿½ï¿½^ï¿½Cï¿½}
+        ubool Hf_exec;                          //ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Nï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
+        ubool Hf_intermittent_set;              //ï¿½ÔŒï¿½ï¿½ï¿½ï¿½ì‹–ï¿½Âƒtï¿½ï¿½ï¿½O
 
-        //***** ƒXƒ[ƒvŠÖ˜A 2009.02.02 *****
+        //***** ï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½Ö˜A 2009.02.02 *****
         ubool Up_slop_curr_end;
         ubool Up_slop_time_end;
         ubool Up_slop_time;
@@ -744,7 +744,7 @@ typedef struct{
         ubool Down_slop_time_end;
         ubool Down_slop_time;
 
-        //***** ƒNƒŒ[ƒ^ƒŠƒs[ƒg‚vƒNƒŠƒbƒNŠÖ˜A 2009.02.05*****
+        //***** ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½sï¿½[ï¿½gï¿½vï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½Ö˜A 2009.02.05*****
         ubool W_click_timer;
         ubool Crater_repeat_end;
         ubool W_click_end; //2009.02.25
@@ -752,7 +752,7 @@ typedef struct{
         ubool Output_correct; //2009.02.16
 
 
-        //‚l‚h‚wŠÖ˜A 2009.02.17
+        //ï¿½lï¿½hï¿½wï¿½Ö˜A 2009.02.17
         ubool    Mix_wave_current_time;
         ubool    Mix_condition_time_set;
         ubool    Mix_condition_change;
@@ -762,50 +762,50 @@ typedef struct{
         ubool    Blink_set; //2009.02.19
 
 
-        //ƒGƒLƒXƒp[ƒgƒ‚[ƒhŠÖ˜A 2009.02.20
+        //ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½Ö˜A 2009.02.20
         ubool Ref_voltage;
         ubool Ref_voltage_result;
         ubool Cal;
         ubool hugou;
         ubool Ref_voltage_add_start; //2010.01.12
 
-        //ƒNƒŒ[ƒ^ƒg[ƒ`ƒXƒCƒbƒ`ˆø‚«ã‚°‚É‚æ‚Á‚ÄÄ“xƒg[ƒ`‚ğÚ‹ß‚µ‚½ê‡‚Ìˆ—ƒtƒ‰ƒO
+        //ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½gï¿½[ï¿½`ï¿½Xï¿½Cï¿½bï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½ã‚°ï¿½É‚ï¿½ï¿½ï¿½ÄÄ“xï¿½gï¿½[ï¿½`ï¿½ï¿½Ú‹ß‚ï¿½ï¿½ï¿½ï¿½ê‡ï¿½Ìï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
         ubool Re_crater; //2009.02.25
 
-        //’¼—¬è—nÚŠÖ˜A 2009.03.06
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½ÚŠÖ˜A 2009.03.06
         ubool Hand_stick_ready_time;
         ubool Hand_stick_start;
         ubool Hand_restart; //2009.03.30
         ubool Hand_restart_wait; //2009.03.30
 
-        //ƒn[ƒh“dŒŸ 2009.03.07
+        //ï¿½nï¿½[ï¿½hï¿½dï¿½ï¿½ 2009.03.07
         ubool Hard_cd;
 
-        //‰Â•Ï”½•œŠÖ˜A 2009.03.14
+        //ï¿½Â•Ï”ï¿½ï¿½ï¿½ï¿½Ö˜A 2009.03.14
         ubool Cr_ts_check;
         ubool Cr_ts_check2;
         ubool Cr_ts_check3; //2009.07.31
 
-        //“d‹É’Z—ŠÖ˜A 2009.03.16
+        //ï¿½dï¿½É’Zï¿½ï¿½ï¿½Ö˜A 2009.03.16
         ubool Arc_short;
 
-        //o—Í“d—¬•â³‘I‘ğ 2009.03.16
+        //ï¿½oï¿½Í“dï¿½ï¿½ï¿½â³ï¿½Iï¿½ï¿½ 2009.03.16
         ubool Disp_adjust;
 
-        //‰Â•Ï”½•œ‘I‘ğ 2009.03.16
+        //ï¿½Â•Ï”ï¿½ï¿½ï¿½ï¿½Iï¿½ï¿½ 2009.03.16
         ubool Variable_crater_repaet;
 
-        //ƒA[ƒNƒhƒ‰ƒCƒuŠÖ˜A 2009.03.17
+        //ï¿½Aï¿½[ï¿½Nï¿½hï¿½ï¿½ï¿½Cï¿½uï¿½Ö˜A 2009.03.17
         ubool Arc_drive_mask_time;
         ubool Arc_drive;
 
-        //ƒpƒ‹ƒX•\¦ŠÖ˜A 2009.03.23
+        //ï¿½pï¿½ï¿½ï¿½Xï¿½\ï¿½ï¿½ï¿½Ö˜A 2009.03.23
         ubool Base_avr_result;
         ubool Peak_avr_result;
         ubool Base_read_delay; //2009.03.24
         ubool Peak_read_delay; //2009.03.24
 
-        //ƒŠƒ‚ƒRƒ“Ä¶ŠÖ˜A
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Äï¿½ï¿½Ö˜A
         ubool Remo_controller_no; //2009.03.28
         ubool Remo_play_sw;       //2009.03.28
         ubool Remo_play_on;       //2009.03.28
@@ -813,17 +813,17 @@ typedef struct{
         ubool No_ch_data;         //2009.03.30
         ubool Remo_play_ch_select;//2009.03.30
 
-        //—nÚI—¹“d—¬•\¦ƒLƒƒƒ“ƒZƒ‹
+        //ï¿½nï¿½ÚIï¿½ï¿½ï¿½dï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½
         ubool End_welding_display_cansel;
 
-        //‚c‚r‚oƒpƒ‹ƒXM† 2009.04.03
+        //ï¿½cï¿½rï¿½oï¿½pï¿½ï¿½ï¿½Xï¿½Mï¿½ï¿½ 2009.04.03
         ubool Dsp_pulse_out;
         
-        //ƒXƒ^[ƒgˆ—I—¹M† 2009.04.03
+        //ï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½Mï¿½ï¿½ 2009.04.03
         ubool Start_process_end;
 //---------------------------------------
 // BP4 Phase11 by @Tny 2009.02.19
-		ubool RemoteController;	// ƒŠƒ‚ƒRƒ“Ú‘±ƒtƒ‰ƒO
+		ubool RemoteController;	// ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Ú‘ï¿½ï¿½tï¿½ï¿½ï¿½O
 //---------------------------------------
 
         ubool UnConnect_false; //2009.07.14
@@ -843,15 +843,15 @@ typedef struct{
 
         ubool Ac_freq_jog;       //2010.01.20
 
-        ubool Variable_crater_re_crater; //‰Â•ÏƒNƒŒ[ƒ^”½•œA—nÚ“r’†iƒNƒŒ[ƒ^Aƒ_ƒEƒ“ƒXƒ[ƒvj‚ÅƒA[ƒNØ‚ê‚ğ‹N‚±‚µ‚½—p‚Ìƒtƒ‰ƒO 2010.02.19
+        ubool Variable_crater_re_crater; //ï¿½Â•ÏƒNï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½nï¿½Ú“rï¿½ï¿½ï¿½iï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½Aï¿½_ï¿½Eï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½jï¿½ÅƒAï¿½[ï¿½Nï¿½Ø‚ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½Ìƒtï¿½ï¿½ï¿½O 2010.02.19
 
         ubool Detail_display;    //2011.10.03
 
         ubool Pl_pram_jog;       //2011.10.03
 
-#if true // « EXTERNAL IIF NEW	2011.02.21 by @Tny
-        ubool Iif_enable;                  //‚h‚h‚e‚ª—LŒø‚©‚Ç‚¤‚©‚Ì”»’èƒtƒ‰ƒO
-        ubool Iif_first_rcv;               //‚h‚h‚e‚©‚çÅ‰‚ÌóM‚ª‚ ‚Á‚½‚©‚Ç‚¤‚©‚Ì”»’èƒtƒ‰ƒO
+#if true // ï¿½ï¿½ EXTERNAL IIF NEW	2011.02.21 by @Tny
+        ubool Iif_enable;                  //ï¿½hï¿½hï¿½eï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
+        ubool Iif_first_rcv;               //ï¿½hï¿½hï¿½eï¿½ï¿½ï¿½ï¿½Åï¿½ï¿½Ìï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‚ï¿½ï¿½ï¿½ï¿½Ì”ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
         ubool Iif_set;                     //
         ubool In_ab_set_ready;             //
         ubool Blink_reset;                 //
@@ -866,22 +866,22 @@ typedef struct{
         ubool In_function_no_one_shot;     //
         ubool Iif_output_data_one_shot;    //
         ubool Blink_reset_one_shot_04;     //
-#endif // ª EXTERNAL IIF NEW	2011.02.21 by @Tny
+#endif // ï¿½ï¿½ EXTERNAL IIF NEW	2011.02.21 by @Tny
 
 
 
-        ubool uc_One_shot_voltage;         //2013.02.13		2013_02_13_500BP4‚æ‚èˆÚA@2014.06.11
+        ubool uc_One_shot_voltage;         //2013.02.13		2013_02_13_500BP4ï¿½ï¿½ï¿½ÚAï¿½@2014.06.11
 
 //-------------------------------------------------------------
 // 2019.09.04
-	ubool ComSend;						// ‘—Mƒ^ƒCƒ~ƒ“ƒOƒtƒ‰ƒO
+	ubool ComSend;						// ï¿½ï¿½ï¿½Mï¿½^ï¿½Cï¿½~ï¿½ï¿½ï¿½Oï¿½tï¿½ï¿½ï¿½O
 //-------------------------------------------------------------
 
 	ubool Ms_time;				//2019.07.03
 }CtrlFlag;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><><><><> “à•”“®ì‚Ì—¬‚ê‚ğ§Œä‚·‚éƒJƒEƒ“ƒ^ŒQ <><><><><><><><><><>
+//<><><><><><><><><> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì—ï¿½ï¿½ï¿½ğ§Œä‚·ï¿½ï¿½Jï¿½Eï¿½ï¿½ï¿½^ï¿½Q <><><><><><><><><><>
 typedef struct{
         unsigned int Motor_off;
         unsigned int Emg_err;
@@ -898,7 +898,7 @@ typedef struct{
         unsigned long Backup_10m;  //2009.03.17 
         unsigned int Table_data_output;
         unsigned int Table_data_output1;
-        unsigned int Welder_init_execution; //2007.1.22 int‚É•ÏX 2007.1.26ˆÚA•ÏX
+        unsigned int Welder_init_execution; //2007.1.22 intï¿½É•ÏX 2007.1.26ï¿½ÚAï¿½ÏX
         unsigned char Ts_check;
         unsigned int  Fan_off;
 //------ Phase9 by @Tny 2008/09/12 ------
@@ -910,10 +910,10 @@ typedef struct{
         unsigned int  R8_send;
         unsigned int  Err_disp_chenge_timing;
         unsigned int  Err_disp_chenge;
-        unsigned int  Ver_disp_chenge_timing; //2007.2.13’Ç‰Á
-        unsigned int  Ver_disp_chenge;        //2007.2.13’Ç‰Á
+        unsigned int  Ver_disp_chenge_timing; //2007.2.13ï¿½Ç‰ï¿½
+        unsigned int  Ver_disp_chenge;        //2007.2.13ï¿½Ç‰ï¿½
         unsigned int  Pri_curr_fb1_err;
-        unsigned int  Pri_curr_fb1_err_unb; //2007.3.14 ‚o‚n”Å‚æ‚èˆÚA
+        unsigned int  Pri_curr_fb1_err_unb; //2007.3.14 ï¿½oï¿½nï¿½Å‚ï¿½ï¿½ÚA
         unsigned int  Pri_curr_fb2_err;
         unsigned int  R8_com_err;
         unsigned int  Pre_flow_time;
@@ -921,25 +921,25 @@ typedef struct{
         unsigned int  Motor_delay;
         unsigned int  Motor_current_err;
         unsigned int  Repeat_weld;//REPEAT 2007.1.12
-        unsigned int  Cd_check;   //2007.1.24 2007.1.26ˆÚA’Ç‰Á
-        unsigned int  Toch_sw_off_delay_time; //2007.2.24 ’Ç‰Á
-        unsigned int  Stick_check_delay_time; //2007.2.24 ’Ç‰Á
-        unsigned char Com_err_parity;         //2007.2.26 ’Ç‰Á
-        unsigned char Com_err_framing;        //2007.2.26 ’Ç‰Á
-        unsigned char Com_remo_err_parity;    //2007.12.03 ’Ç‰Á
-        unsigned char Com_remo_err_framing;   //2007.12.03 ’Ç‰Á
-        unsigned char Pri_volt_err_com_delay; //2007.3.6’Ç‰Á 2007.3.13ˆÚA
+        unsigned int  Cd_check;   //2007.1.24 2007.1.26ï¿½ÚAï¿½Ç‰ï¿½
+        unsigned int  Toch_sw_off_delay_time; //2007.2.24 ï¿½Ç‰ï¿½
+        unsigned int  Stick_check_delay_time; //2007.2.24 ï¿½Ç‰ï¿½
+        unsigned char Com_err_parity;         //2007.2.26 ï¿½Ç‰ï¿½
+        unsigned char Com_err_framing;        //2007.2.26 ï¿½Ç‰ï¿½
+        unsigned char Com_remo_err_parity;    //2007.12.03 ï¿½Ç‰ï¿½
+        unsigned char Com_remo_err_framing;   //2007.12.03 ï¿½Ç‰ï¿½
+        unsigned char Pri_volt_err_com_delay; //2007.3.6ï¿½Ç‰ï¿½ 2007.3.13ï¿½ÚA
         unsigned char Total_weld_time;        //2007.3.30
-        unsigned int Pri_curr_fb1_start_err; //2007.4.17 2007.7.10 char -> int‚É•ÏX
+        unsigned int Pri_curr_fb1_start_err; //2007.4.17 2007.7.10 char -> intï¿½É•ÏX
 
-        //<><><>ƒ‚[ƒ^ƒGƒ‰[ŠÖ˜A 2007.8.1<><><>
+        //<><><>ï¿½ï¿½ï¿½[ï¿½^ï¿½Gï¿½ï¿½ï¿½[ï¿½Ö˜A 2007.8.1<><><>
         unsigned int  Motor_encoder_err;
         unsigned int  Motor_lock_err;
         unsigned int  Motor_circuit_break;
         unsigned int  Motor_circuit_err;
         unsigned int  Motor_err;
 
-        //‰Šú“d—¬{ƒ[ƒpƒ‹ƒXŠÖ˜A
+        //ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½Ö˜A
         unsigned short Init_current_time; //2008.02.27
         unsigned short Wave_current_time; //2008.02.27
 
@@ -967,21 +967,21 @@ typedef struct{
         unsigned short Srt1; //2008.03.11
 
 
-        //<><><>ƒV[ƒPƒ“ƒX§ŒäŠÖ˜A<><><>
+        //<><><>ï¿½Vï¿½[ï¿½Pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½Ö˜A<><><>
         unsigned int   Arc_spot_time; //2008.07.30
         unsigned int   Crater_repeat_time;
         unsigned int   Start_time; //2008.08.05
 
-        //<><><> •\¦§ŒäŠÖ˜A <><><>
+        //<><><> ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö˜A <><><>
         unsigned int   Revers_time; //2008.08.19
         unsigned char  uc_Robot_connect_time; //2008.10.06
 
-        //<><><> İ’èƒƒjƒ…[ŠÖ˜A <><><>
-        //***ƒ†[ƒU[***
-        //“Áêƒpƒ‰ƒ[ƒ^ŠÖ˜A
+        //<><><> ï¿½İ’èƒï¿½jï¿½ï¿½ï¿½[ï¿½Ö˜A <><><>
+        //***ï¿½ï¿½ï¿½[ï¿½Uï¿½[***
+        //ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ö˜A
         unsigned char  uc_User_menu_no;
         unsigned short us_User_parameter_no;
-        //‚h‚h‚eİ’èŠÖ˜A
+        //ï¿½hï¿½hï¿½eï¿½İ’ï¿½Ö˜A
         unsigned char  uc_Iif_no;
         unsigned char  uc_Out_port_no;
         unsigned char  uc_Out_function_no;
@@ -989,7 +989,7 @@ typedef struct{
         unsigned char  uc_In_function_no;
         unsigned char  uc_Analog_port_no;
         unsigned char  uc_Analog_function_no;
-        //ƒJƒŒƒ“ƒ_[ŠÖ˜A
+        //ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½[ï¿½Ö˜A
         unsigned char  uc_Calender_no;    //2008.08.25
         unsigned char  uc_Year_set_data;  //2008.08.25
         unsigned char  uc_Month_set_data; //2008.08.25
@@ -998,15 +998,15 @@ typedef struct{
         unsigned char  uc_Mint_set_data;  //2008.08.25
 //------ Phase8 by @Tny 2008/09/11 ------
 #if true
-        //ƒGƒ‰[—š—ğ•\¦ŠÖ˜A
+        //ï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Ö˜A
         unsigned char  uc_Error_history_no;
         ubool            b_Error_information;
 #endif
 //---------------------------------------------------------------------
-        //ƒƒ‚ƒŠƒRƒs[ŠÖ˜A
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½sï¿½[ï¿½Ö˜A
         unsigned char Memory_copy_area_no; //2008.08.29
 
-        //ƒT[ƒrƒXƒ}ƒ“ŠÖ˜A
+        //ï¿½Tï¿½[ï¿½rï¿½Xï¿½}ï¿½ï¿½ï¿½Ö˜A
         unsigned char Pass_word_check; //2008.09.02
         unsigned char Pass_word_ok;    //2008.09.02
         unsigned char  uc_Service_menu_no; //2008.09.02
@@ -1014,47 +1014,47 @@ typedef struct{
         unsigned char uc_Service_reset_no; //2008.09.02
         unsigned char uc_Clr_time;       //2008.09.03
 
-        //ƒKƒX§Œä
+        //ï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½
         unsigned short Gas_limit_timer;      //2008.09.08
 
-        //ƒe[ƒuƒ‹‰Šúˆ—i‚Ç‚Ì‚æ‚¤‚Èƒe[ƒuƒ‹‚ª“ü‚Á‚Ä‚¢‚é‚©A‘I•Ê‚µ•À‚×‘Ö‚¦‚ğ‚·‚éˆ—‚Ég—p‚·‚éj
-        unsigned char uc_Pulse_mode_check;     //ƒe[ƒuƒ‹“à—e’Šo‚Ì‚½‚ß‚ÌƒJƒEƒ“ƒ^ 2008.09.16
+        //ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Ç‚Ì‚æ‚¤ï¿½Èƒeï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½é‚©ï¿½Aï¿½Iï¿½Ê‚ï¿½ï¿½ï¿½ï¿½×‘Ö‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½éˆï¿½ï¿½ï¿½Égï¿½pï¿½ï¿½ï¿½ï¿½j
+        unsigned char uc_Pulse_mode_check;     //ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½oï¿½Ì‚ï¿½ï¿½ß‚ÌƒJï¿½Eï¿½ï¿½ï¿½^ 2008.09.16
 
 
-        //Œğ—¬’¼—¬§Œä‹æŠÔ§ŒäŠÖ˜A 2008.09.22
+        //ï¿½ğ—¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôï¿½ï¿½ï¿½Ö˜A 2008.09.22
          unsigned short us_DC_control_timer;
 
-        //“Ë‚«o‚µ’·İ’èŠÖ˜A 2008.11.10
+        //ï¿½Ë‚ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½İ’ï¿½Ö˜A 2008.11.10
         unsigned char  uc_Ext_condition_data;
 
         unsigned short Second_currnt_err_timer; //2008.12.04
 
-        //‚i‚n‚f@‚uQ‚l‚`‚w”­“® 2008.12.22
+        //ï¿½iï¿½nï¿½fï¿½@ï¿½uï¿½Qï¿½lï¿½`ï¿½wï¿½ï¿½ï¿½ï¿½ 2008.12.22
         char sc_Jog1;
         char sc_Jog2;
         unsigned short us_Jog1_timer;
         unsigned short us_Jog2_timer;
 
-        //***** ‚ü”gŠÖ˜Aƒ^ƒCƒ} 2009.01.31 *****
-        short Hf_2sec_timer;                    //‚Q•bƒ^ƒCƒ}
-        short Hf_30sec_timer;                   //‚R‚O•bƒ^ƒCƒ}
-        short Hf_30sec_interval_timer;          //ŠÔŒ‡“®ì‚Ü‚ÅƒCƒ“ƒ^[ƒoƒ‹ƒ^ƒCƒ}
-        short Hf_intermittent_on;               //ŠÔŒ‡‹N“®ƒ^ƒCƒ}
-        short Hf_intermittent_off;              //ŠÔŒ‡‹N“®ƒ^ƒCƒ}
+        //***** ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ö˜Aï¿½^ï¿½Cï¿½} 2009.01.31 *****
+        short Hf_2sec_timer;                    //ï¿½Qï¿½bï¿½^ï¿½Cï¿½}
+        short Hf_30sec_timer;                   //ï¿½Rï¿½Oï¿½bï¿½^ï¿½Cï¿½}
+        short Hf_30sec_interval_timer;          //ï¿½ÔŒï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ÅƒCï¿½ï¿½ï¿½^ï¿½[ï¿½oï¿½ï¿½ï¿½^ï¿½Cï¿½}
+        short Hf_intermittent_on;               //ï¿½ÔŒï¿½ï¿½Nï¿½ï¿½ï¿½^ï¿½Cï¿½}
+        short Hf_intermittent_off;              //ï¿½ÔŒï¿½ï¿½Nï¿½ï¿½ï¿½^ï¿½Cï¿½}
         
 
-        //***** ƒXƒ[ƒvŠÖ˜A 2009.02.02 *****
+        //***** ï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½Ö˜A 2009.02.02 *****
         unsigned short Up_slop_time;
         unsigned short Down_slop_time;
         
-        //***** ƒNƒŒ[ƒ^ƒŠƒs[ƒg‚vƒNƒŠƒbƒNŠÖ˜A 2009.02.05*****
+        //***** ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½ï¿½sï¿½[ï¿½gï¿½vï¿½Nï¿½ï¿½ï¿½bï¿½Nï¿½Ö˜A 2009.02.05*****
         unsigned short W_click_timer;
 
 
         unsigned short Output_correct; //2009.02.16
 
 
-        //‚l‚h‚wŠÖ˜A 2009.02.17
+        //ï¿½lï¿½hï¿½wï¿½Ö˜A 2009.02.17
         //unsigned short Mix_wave_current_time;
         //unsigned short Mix_frequence_time;
         //unsigned short Mix_A_condition_time;
@@ -1073,49 +1073,49 @@ typedef struct{
         unsigned long Mix_B_condition_set_time;
 
 
-        //ƒGƒLƒXƒp[ƒgƒ‚[ƒhŠÖ˜A 2009.02.20
+        //ï¿½Gï¿½Lï¿½Xï¿½pï¿½[ï¿½gï¿½ï¿½ï¿½[ï¿½hï¿½Ö˜A 2009.02.20
         short Ref_voltage;
         unsigned short Ref_voltage_add_count; //2010.01.12
 
         unsigned short Hpi;
 
 
-        //’¼—¬è—nÚŠÖ˜A 2009.03.06
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½nï¿½ÚŠÖ˜A 2009.03.06
         short Hand_stick_ready_time;
         short Hand_restart_wait; //2009.03.30
 
-        //“d‹É’Z—ƒ`ƒFƒbƒN 2009.03.13
+        //ï¿½dï¿½É’Zï¿½ï¿½ï¿½`ï¿½Fï¿½bï¿½N 2009.03.13
         short Electrode_short_check;
 
-        //‰Â•Ï”½•œŠÖ˜A 2009.03.14
+        //ï¿½Â•Ï”ï¿½ï¿½ï¿½ï¿½Ö˜A 2009.03.14
         short Cr_ts_check;
         short Cr_ts_check2;
 
-        //ƒA[ƒNƒhƒ‰ƒCƒuŠÖ˜A 2009.03.17
+        //ï¿½Aï¿½[ï¿½Nï¿½hï¿½ï¿½ï¿½Cï¿½uï¿½Ö˜A 2009.03.17
         char Arc_drive_mask_time;
 
-        //ƒpƒ‹ƒX•\¦ŠÖ˜A 2009.03.24
+        //ï¿½pï¿½ï¿½ï¿½Xï¿½\ï¿½ï¿½ï¿½Ö˜A 2009.03.24
         char Base_read_delay;
         char Peak_read_delay;
         
-        //ƒŠƒ‚ƒRƒ“Ä¶ŠÖ˜A
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Äï¿½ï¿½Ö˜A
         short Remo_play_sw; //2009.03.28
 
-        //ƒGƒ‰[ƒKƒXˆ—ŠÖ˜A
+        //ï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½Ö˜A
         short Err_gas;      //2009.07.27
 
-        //ƒg[ƒ`‚r‚vÄ‹N“®ŠÖ˜A
+        //ï¿½gï¿½[ï¿½`ï¿½rï¿½vï¿½Ä‹Nï¿½ï¿½ï¿½Ö˜A
         short Ts_on_err_timer; //2009.12.18
 
-#if true // « EXTERNAL IIF NEW	2011.02.21 by @Tny
+#if true // ï¿½ï¿½ EXTERNAL IIF NEW	2011.02.21 by @Tny
         unsigned char  uc_Iif_ab_set; 			//
         unsigned char  uc_Iif_set;    			//
         short          ss_Blink_reset; 			//
         short          Blink_reset_one_shot_04; //
-#endif // ª EXTERNAL IIF NEW	2011.02.21 by @Tny
+#endif // ï¿½ï¿½ EXTERNAL IIF NEW	2011.02.21 by @Tny
 
 
-		unsigned short	us_One_shot_voltage;	//<><><> “d‹É’Z—‚Ì‰ñ”ğ 2014.06.24 <><><>
+		unsigned short	us_One_shot_voltage;	//<><><> ï¿½dï¿½É’Zï¿½ï¿½ï¿½Ì‰ï¿½ï¿½ 2014.06.24 <><><>
 
 	short Ms_time;		//2019.07.03
 
@@ -1124,16 +1124,16 @@ typedef struct{
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 
-//<><><><><><><><><><><> ‚d‚m”ä—¦ŠÖ˜A‚Ì•Ï”ŒQ 2008.09.22 <><><><><><><><><><>
+//<><><><><><><><><><><> ï¿½dï¿½mï¿½ä—¦ï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q 2008.09.22 <><><><><><><><><><>
 typedef struct{
-    float	f_AC_Frq_ENa1_A;	//ü”g”’è”bZo—pEN”ä—¦”ÍˆÍ‚P‚Å‚Ì’è”A
-    float	f_AC_Frq_ENa1_B;	//ü”g”’è”bZo—pEN”ä—¦”ÍˆÍ‚P‚Å‚Ì’è”B
-    float	f_AC_Frq_ENa1_C;	//ü”g”’è”bZo—pEN”ä—¦”ÍˆÍ‚P‚Å‚Ì’è”C
-    float	f_AC_Frq_ENa2_A;	//ü”g”’è”bZo—pEN”ä—¦”ÍˆÍ‚Q‚Å‚Ì’è”A
-    float	f_AC_Frq_ENa2_B;	//ü”g”’è”bZo—pEN”ä—¦”ÍˆÍ‚Q‚Å‚Ì’è”B
-    float	f_AC_Frq_ENa2_C;	//ü”g”’è”bZo—pEN”ä—¦”ÍˆÍ‚Q‚Å‚Ì’è”C
-    sint	ss_AC_DCstart_Tim_Def;	//±°¸½À°Ä’¼—¬§Œä‹æŠÔ”÷’²—ÊÃŞÌ«ÙÄ’l (’PˆÊFms)
-    sint	ss_AC_DCstart_Tim_Max;	//±°¸½À°Ä’¼—¬§Œä‹æŠÔ”÷’²—ÊMAX’l (’PˆÊFms)
+    float	f_AC_Frq_ENa1_A;	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½è”bï¿½Zï¿½oï¿½pENï¿½ä—¦ï¿½ÍˆÍ‚Pï¿½Å‚Ì’è”A
+    float	f_AC_Frq_ENa1_B;	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½è”bï¿½Zï¿½oï¿½pENï¿½ä—¦ï¿½ÍˆÍ‚Pï¿½Å‚Ì’è”B
+    float	f_AC_Frq_ENa1_C;	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½è”bï¿½Zï¿½oï¿½pENï¿½ä—¦ï¿½ÍˆÍ‚Pï¿½Å‚Ì’è”C
+    float	f_AC_Frq_ENa2_A;	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½è”bï¿½Zï¿½oï¿½pENï¿½ä—¦ï¿½ÍˆÍ‚Qï¿½Å‚Ì’è”A
+    float	f_AC_Frq_ENa2_B;	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½è”bï¿½Zï¿½oï¿½pENï¿½ä—¦ï¿½ÍˆÍ‚Qï¿½Å‚Ì’è”B
+    float	f_AC_Frq_ENa2_C;	//ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½è”bï¿½Zï¿½oï¿½pENï¿½ä—¦ï¿½ÍˆÍ‚Qï¿½Å‚Ì’è”C
+    sint	ss_AC_DCstart_Tim_Def;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä’ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô”ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì«ï¿½Ä’l (ï¿½Pï¿½ÊFms)
+    sint	ss_AC_DCstart_Tim_Max;	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä’ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô”ï¿½ï¿½ï¿½ï¿½ï¿½MAXï¿½l (ï¿½Pï¿½ÊFms)
     sint    ss_En_def;
     sint    ss_En_a;
     sint    ss_En_a_init;
@@ -1155,11 +1155,11 @@ typedef struct{
     signed char sc_Va_wave;   //2008.10.10
     signed char sc_Va_start;  //2008.10.10
     signed char sc_Va_qes;    //2008.11.28
-    unsigned char uc_En_inquiry; //2008.10.03 ƒƒ{ƒbƒg‚©‚ç‚Ì‚d‚m”ä—¦ŒvZŒ‹‰Ê–â‚¢‡‚í‚¹•Ï”
-    unsigned char uc_Com_en_inquiry; //2008.12.01 ƒƒ{ƒbƒg‚©‚ç‚Ì‚d‚m”ä—¦ŒvZŒ‹‰Ê–â‚¢‡‚í‚¹•Ï”
+    unsigned char uc_En_inquiry; //2008.10.03 ï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ï¿½vï¿½Zï¿½ï¿½ï¿½Ê–â‚¢ï¿½ï¿½ï¿½í‚¹ï¿½Ïï¿½
+    unsigned char uc_Com_en_inquiry; //2008.12.01 ï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½ï¿½ï¿½ï¿½Ì‚dï¿½mï¿½ä—¦ï¿½vï¿½Zï¿½ï¿½ï¿½Ê–â‚¢ï¿½ï¿½ï¿½í‚¹ï¿½Ïï¿½
 }En;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-//<><><><><><><><><><><>  Ú×‚Ìƒ[ƒN•Ï”ŒQ 2008.10.09 <><><><><><><><><><>
+//<><><><><><><><><><><>  ï¿½Ú×‚Ìƒï¿½ï¿½[ï¿½Nï¿½Ïï¿½ï¿½Q 2008.10.09 <><><><><><><><><><>
 typedef struct{
     unsigned short us_Pre_flow_time;    //P05
     unsigned short us_After_flow_time;  //P06
@@ -1175,7 +1175,7 @@ typedef struct{
 }DitailWork;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><> FPGA“à•”‚Ìƒf[ƒ^iA/D’ljæ‚è‚İŠÖ˜A‚Ì•Ï”ŒQ  <><><><><><><>
+//<><><><><><> FPGAï¿½ï¿½ï¿½ï¿½ï¿½Ìƒfï¿½[ï¿½^ï¿½iA/Dï¿½lï¿½jï¿½ï¿½èï¿½İŠÖ˜Aï¿½Ì•Ïï¿½ï¿½Q  <><><><><><><>
 typedef struct{
         unsigned short Curr_ad;
         unsigned long  Curr_buff;
@@ -1185,16 +1185,16 @@ typedef struct{
         unsigned long  Volt_buff;
         unsigned int   Volt_counter;
         unsigned short Volt_result;
-        unsigned int   Short_counter; //’Z—‰ñ”‚ÌƒJƒEƒ“ƒ^[@’Z—‰ñ”‚ÍÀÛ‚É‚Í‚c‚r‚o‚©‚çæ“¾‚·‚é‚ª•Ö‹Xã‚±‚±‚É”z’u‚·‚é 2007.3.2
+        unsigned int   Short_counter; //ï¿½Zï¿½ï¿½ï¿½ñ”‚ÌƒJï¿½Eï¿½ï¿½ï¿½^ï¿½[ï¿½@ï¿½Zï¿½ï¿½ï¿½ñ”‚Íï¿½ï¿½Û‚É‚Í‚cï¿½rï¿½oï¿½ï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½é‚ªï¿½Ö‹Xï¿½ã‚±ï¿½ï¿½ï¿½É”zï¿½uï¿½ï¿½ï¿½ï¿½ 2007.3.2
   
-        unsigned long  Curr_buff_unb;    //2007.3.14@‚o‚n”Å‚æ‚èˆÚA
-        unsigned int   Curr_counter_unb; //2007.3.14@‚o‚n”Å‚æ‚èˆÚA
-        unsigned short Curr_result_unb;  //2007.3.14@‚o‚n”Å‚æ‚èˆÚA
+        unsigned long  Curr_buff_unb;    //2007.3.14ï¿½@ï¿½oï¿½nï¿½Å‚ï¿½ï¿½ÚA
+        unsigned int   Curr_counter_unb; //2007.3.14ï¿½@ï¿½oï¿½nï¿½Å‚ï¿½ï¿½ÚA
+        unsigned short Curr_result_unb;  //2007.3.14ï¿½@ï¿½oï¿½nï¿½Å‚ï¿½ï¿½ÚA
  
         unsigned char  Rpm_counter;      //2007.3.15
         unsigned char  Rpm_avg_counter;  //2007.3.15
 
-        //ÀŒø’lŒvZŠÖ˜A
+        //ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½vï¿½Zï¿½Ö˜A
         double Curr_buff_rms; //2009.03.26
         double Volt_buff_rms; //2009.03.26
         double Curr_result_rms; //2009.03.26
@@ -1204,7 +1204,7 @@ typedef struct{
 
 
 
-//<><><><><><><><><><><> ƒe[ƒuƒ‹ƒL[•ÏŠ·ŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><><><>
+//<><><><><><><><><><><> ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Lï¿½[ï¿½ÏŠï¿½ï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><><><>
 typedef struct{
         unsigned char  Wire_diameter;
         unsigned char  Welding_method;
@@ -1239,8 +1239,8 @@ typedef struct{
 
 
 
-//<><><><><><><><><><><><><> ‚q‚W’ÊMŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><><><><><>
-typedef union{ //‚q‚W‚©‚ç‚ÌóM•ª
+//<><><><><><><><><><><><><> ï¿½qï¿½Wï¿½ÊMï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><><><><><>
+typedef union{ //ï¿½qï¿½Wï¿½ï¿½ï¿½ï¿½Ìï¿½Mï¿½ï¿½
 	uchar	ALL[6];
 	struct{
            struct{
@@ -1252,13 +1252,13 @@ typedef union{ //‚q‚W‚©‚ç‚ÌóM•ª
                   ubool    non1                   :  1;
                   ubool    b1                     :  1;
                   ubool    b0                     :  1;
-           } Sp_data;                  //‚U‚‚‚‰‚”ƒXƒCƒbƒ`
-           uchar Ex_data;              //ŠO•”‘I‘ğƒ†ƒjƒbƒg
-           unsigned short Pri_curr_fb1;//ˆêŸ“d—¬‚e‚a’l‚P
-           unsigned short Pri_curr_fb2;//ˆêŸ“d—¬‚e‚a’l‚Q
+           } Sp_data;                  //ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½Cï¿½bï¿½`
+           uchar Ex_data;              //ï¿½Oï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½jï¿½bï¿½g
+           unsigned short Pri_curr_fb1;//ï¿½êŸï¿½dï¿½ï¿½ï¿½eï¿½aï¿½lï¿½P
+           unsigned short Pri_curr_fb2;//ï¿½êŸï¿½dï¿½ï¿½ï¿½eï¿½aï¿½lï¿½Q
 	}Data;
 } RcvPacket;  
-typedef struct{ //‚l‚R‚Q“à•”g—p•ª
+typedef struct{ //ï¿½lï¿½Rï¿½Qï¿½ï¿½ï¿½ï¿½ï¿½gï¿½pï¿½ï¿½
            struct{
                   ubool    b5                     :  1;
                   ubool    non2                   :  1;
@@ -1277,7 +1277,7 @@ typedef struct{ //‚l‚R‚Q“à•”g—p•ª
         unsigned short Sum_counter;
                   ubool Com_check                 :  1;
 } InputR8;
-typedef struct{ //‚q‚W‚Æ‚Ì’ÊM‚Ég—p‚·‚é•Ï”
+typedef struct{ //ï¿½qï¿½Wï¿½Æ‚Ì’ÊMï¿½Égï¿½pï¿½ï¿½ï¿½ï¿½Ïï¿½
         unsigned char   Rx_buffer[10];
         unsigned char   Rx_write_position;
         unsigned short  Work;
@@ -1289,7 +1289,7 @@ typedef struct{ //‚q‚W‚Æ‚Ì’ÊM‚Ég—p‚·‚é•Ï”
 
 
 
-//<><><><><><><><><><><><><> ŠO•”“ü—ÍŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><><><><><>
+//<><><><><><><><><><><><><> ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ÍŠÖ˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><><><><><>
 typedef struct{
         unsigned char Data[ARRAY_WIDTH];
         unsigned char Data_bkup[ARRAY_WIDTH];
@@ -1299,8 +1299,8 @@ typedef struct{
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 
-//<><><><><><><><><><><><><><> ‚c‚r‚vŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><><><><><>
-typedef union{ //‚c‚r‚v‚Ì“à—e
+//<><><><><><><><><><><><><><> ï¿½cï¿½rï¿½vï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><><><><><>
+typedef union{ //ï¿½cï¿½rï¿½vï¿½Ì“ï¿½ï¿½e
 	unsigned short ALL;
 	struct{
               ubool    No15                   :  1;
@@ -1323,7 +1323,7 @@ typedef union{ //‚c‚r‚v‚Ì“à—e
 } Dsw;  
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><><><><><> ‚`‚c‚SiˆêŸ“ü—Í“dˆ³jŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><>
+//<><><><><><><><><><> ï¿½`ï¿½cï¿½Sï¿½iï¿½êŸï¿½ï¿½ï¿½Í“dï¿½ï¿½ï¿½jï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><>
 typedef struct{
         unsigned int Result;
         unsigned int Buffer;
@@ -1331,12 +1331,12 @@ typedef struct{
 } Vp;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><><><><><> ‚`‚c‚Oiƒ‚[ƒ^“d—¬jŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><>
+//<><><><><><><><><><> ï¿½`ï¿½cï¿½Oï¿½iï¿½ï¿½ï¿½[ï¿½^ï¿½dï¿½ï¿½ï¿½jï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><>
 typedef struct{
         //unsigned int Result;
         //unsigned int Buffer;
-        int Result;     //2007.1.15 signed ‚É•ÏX 2007.1.17ˆÚA
-        int Buffer;     //2007.1.15 signed ‚É•ÏX 2007.1.17ˆÚA
+        int Result;     //2007.1.15 signed ï¿½É•ÏX 2007.1.17ï¿½ÚA
+        int Buffer;     //2007.1.15 signed ï¿½É•ÏX 2007.1.17ï¿½ÚA
         unsigned short Counter;
       
         int Center_result;  //2007.3.20
@@ -1346,82 +1346,82 @@ typedef struct{
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 
-//<><><><><><><><><><> —nÚğŒƒe[ƒuƒ‹ƒR[ƒhŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><>
+//<><><><><><><><><><> ï¿½nï¿½Úï¿½ï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><>
 typedef struct{
-        unsigned char Material;          //Ş¿
-        unsigned char Method;           //—nÚ–@
-        unsigned char Pulse_mode;        //—nÚí•Êƒtƒ‰ƒOi’Z—^ƒpƒ‹ƒXj
-        unsigned char Pulse_type;        //ƒpƒ‹ƒXƒ^ƒCƒv
-        unsigned char Wire;              //ƒƒCƒ„Œa
-        unsigned char Extension;         //“Ë‚«o‚µ’·
-        unsigned char Reserved1;         //—\–ñ
-        unsigned char Reserved2;         //—\–ñ
+        unsigned char Material;          //ï¿½Şï¿½
+        unsigned char Method;           //ï¿½nï¿½Ú–@
+        unsigned char Pulse_mode;        //ï¿½nï¿½Úï¿½Êƒtï¿½ï¿½ï¿½Oï¿½iï¿½Zï¿½ï¿½ï¿½^ï¿½pï¿½ï¿½ï¿½Xï¿½j
+        unsigned char Pulse_type;        //ï¿½pï¿½ï¿½ï¿½Xï¿½^ï¿½Cï¿½v
+        unsigned char Wire;              //ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½a
+        unsigned char Extension;         //ï¿½Ë‚ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½
+        unsigned char Reserved1;         //ï¿½\ï¿½ï¿½
+        unsigned char Reserved2;         //ï¿½\ï¿½ï¿½
 } Table_Code;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><> ƒŠƒ‚ƒRƒ“‘I‘ğ—p—nÚğŒƒe[ƒuƒ‹ƒR[ƒhŠÖ˜A‚Ì•Ï”ŒQ <><><><><><>
+//<><><><><><> ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½Iï¿½ï¿½pï¿½nï¿½Úï¿½ï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><>
 typedef struct{
-        unsigned char Material[REMO_TBLCNT];         //Ş¿
-        unsigned char Method[REMO_TBLCNT];           //—nÚ–@
-        unsigned char Pulse_mode[REMO_TBLCNT];       //—nÚí•Êƒtƒ‰ƒOi’Z—^ƒpƒ‹ƒXj
-        unsigned char Pulse_type[REMO_TBLCNT];       //ƒpƒ‹ƒXƒ^ƒCƒv
-        unsigned char Wire[REMO_TBLCNT];             //ƒƒCƒ„Œa
-        unsigned char Extension[REMO_TBLCNT];        //“Ë‚«o‚µ’·
-        unsigned char Reserved1[REMO_TBLCNT];        //—\–ñ
-        unsigned char Reserved2[REMO_TBLCNT];        //—\–ñ
+        unsigned char Material[REMO_TBLCNT];         //ï¿½Şï¿½
+        unsigned char Method[REMO_TBLCNT];           //ï¿½nï¿½Ú–@
+        unsigned char Pulse_mode[REMO_TBLCNT];       //ï¿½nï¿½Úï¿½Êƒtï¿½ï¿½ï¿½Oï¿½iï¿½Zï¿½ï¿½ï¿½^ï¿½pï¿½ï¿½ï¿½Xï¿½j
+        unsigned char Pulse_type[REMO_TBLCNT];       //ï¿½pï¿½ï¿½ï¿½Xï¿½^ï¿½Cï¿½v
+        unsigned char Wire[REMO_TBLCNT];             //ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½a
+        unsigned char Extension[REMO_TBLCNT];        //ï¿½Ë‚ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½
+        unsigned char Reserved1[REMO_TBLCNT];        //ï¿½\ï¿½ï¿½
+        unsigned char Reserved2[REMO_TBLCNT];        //ï¿½\ï¿½ï¿½
 
-        //*** 2008.07.18’Ç‰Á ***
-        unsigned char Control1_mode[REMO_TBLCNT];    //§Œä‚P
-        unsigned char Control2_mode[REMO_TBLCNT];    //§Œä‚Q
-        unsigned char Control3_mode[REMO_TBLCNT];    //§Œä‚R
+        //*** 2008.07.18ï¿½Ç‰ï¿½ ***
+        unsigned char Control1_mode[REMO_TBLCNT];    //ï¿½ï¿½ï¿½ï¿½P
+        unsigned char Control2_mode[REMO_TBLCNT];    //ï¿½ï¿½ï¿½ï¿½Q
+        unsigned char Control3_mode[REMO_TBLCNT];    //ï¿½ï¿½ï¿½ï¿½R
 
 } REMO_Table_Code;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><><><><><> “ÁêğŒƒe[ƒuƒ‹ƒR[ƒhŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><>
+//<><><><><><><><><><> ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Rï¿½[ï¿½hï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><>
 typedef struct{
-        unsigned char Kind;              //01:Ş¿ 02:—nÚ–@
-        unsigned char Code;              //ƒR[ƒh
-        unsigned char Name[16];          //ƒRƒƒ“ƒg
+        unsigned char Kind;              //01:ï¿½Şï¿½ 02:ï¿½nï¿½Ú–@
+        unsigned char Code;              //ï¿½Rï¿½[ï¿½h
+        unsigned char Name[16];          //ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½g
 } Sp_Table_Code;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
-//<><><><><><><><> ”¼ŒÅ’èA‰Â•Ïƒf[ƒ^‘‚«Š·‚¦ŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><>
+//<><><><><><><><> ï¿½ï¿½ï¿½Å’ï¿½Aï¿½Â•Ïƒfï¿½[ï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><>
 typedef struct{
-        //”¼ŒÅ’èƒf[ƒ^
-        //unsigned char  Hfix_no;           //”¼ŒÅ’èƒf[ƒ^”Ô†
-        unsigned short Hfix_no;           //”¼ŒÅ’èƒf[ƒ^”Ô† 2007.4.16•ÏX
-        unsigned short Hfix_data;         //ƒf[ƒ^
-        //‰Â•Ïƒf[ƒ^
-        unsigned char  Val_no0;            //‰Â•Ïƒf[ƒ^”Ô†
-        unsigned int   Val_a_data0;        //‚ƒf[ƒ^
-        unsigned int   Val_b_data0;        //‚‚ƒf[ƒ^
-        unsigned int   Val_c_data0;        //‚ƒƒf[ƒ^
-        unsigned int   Val_min_data0;      //‚‚‰‚ƒf[ƒ^
-        unsigned int   Val_max_data0;      //‚‚‚˜ƒf[ƒ^
-        unsigned char  Val_no1;            //‰Â•Ïƒf[ƒ^”Ô†
-        unsigned int   Val_a_data1;        //‚ƒf[ƒ^
-        unsigned int   Val_b_data1;        //‚‚ƒf[ƒ^
-        unsigned int   Val_c_data1;        //‚ƒƒf[ƒ^
-        unsigned int   Val_min_data1;      //‚‚‰‚ƒf[ƒ^
-        unsigned int   Val_max_data1;      //‚‚‚˜ƒf[ƒ^
-        unsigned char  Bank;               //ƒoƒ“ƒNØ‚è‘Ö‚¦ƒtƒ‰ƒO
+        //ï¿½ï¿½ï¿½Å’ï¿½fï¿½[ï¿½^
+        //unsigned char  Hfix_no;           //ï¿½ï¿½ï¿½Å’ï¿½fï¿½[ï¿½^ï¿½Ôï¿½
+        unsigned short Hfix_no;           //ï¿½ï¿½ï¿½Å’ï¿½fï¿½[ï¿½^ï¿½Ôï¿½ 2007.4.16ï¿½ÏX
+        unsigned short Hfix_data;         //ï¿½fï¿½[ï¿½^
+        //ï¿½Â•Ïƒfï¿½[ï¿½^
+        unsigned char  Val_no0;            //ï¿½Â•Ïƒfï¿½[ï¿½^ï¿½Ôï¿½
+        unsigned int   Val_a_data0;        //ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_b_data0;        //ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_c_data0;        //ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_min_data0;      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_max_data0;      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned char  Val_no1;            //ï¿½Â•Ïƒfï¿½[ï¿½^ï¿½Ôï¿½
+        unsigned int   Val_a_data1;        //ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_b_data1;        //ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_c_data1;        //ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_min_data1;      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned int   Val_max_data1;      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^
+        unsigned char  Bank;               //ï¿½oï¿½ï¿½ï¿½Nï¿½Ø‚ï¿½Ö‚ï¿½ï¿½tï¿½ï¿½ï¿½O
 
 } Com_Data;
 //<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 
-//<><><><><>ƒŠƒ‚ƒRƒ“—p@Šeíİ’è{“dˆ³•\¦{”gŒ`§Œä@2008.02.25<><><><><><>
+//<><><><><>ï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½pï¿½@ï¿½eï¿½ï¿½İ’ï¿½{ï¿½dï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½{ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½@2008.02.25<><><><><><>
 typedef struct{
         unsigned char Select_counter;
         struct {
-                //Šeíİ’èŠÖ˜A
+                //ï¿½eï¿½ï¿½İ’ï¿½Ö˜A
                 signed char Parameter_set_counter;
                 unsigned char Parameter_set_flag;
                 signed short Parameter_set[20];
-                //“dˆ³•\¦ŠÖ˜A
+                //ï¿½dï¿½ï¿½ï¿½\ï¿½ï¿½ï¿½Ö˜A
                 unsigned char Voltage_display_flag;
-                //”gŒ`§ŒäŠÖ˜A
+                //ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½Ö˜A
                 unsigned char Wave_control_flag;
         }Item;
 } Parameter;
@@ -1429,9 +1429,9 @@ typedef struct{
 
 
 typedef struct{
-        //ƒ†[ƒU[ƒpƒ‰ƒ[ƒ^
+        //ï¿½ï¿½ï¿½[ï¿½Uï¿½[ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^
         signed short ss_User_param[USER_PARAMETER_NO];
-        //ƒT[ƒrƒXƒ}ƒ“ƒf[ƒ^
+        //ï¿½Tï¿½[ï¿½rï¿½Xï¿½}ï¿½ï¿½ï¿½fï¿½[ï¿½^
         signed short ss_Service_data[SERVICE_DATA_NO];
 //--------------------------------------------------------------------
 //BP4 Phase14 by @Tny 2009.02.24
@@ -1446,11 +1446,11 @@ typedef struct{
         unsigned char  uc_Hour_data;  //2008.08.25
         unsigned char  uc_Mint_data;  //2008.08.25
         unsigned char  uc_Sec_data;   //2008.08.25
-        unsigned char  Leap_year;  //‰[”N 2008.08.25
-        unsigned char  Leap_month; //‰[Œ 2008.08.25
+        unsigned char  Leap_year;  //ï¿½[ï¿½N 2008.08.25
+        unsigned char  Leap_month; //ï¿½[ï¿½ï¿½ 2008.08.25
 } Calender;
 
-//‚oƒƒjƒ…[‚Ì‘®«
+//ï¿½oï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Ì‘ï¿½ï¿½ï¿½
 typedef struct{
         short ss_Max;
         short ss_Min;
@@ -1485,143 +1485,143 @@ typedef struct{
         unsigned char uc_Navi_limit;  //2010.01.21
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 // <NAVI Enhancements(Phase 1)> 2011.10.26 by @Tny
-		unsigned short	us_Gas_Navi;			// ƒKƒX—¬—Ê
-		unsigned short	us_Filler_navi;			// ƒtƒBƒ‰[Œa
-		unsigned short	us_Electroad_navi;		// “d‹ÉŒa
-		unsigned short	us_El_rd_angle_navi;	// “d‹Éæ’[Šp“x
-		ubool			b_Navi_Disp;			// ƒiƒr•\¦ƒtƒ‰ƒO
+		unsigned short	us_Gas_Navi;			// ï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½
+		unsigned short	us_Filler_navi;			// ï¿½tï¿½Bï¿½ï¿½ï¿½[ï¿½a
+		unsigned short	us_Electroad_navi;		// ï¿½dï¿½ÉŒa
+		unsigned short	us_El_rd_angle_navi;	// ï¿½dï¿½Éï¿½[ï¿½pï¿½x
+		ubool			b_Navi_Disp;			// ï¿½iï¿½rï¿½\ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½O
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 
 } NAVI;
 
 
-//<><><><><><><><><><><><><><><><><><><><><><><> “à•”g—pŠÖ˜A‚Ì•Ï”ŒQ <><><><><><><><><><><><><><><><><><><><><><><>
+//<><><><><><><><><><><><><><><><><><><><><><><> ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½pï¿½Ö˜Aï¿½Ì•Ïï¿½ï¿½Q <><><><><><><><><><><><><><><><><><><><><><><>
 struct gtt_Internal_pack{
        struct{
-                ubool            bRS422Connection;          // ‚q‚r‚S‚Q‚Q‘¤‰ñüÚ‘±ó‘Ô
-                ubool            bRS232Connection;          // ‚q‚r‚Q‚R‚Q‚ƒ‘¤‰ñüÚ‘±ó‘Ô
+                ubool            bRS422Connection;          // ï¿½qï¿½rï¿½Sï¿½Qï¿½Qï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú‘ï¿½ï¿½ï¿½ï¿½
+                ubool            bRS232Connection;          // ï¿½qï¿½rï¿½Qï¿½Rï¿½Qï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú‘ï¿½ï¿½ï¿½ï¿½
           struct{
-                ubool            bChangeData;               // óMƒf[ƒ^XVƒtƒ‰ƒO
-                uchar           iRecvCommand;              // óMƒRƒ}ƒ“ƒhiƒf[ƒ^XV”»•Ê—pj
-                sint            usWeldingCurr;             // o—Í“d—¬w—ß’l
-                sint            usWeldingCurr_bkup;        // o—Í“d—¬w—ß’l‚ÌƒoƒbƒNƒAƒbƒv 2008.10.20’Ç‰Á
-                sint            usWeldingVolt;             // o—Í“dˆ³w—ß’l
-                sint            usWeldingInitCurr;         // ‰Šúo—Í“d—¬w—ß’l 2008.02.22
-                sint            usWeldingInitVolt;         // ‰Šúo—Í“dˆ³w—ß’l 2008.02.22
-                sint            usWeldingCratCurr;         // ƒNƒŒ[ƒ^o—Í“d—¬w—ß’l 2008.02.22
-                sint            usWeldingCratVolt;         // ƒNƒŒ[ƒ^o—Í“dˆ³w—ß’l 2008.02.22
-                sint            usWeldingWaveCurr;         // ”gŒ`§Œä@‚ağŒ@o—Í“d—¬w—ß’l 2008.02.26
-                sint            usWeldingWaveVolt;         // ”gŒ`§Œä@‚ağŒ@o—Í“dˆ³w—ß’l 2008.02.26
-                sint            usWeldingStartCurr;        // ”gŒ`§Œä@ƒXƒ^[ƒgğŒ@o—Í“d—¬w—ß’l 2008.08.05
-                sint            usWeldingStartVolt;        // ”gŒ`§Œä@ƒXƒ^[ƒgğŒ@o—Í“dˆ³w—ß’l 2008.08.05
-                BitSwitch       fWireDiameter;             // ƒƒCƒ„Œa
-                BitSwitch       fWelding;                  // —nÚ–@
-                BitSwitch       fWireMaterial;             // ƒƒCƒ„Ş¿
-                BitSwitch       fWireSelect;               // ƒƒCƒ„í
-                BitSwitch       fInitialSelect1;           // ‰Šúƒf[ƒ^İ’è‚P
-                float            vTsoAdj;                   // ’Z—‰ŠúŠÔ’²®
-                float            vIscAdj;                   // ’Z—“d—¬‹üÜ’l’²®
-                float            vIsl1Adj;                  // ’Z—“d—¬Œù”z‚P’²®
-                float            vIsl2Adj;                  // ’Z—“d—¬Œù”z‚Q’²®
-                char             vTspAdj;                   // “Ë‚ÁŠ|‚©‚è–h~ŠÔ’²®
-                float            vIacAdj;                   // ƒA[ƒN“d—¬‹üÜ’l’²® 2009.07.10 char->float
-                short            vIhotAdj;                  // ƒzƒbƒg“d—¬’²®
-                float            vVhotAdj;                  // ƒzƒbƒg“dˆ³’²® 2007.2.5•ÏX
-                short            vSldnAdj;                  // ƒƒCƒ„ƒXƒ[ƒ_ƒEƒ“’²®
-                short            vFttAdj;                   // ‚e‚s‚sƒŒƒxƒ‹’²®
-                short            vBarnBackAdj;              // ƒo[ƒ“ƒoƒbƒNŠÔ’²®
-                WelderCommand   fWelderCommand;            // —nÚ“dŒ¹“®ìw—ß
-                WelderCheck     fWelderCheck;              // —nÚ“dŒ¹ƒ`ƒFƒbƒN
-                Control         fControl;                  // ƒRƒ“ƒgƒ[ƒ‹iƒƒ{ƒbƒg’ÊM‚Åg—pj2009.07.13
+                ubool            bChangeData;               // ï¿½ï¿½Mï¿½fï¿½[ï¿½^ï¿½Xï¿½Vï¿½tï¿½ï¿½ï¿½O
+                uchar           iRecvCommand;              // ï¿½ï¿½Mï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½iï¿½fï¿½[ï¿½^ï¿½Xï¿½Vï¿½ï¿½ï¿½Ê—pï¿½j
+                sint            usWeldingCurr;             // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l
+                sint            usWeldingCurr_bkup;        // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’lï¿½Ìƒoï¿½bï¿½Nï¿½Aï¿½bï¿½v 2008.10.20ï¿½Ç‰ï¿½
+                sint            usWeldingVolt;             // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l
+                sint            usWeldingInitCurr;         // ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.02.22
+                sint            usWeldingInitVolt;         // ï¿½ï¿½ï¿½ï¿½ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.02.22
+                sint            usWeldingCratCurr;         // ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.02.22
+                sint            usWeldingCratVolt;         // ï¿½Nï¿½ï¿½ï¿½[ï¿½^ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.02.22
+                sint            usWeldingWaveCurr;         // ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½@ï¿½aï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.02.26
+                sint            usWeldingWaveVolt;         // ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½@ï¿½aï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.02.26
+                sint            usWeldingStartCurr;        // ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½@ï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.08.05
+                sint            usWeldingStartVolt;        // ï¿½gï¿½`ï¿½ï¿½ï¿½ï¿½@ï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2008.08.05
+                BitSwitch       fWireDiameter;             // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½a
+                BitSwitch       fWelding;                  // ï¿½nï¿½Ú–@
+                BitSwitch       fWireMaterial;             // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Şï¿½
+                BitSwitch       fWireSelect;               // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½
+                BitSwitch       fInitialSelect1;           // ï¿½ï¿½ï¿½ï¿½ï¿½fï¿½[ï¿½^ï¿½İ’ï¿½P
+                float            vTsoAdj;                   // ï¿½Zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô’ï¿½ï¿½ï¿½
+                float            vIscAdj;                   // ï¿½Zï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½Ü’lï¿½ï¿½ï¿½ï¿½
+                float            vIsl1Adj;                  // ï¿½Zï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½zï¿½Pï¿½ï¿½ï¿½ï¿½
+                float            vIsl2Adj;                  // ï¿½Zï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½zï¿½Qï¿½ï¿½ï¿½ï¿½
+                char             vTspAdj;                   // ï¿½Ë‚ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½hï¿½~ï¿½ï¿½ï¿½Ô’ï¿½ï¿½ï¿½
+                float            vIacAdj;                   // ï¿½Aï¿½[ï¿½Nï¿½dï¿½ï¿½ï¿½ï¿½ï¿½Ü’lï¿½ï¿½ï¿½ï¿½ 2009.07.10 char->float
+                short            vIhotAdj;                  // ï¿½zï¿½bï¿½gï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                float            vVhotAdj;                  // ï¿½zï¿½bï¿½gï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2007.2.5ï¿½ÏX
+                short            vSldnAdj;                  // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½[ï¿½_ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                short            vFttAdj;                   // ï¿½eï¿½sï¿½sï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                short            vBarnBackAdj;              // ï¿½oï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½ï¿½ï¿½Ô’ï¿½ï¿½ï¿½
+                WelderCommand   fWelderCommand;            // ï¿½nï¿½Ú“dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½
+                WelderCheck     fWelderCheck;              // ï¿½nï¿½Ú“dï¿½ï¿½ï¿½`ï¿½Fï¿½bï¿½N
+                Control         fControl;                  // ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½ÊMï¿½Ågï¿½pï¿½j2009.07.13
 #if 0 //2009.03.18 unsigned -> signed
-                ushort          usIP;                      // ƒpƒ‹ƒXƒs[ƒNw—ß“d—¬
-                ushort          usIB;                      // ƒpƒ‹ƒXƒx[ƒXw—ß“d—¬
-                ushort          usPulseFreq;               // ƒpƒ‹ƒXw—ßü”g”
-                ushort          usPulseDuty;               // ƒpƒ‹ƒXw—ß•
-                ushort          usAcFreq;                  // Œğ—¬ü”g”
-                uchar           ucCleaningDuty;            // ƒNƒŠ[ƒjƒ“ƒO•
-                uchar           ucMixFreq;                 // MIX TIGü”g”
-                uchar           ucMixAcRatio;              // MIX(AC)”ä—¦
+                ushort          usIP;                      // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½wï¿½ß“dï¿½ï¿½
+                ushort          usIB;                      // ï¿½pï¿½ï¿½ï¿½Xï¿½xï¿½[ï¿½Xï¿½wï¿½ß“dï¿½ï¿½
+                ushort          usPulseFreq;               // ï¿½pï¿½ï¿½ï¿½Xï¿½wï¿½ßï¿½ï¿½gï¿½ï¿½
+                ushort          usPulseDuty;               // ï¿½pï¿½ï¿½ï¿½Xï¿½wï¿½ß•ï¿½
+                ushort          usAcFreq;                  // ï¿½ğ—¬ï¿½ï¿½gï¿½ï¿½
+                uchar           ucCleaningDuty;            // ï¿½Nï¿½ï¿½ï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½
+                uchar           ucMixFreq;                 // MIX TIGï¿½ï¿½ï¿½gï¿½ï¿½
+                uchar           ucMixAcRatio;              // MIX(AC)ï¿½ä—¦
 #endif
-                short          usIP;                      // ƒpƒ‹ƒXƒs[ƒNw—ß“d—¬
-                short          usIB;                      // ƒpƒ‹ƒXƒx[ƒXw—ß“d—¬
-                short          usPulseFreq;               // ƒpƒ‹ƒXw—ßü”g”
-                short          usPulseDuty;               // ƒpƒ‹ƒXw—ß•
-                short          usAcFreq;                  // Œğ—¬ü”g”
-                char           ucCleaningDuty;            // ƒNƒŠ[ƒjƒ“ƒO•
-                //char           ucMixFreq;                 // MIX TIGü”g”
-                short          ucMixFreq;                 // MIX TIGü”g” 2009.03.31
-                char           ucMixAcRatio;              // MIX(AC)”ä—¦
+                short          usIP;                      // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½wï¿½ß“dï¿½ï¿½
+                short          usIB;                      // ï¿½pï¿½ï¿½ï¿½Xï¿½xï¿½[ï¿½Xï¿½wï¿½ß“dï¿½ï¿½
+                short          usPulseFreq;               // ï¿½pï¿½ï¿½ï¿½Xï¿½wï¿½ßï¿½ï¿½gï¿½ï¿½
+                short          usPulseDuty;               // ï¿½pï¿½ï¿½ï¿½Xï¿½wï¿½ß•ï¿½
+                short          usAcFreq;                  // ï¿½ğ—¬ï¿½ï¿½gï¿½ï¿½
+                char           ucCleaningDuty;            // ï¿½Nï¿½ï¿½ï¿½[ï¿½jï¿½ï¿½ï¿½Oï¿½ï¿½
+                //char           ucMixFreq;                 // MIX TIGï¿½ï¿½ï¿½gï¿½ï¿½
+                short          ucMixFreq;                 // MIX TIGï¿½ï¿½ï¿½gï¿½ï¿½ 2009.03.31
+                char           ucMixAcRatio;              // MIX(AC)ï¿½ä—¦
 
-                //BitSwitch       fControl;                  // ƒRƒ“ƒgƒ[ƒ‹ 2009.07.13 del
-                short           ucImprudenceVolt;          // “d‹É’Z—“dˆ³w—ß’l 2009.07.15 uchar->short
-                BitSwitch       fPulseMode;                // ƒpƒ‹ƒXƒ‚[ƒhİ’è
-                //char            vHotTime;                  // ƒzƒbƒgƒ^ƒCƒ€ 2007.2.5•ÏX
-                short           vHotTime;                  // ƒzƒbƒgƒ^ƒCƒ€
-                short           vIniIpAdj;                 // ƒXƒ^[ƒgƒs[ƒN“d—¬”÷’²®   2009.06.26 char->short
-                short           vIniIbAdj;                 // ƒXƒ^[ƒgƒx[ƒX“d—¬”÷’²®   2009.06.26 char->short
-                float           vIpAdj;                    // ƒpƒ‹ƒXƒs[ƒN“d—¬”÷’²®     2009.06.25 char->float
-                float           vIb1Adj;                   // ƒpƒ‹ƒX‘æ‚Pƒx[ƒX“d—¬”÷’²® 2009.06.25 char->float
-                float           vIb2Adj;                   // ƒpƒ‹ƒX‘æ‚Qƒx[ƒX“d—¬”÷’²® 2009.06.30 char->float
-                float           vIprAdj;                   // ƒpƒ‹ƒXƒs[ƒN—§‚¿ã‚ª‚è”÷’²® 2009.06.25 char->float
-                float           vIpfAdj;                   // ƒpƒ‹ƒXƒs[ƒN—§‚¿‰º‚ª‚è”÷’²® 2009.06.25 char->float
-                float           vTiprAdj;                  // ƒpƒ‹ƒX—§‚¿ã‚ª‚èŠÔ”÷’²®         2009.06.25 char->float
-                float           vTipAdj;                   // ƒpƒ‹ƒXƒs[ƒN—§‚¿ã‚ª‚èŠÔ”÷’²®   2009.06.25 char->float
-                float           vTipfAdj;                  // ƒpƒ‹ƒX—§‚¿‰º‚ª‚èŠÔ”÷’²®         2009.06.25 char->float
-                char            vPulseFreqAdj;             // ƒpƒ‹ƒXü”g””÷’²®
-                short           vStartPulse;               // ƒXƒ^[ƒgƒpƒ‹ƒX—L‚è–³‚µ     2009.06.26 ’Ç‰Á
-                short           vEndPulse;                 // ƒGƒ“ƒhƒpƒ‹ƒX—L‚è–³‚µ       2009.06.26 ’Ç‰Á
-                short           vIniPulseFreqAdj;          // ƒCƒjƒVƒƒƒ‹ƒpƒ‹ƒXü”g”     2009.06.26 ’Ç‰Á
-                short           vPctrlBlowAdj;             // ƒA[ƒNƒuƒ[—}§§Œä       2009.06.26 ’Ç‰Á
-                short           vWirSpdAdj;                // ƒƒCƒ„ƒXƒs[ƒh”÷’²®       2009.06.26 ’Ç‰Á
-                float           vWirStrAccAdj;             // ƒXƒ^[ƒgƒXƒ[ƒv”÷’²®     2009.06.26 ’Ç‰Á 2009.06.30 short->float
-                float           vWirStrDelayAdj;           // ƒƒCƒ„ƒXƒ^[ƒgƒfƒBƒŒƒC”÷’²®     2009.06.26 ’Ç‰Á 2009.06.30 short->float
-                short           vNeckLvlAdj;               // ƒlƒbƒNƒŒƒxƒ‹”÷’²®         2009.06.26 ’Ç‰Á
-                float           vWirAcDcAdj;               // ‰Á‘¬“x‚R                   2009.06.26 ’Ç‰Á 2009.06.30 short->float
-                short           vBbkPulseAdj;           // ƒo[ƒ“ƒoƒbƒNƒpƒ‹ƒX         2009.06.29 ’Ç‰Á
-                char            vLowPulseAB_LevelGap;      // ŠÈˆÕƒ[ƒpƒ‹ƒXF‚`ğŒ‚ağŒƒŒƒxƒ‹·
-                char            vLowPulseAB_TimeRatio;     // ŠÈˆÕƒ[ƒpƒ‹ƒXF‚`ğŒ‚ağŒŠÔ”ä—¦
-                char            vLowPulseFreq;             // ŠÈˆÕƒ[ƒpƒ‹ƒXFü”g”
-                char            vLowPulseStartTimeAdj;     // ŠÈˆÕƒ[ƒpƒ‹ƒXŠJnŠÔ”÷’²®
-                char            vPulseStartSlope;          // ƒpƒ‹ƒXƒXƒ^[ƒgƒXƒ[ƒv
-                char            vPulseExecSlope;           // ƒpƒ‹ƒXw—ß’lØ‚è‘Ö‚¦ƒXƒ[ƒv
-                char            vPulsePerformance;         // ƒpƒ‹ƒX‰“š«
-                BitSwitch       fLotCheck;                 // »•iŒŸ¸—p
-                char            vAfterFlowAddTime;         // ƒAƒtƒ^[ƒtƒ[ŠÔ‰ÁZ’l
-                ushort          vCheck;                    // ƒoƒbƒNƒAƒbƒvƒƒ‚ƒŠŠm”F—pƒGƒŠƒA
-                ubool            Emergency;                 //”ñí’â~“ü—Í                  iŠO•”“ü—Í‚Ì‚İj
-                ubool            Emergency2;                //”ñí’â~‚Q“ü—Í                iŠO•”“ü—Í‚Ì‚İj2007.2.9
-                ubool            Outside1;                  //ˆê’â~‚PiƒKƒXŒ¸ˆ³ˆÙíj“ü—ÍiŠO•”“ü—Í‚Ì‚İj
-                ubool            Outside2;                  //ˆê’â~‚Qi…‰ñ˜HˆÙíj“ü—Í@iŠO•”“ü—Í‚Ì‚İj
-                ubool            Temp;                      //ƒT[ƒ}ƒ‹@@@@@@@@@@@iŠO•”“ü—Í‚Ì‚İj
-                char            vTableChange;              //ƒe[ƒuƒ‹Ø‚è‘Ö‚¦ƒRƒ}ƒ“ƒh 2007.2.9
-                sint            usWeldingCurr_bk_up;       // o—Í“d—¬w—ß’l 2007.2.19 ƒCƒ“ƒ`ƒ“ƒO‘¬“x•ÏX—pƒoƒbƒNƒAƒbƒv
-                sint            usWeldingVolt_bk_up;       // o—Í“dˆ³w—ß’l 2007.2.19 ƒCƒ“ƒ`ƒ“ƒO‘¬“x•ÏX—pƒoƒbƒNƒAƒbƒv
-                sint            usWeldingCurr_pc_bk_up;    // o—Í“d—¬w—ß’l 2007.4.6 ‚r‚f‚P—pƒoƒbƒNƒAƒbƒv
-                sint            usWeldingVolt_pc_bk_up;    // o—Í“dˆ³w—ß’l 2007.4.6 ‚r‚f‚P—pƒoƒbƒNƒAƒbƒv
+                //BitSwitch       fControl;                  // ï¿½Rï¿½ï¿½ï¿½gï¿½ï¿½ï¿½[ï¿½ï¿½ 2009.07.13 del
+                short           ucImprudenceVolt;          // ï¿½dï¿½É’Zï¿½ï¿½ï¿½dï¿½ï¿½ï¿½wï¿½ß’l 2009.07.15 uchar->short
+                BitSwitch       fPulseMode;                // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½[ï¿½hï¿½İ’ï¿½
+                //char            vHotTime;                  // ï¿½zï¿½bï¿½gï¿½^ï¿½Cï¿½ï¿½ 2007.2.5ï¿½ÏX
+                short           vHotTime;                  // ï¿½zï¿½bï¿½gï¿½^ï¿½Cï¿½ï¿½
+                short           vIniIpAdj;                 // ï¿½Xï¿½^ï¿½[ï¿½gï¿½sï¿½[ï¿½Nï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   2009.06.26 char->short
+                short           vIniIbAdj;                 // ï¿½Xï¿½^ï¿½[ï¿½gï¿½xï¿½[ï¿½Xï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   2009.06.26 char->short
+                float           vIpAdj;                    // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     2009.06.25 char->float
+                float           vIb1Adj;                   // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½Pï¿½xï¿½[ï¿½Xï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2009.06.25 char->float
+                float           vIb2Adj;                   // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½Qï¿½xï¿½[ï¿½Xï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2009.06.30 char->float
+                float           vIprAdj;                   // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ã‚ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2009.06.25 char->float
+                float           vIpfAdj;                   // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2009.06.25 char->float
+                float           vTiprAdj;                  // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ã‚ªï¿½èï¿½Ô”ï¿½ï¿½ï¿½ï¿½ï¿½         2009.06.25 char->float
+                float           vTipAdj;                   // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ã‚ªï¿½èï¿½Ô”ï¿½ï¿½ï¿½ï¿½ï¿½   2009.06.25 char->float
+                float           vTipfAdj;                  // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½èï¿½Ô”ï¿½ï¿½ï¿½ï¿½ï¿½         2009.06.25 char->float
+                char            vPulseFreqAdj;             // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                short           vStartPulse;               // ï¿½Xï¿½^ï¿½[ï¿½gï¿½pï¿½ï¿½ï¿½Xï¿½Lï¿½è–³ï¿½ï¿½     2009.06.26 ï¿½Ç‰ï¿½
+                short           vEndPulse;                 // ï¿½Gï¿½ï¿½ï¿½hï¿½pï¿½ï¿½ï¿½Xï¿½Lï¿½è–³ï¿½ï¿½       2009.06.26 ï¿½Ç‰ï¿½
+                short           vIniPulseFreqAdj;          // ï¿½Cï¿½jï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½gï¿½ï¿½     2009.06.26 ï¿½Ç‰ï¿½
+                short           vPctrlBlowAdj;             // ï¿½Aï¿½[ï¿½Nï¿½uï¿½ï¿½ï¿½[ï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½       2009.06.26 ï¿½Ç‰ï¿½
+                short           vWirSpdAdj;                // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½       2009.06.26 ï¿½Ç‰ï¿½
+                float           vWirStrAccAdj;             // ï¿½Xï¿½^ï¿½[ï¿½gï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     2009.06.26 ï¿½Ç‰ï¿½ 2009.06.30 short->float
+                float           vWirStrDelayAdj;           // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Xï¿½^ï¿½[ï¿½gï¿½fï¿½Bï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     2009.06.26 ï¿½Ç‰ï¿½ 2009.06.30 short->float
+                short           vNeckLvlAdj;               // ï¿½lï¿½bï¿½Nï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½         2009.06.26 ï¿½Ç‰ï¿½
+                float           vWirAcDcAdj;               // ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½R                   2009.06.26 ï¿½Ç‰ï¿½ 2009.06.30 short->float
+                short           vBbkPulseAdj;           // ï¿½oï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½pï¿½ï¿½ï¿½X         2009.06.29 ï¿½Ç‰ï¿½
+                char            vLowPulseAB_LevelGap;      // ï¿½ÈˆÕƒï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½Fï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½
+                char            vLowPulseAB_TimeRatio;     // ï¿½ÈˆÕƒï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½Fï¿½`ï¿½ï¿½ï¿½ï¿½ï¿½aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô”ä—¦
+                char            vLowPulseFreq;             // ï¿½ÈˆÕƒï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½Fï¿½ï¿½ï¿½gï¿½ï¿½
+                char            vLowPulseStartTimeAdj;     // ï¿½ÈˆÕƒï¿½ï¿½[ï¿½pï¿½ï¿½ï¿½Xï¿½Jï¿½nï¿½ï¿½ï¿½Ô”ï¿½ï¿½ï¿½ï¿½ï¿½
+                char            vPulseStartSlope;          // ï¿½pï¿½ï¿½ï¿½Xï¿½Xï¿½^ï¿½[ï¿½gï¿½Xï¿½ï¿½ï¿½[ï¿½v
+                char            vPulseExecSlope;           // ï¿½pï¿½ï¿½ï¿½Xï¿½wï¿½ß’lï¿½Ø‚ï¿½Ö‚ï¿½ï¿½Xï¿½ï¿½ï¿½[ï¿½v
+                char            vPulsePerformance;         // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                BitSwitch       fLotCheck;                 // ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½p
+                char            vAfterFlowAddTime;         // ï¿½Aï¿½tï¿½^ï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Ô‰ï¿½ï¿½Zï¿½l
+                ushort          vCheck;                    // ï¿½oï¿½bï¿½Nï¿½Aï¿½bï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Fï¿½pï¿½Gï¿½ï¿½ï¿½A
+                ubool            Emergency;                 //ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½ï¿½                  ï¿½iï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Í‚Ì‚İj
+                ubool            Emergency2;                //ï¿½ï¿½ï¿½ï¿½~ï¿½Qï¿½ï¿½ï¿½ï¿½                ï¿½iï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Í‚Ì‚İj2007.2.9
+                ubool            Outside1;                  //ï¿½êï¿½ï¿½~ï¿½Pï¿½iï¿½Kï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½Ùï¿½jï¿½ï¿½ï¿½Íiï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Í‚Ì‚İj
+                ubool            Outside2;                  //ï¿½êï¿½ï¿½~ï¿½Qï¿½iï¿½ï¿½ï¿½ï¿½Hï¿½Ùï¿½jï¿½ï¿½ï¿½Í@ï¿½iï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Í‚Ì‚İj
+                ubool            Temp;                      //ï¿½Tï¿½[ï¿½}ï¿½ï¿½ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½iï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½Í‚Ì‚İj
+                char            vTableChange;              //ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ø‚ï¿½Ö‚ï¿½ï¿½Rï¿½}ï¿½ï¿½ï¿½h 2007.2.9
+                sint            usWeldingCurr_bk_up;       // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2007.2.19 ï¿½Cï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½xï¿½ÏXï¿½pï¿½oï¿½bï¿½Nï¿½Aï¿½bï¿½v
+                sint            usWeldingVolt_bk_up;       // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2007.2.19 ï¿½Cï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½xï¿½ÏXï¿½pï¿½oï¿½bï¿½Nï¿½Aï¿½bï¿½v
+                sint            usWeldingCurr_pc_bk_up;    // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2007.4.6 ï¿½rï¿½fï¿½Pï¿½pï¿½oï¿½bï¿½Nï¿½Aï¿½bï¿½v
+                sint            usWeldingVolt_pc_bk_up;    // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l 2007.4.6 ï¿½rï¿½fï¿½Pï¿½pï¿½oï¿½bï¿½Nï¿½Aï¿½bï¿½v
 
-                short           sPreFlowTime;              // ƒvƒŠƒtƒ[ŠÔ       2009.01.13
-                short           sAfterFlowTime;            // ƒAƒtƒ^[ƒtƒ[ŠÔ   2009.01.13
-                short           sUpSlopTime;               // ƒAƒbƒvƒXƒ[ƒvŠÔ   2009.01.13
-                short           sDownSlopTime;             // ƒ_ƒEƒ“ƒXƒ[ƒvŠÔ   2009.01.13
+                short           sPreFlowTime;              // ï¿½vï¿½ï¿½ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½       2009.01.13
+                short           sAfterFlowTime;            // ï¿½Aï¿½tï¿½^ï¿½[ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½   2009.01.13
+                short           sUpSlopTime;               // ï¿½Aï¿½bï¿½vï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½ï¿½ï¿½ï¿½   2009.01.13
+                short           sDownSlopTime;             // ï¿½_ï¿½Eï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½ï¿½ï¿½ï¿½   2009.01.13
                 
-                //<><><> TIGŒn’²®ƒpƒ‰ƒ[ƒ^•Ï” 2009.07.10 <><><>
-                short           vIhotAdj_tig;              // ƒzƒbƒg“d—¬’²®i‚s‚h‚fŒnj
-                short           vHotTime_tig;              // ƒzƒbƒgŠÔ’²®i‚s‚h‚fŒnj
-                short           vHotSlop_tig;              // ƒzƒbƒgƒXƒ[ƒvi‚s‚h‚fŒnj
+                //<><><> TIGï¿½nï¿½ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ïï¿½ 2009.07.10 <><><>
+                short           vIhotAdj_tig;              // ï¿½zï¿½bï¿½gï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½sï¿½hï¿½fï¿½nï¿½j
+                short           vHotTime_tig;              // ï¿½zï¿½bï¿½gï¿½ï¿½ï¿½Ô’ï¿½ï¿½ï¿½ï¿½iï¿½sï¿½hï¿½fï¿½nï¿½j
+                short           vHotSlop_tig;              // ï¿½zï¿½bï¿½gï¿½Xï¿½ï¿½ï¿½[ï¿½vï¿½iï¿½sï¿½hï¿½fï¿½nï¿½j
                 //<><><><><><><><><><><><><><><><><><><><><><><><>
 
-                //<><><> Šg’£—nÚ”÷’²ƒpƒ‰ƒ[ƒ^•Ï” 2007.5.29 <><><>
-                unsigned short  Id_no;                     //‚h‚c”Ô†
-                float           Sp_current;                //‚r‚o“d—¬
-                float           Sp_time;                   //‚r‚oŠÔ
-                float           Eli;                       //‚d‚k‚h
-                float           Mts_v;                     //dô“dˆ³’l
-                float           Mts_ontime;                //dô“dˆ³‚n‚mŠÔ
-                float           Mts_cycle;                 //dô“dˆ³üŠú
+                //<><><> ï¿½gï¿½ï¿½ï¿½nï¿½Ú”ï¿½ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½^ï¿½Ïï¿½ 2007.5.29 <><><>
+                unsigned short  Id_no;                     //ï¿½hï¿½cï¿½Ôï¿½
+                float           Sp_current;                //ï¿½rï¿½oï¿½dï¿½ï¿½
+                float           Sp_time;                   //ï¿½rï¿½oï¿½ï¿½ï¿½ï¿½
+                float           Eli;                       //ï¿½dï¿½kï¿½h
+                float           Mts_v;                     //ï¿½dï¿½ï¿½ï¿½dï¿½ï¿½ï¿½l
+                float           Mts_ontime;                //ï¿½dï¿½ï¿½ï¿½dï¿½ï¿½ï¿½nï¿½mï¿½ï¿½ï¿½ï¿½
+                float           Mts_cycle;                 //ï¿½dï¿½ï¿½ï¿½dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 //<><><><><><><><><><><><><><><><><><><><><><><><><>
 
-                sint            ss_En_duty_adjustment;     //ƒƒ{ƒbƒg‚©‚ç‘—‚ç‚ê‚Ä‚«‚½‚d‚m’²®—Ê 2008.10.03
+                sint            ss_En_duty_adjustment;     //ï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½ï¿½ï¿½ç‘—ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½dï¿½mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2008.10.03
 	        unsigned short us_Q_WeldingCurr;        //2008.11.28
                 short          ss_Q_en_duty_adjustment; //2008.11.28
                 unsigned char  uc_Q_En_0_mode;          //2008.11.28
@@ -1629,36 +1629,36 @@ struct gtt_Internal_pack{
 
           } In;
           struct{
-                uchar           ucModelCode;               // ‹@í•ÊƒR[ƒh
-                uchar           sRomVersion[2];            // ROMƒo[ƒWƒ‡ƒ“
-                uchar           ucPassword;                // ƒpƒXƒ[ƒh•ÏŠ·Œãƒf[ƒ^
-                ushort          usWeldingCurr;             // o—Í“d—¬w—ß’l
-                ushort          usWeldingVolt;             // o—Í“dˆ³w—ß’l
-                ushort          usWeldingOutCurr;          // o—Í“d—¬’l
-                ushort          usWeldingOutVolt;          // o—Í“dˆ³’l
-                uchar		ucImprudence;              // ’Z—‰ñ”
-                uchar           ucMotorCurr;               // ƒ‚[ƒ^“d—¬’l
-                uchar           ucMotorRPM;                // ƒ‚[ƒ^‰ñ“]”
-                uchar           ucMotorCurr2;              // ƒ‚[ƒ^“d—¬’l‚Q
-                ushort          usMotorRPM2;               // ƒ‚[ƒ^‰ñ“]”‚Q
-                BitSwitch       fErrorCode1;               // ˆÙíŒŸoó‘Ôi—nÚE‘—‹‹Œnj
-                BitSwitch       fErrorCode2;               // ˆÙíŒŸoó‘Ôi“dŒ¹Œnj
-                BitSwitch       fErrorCode3;               // ˆÙíŒŸoó‘ÔiˆÙíE’â~M†ŒŸoŒnj
-                PowerStatus     fPowerStatus;              // —nÚ“dŒ¹ó‘Ô
-                ushort          usIP;                      // ƒpƒ‹ƒXƒs[ƒN“d—¬
-                ushort          usIB;                      // ƒpƒ‹ƒXƒx[ƒX“d—¬
-                ushort          usPulseFreq;               // ƒpƒ‹ƒXü”g”
-                BitSwitch       fArcStartStatus;           // ƒA[ƒNƒXƒ^[ƒgó‘Ô
+                uchar           ucModelCode;               // ï¿½@ï¿½ï¿½ÊƒRï¿½[ï¿½h
+                uchar           sRomVersion[2];            // ROMï¿½oï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½
+                uchar           ucPassword;                // ï¿½pï¿½Xï¿½ï¿½ï¿½[ï¿½hï¿½ÏŠï¿½ï¿½ï¿½fï¿½[ï¿½^
+                ushort          usWeldingCurr;             // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l
+                ushort          usWeldingVolt;             // ï¿½oï¿½Í“dï¿½ï¿½ï¿½wï¿½ß’l
+                ushort          usWeldingOutCurr;          // ï¿½oï¿½Í“dï¿½ï¿½ï¿½l
+                ushort          usWeldingOutVolt;          // ï¿½oï¿½Í“dï¿½ï¿½ï¿½l
+                uchar		ucImprudence;              // ï¿½Zï¿½ï¿½ï¿½ï¿½
+                uchar           ucMotorCurr;               // ï¿½ï¿½ï¿½[ï¿½^ï¿½dï¿½ï¿½ï¿½l
+                uchar           ucMotorRPM;                // ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½]ï¿½ï¿½
+                uchar           ucMotorCurr2;              // ï¿½ï¿½ï¿½[ï¿½^ï¿½dï¿½ï¿½ï¿½lï¿½Q
+                ushort          usMotorRPM2;               // ï¿½ï¿½ï¿½[ï¿½^ï¿½ï¿½]ï¿½ï¿½ï¿½Q
+                BitSwitch       fErrorCode1;               // ï¿½ÙíŒŸï¿½oï¿½ï¿½Ôiï¿½nï¿½ÚEï¿½ï¿½ï¿½ï¿½ï¿½nï¿½j
+                BitSwitch       fErrorCode2;               // ï¿½ÙíŒŸï¿½oï¿½ï¿½Ôiï¿½dï¿½ï¿½ï¿½nï¿½j
+                BitSwitch       fErrorCode3;               // ï¿½ÙíŒŸï¿½oï¿½ï¿½Ôiï¿½Ùï¿½Eï¿½ï¿½~ï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½oï¿½nï¿½j
+                PowerStatus     fPowerStatus;              // ï¿½nï¿½Ú“dï¿½ï¿½ï¿½ï¿½ï¿½
+                ushort          usIP;                      // ï¿½pï¿½ï¿½ï¿½Xï¿½sï¿½[ï¿½Nï¿½dï¿½ï¿½
+                ushort          usIB;                      // ï¿½pï¿½ï¿½ï¿½Xï¿½xï¿½[ï¿½Xï¿½dï¿½ï¿½
+                ushort          usPulseFreq;               // ï¿½pï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½gï¿½ï¿½
+                BitSwitch       fArcStartStatus;           // ï¿½Aï¿½[ï¿½Nï¿½Xï¿½^ï¿½[ï¿½gï¿½ï¿½ï¿½
 
-                uchar       uc_En_a;                //‚d‚m”ä—¦ŒvZŒ‹‰Ê     2008.10.03
-                ushort      us_En_Okcv;             //‚d‚m”ä—¦ŒvZŒãˆêŒ³‰» 2008.10.03
+                uchar       uc_En_a;                //ï¿½dï¿½mï¿½ä—¦ï¿½vï¿½Zï¿½ï¿½ï¿½ï¿½     2008.10.03
+                ushort      us_En_Okcv;             //ï¿½dï¿½mï¿½ä—¦ï¿½vï¿½Zï¿½ï¿½êŒ³ï¿½ï¿½ 2008.10.03
 
                 struct{
-                      ushort          usWeldTimes;            // —nÚ‰ñ”
-                      ushort          usWeldTimerIndividual;  // —nÚŠÔ(ŒÂ•Ê)
-                      unsigned int    usWeldTimer;           // —nÚŠÔ 2007.3.30
-                      ulong           usWireFeed;             // ƒƒCƒ„‘‘—‹‹—Ê
-                      ushort          vCheck;                 // ƒoƒbƒNƒAƒbƒvƒƒ‚ƒŠŠm”F—pƒGƒŠƒA
+                      ushort          usWeldTimes;            // ï¿½nï¿½Ú‰ï¿½
+                      ushort          usWeldTimerIndividual;  // ï¿½nï¿½Úï¿½ï¿½ï¿½(ï¿½Â•ï¿½)
+                      unsigned int    usWeldTimer;           // ï¿½nï¿½Úï¿½ï¿½ï¿½ 2007.3.30
+                      ulong           usWireFeed;             // ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                      ushort          vCheck;                 // ï¿½oï¿½bï¿½Nï¿½Aï¿½bï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mï¿½Fï¿½pï¿½Gï¿½ï¿½ï¿½A
                 }BackUp;
           } Out;
 
@@ -1667,25 +1667,25 @@ struct gtt_Internal_pack{
 
 //----- Phase6 by @Tny 2008/09/10 -----
 #if true
-#define MAX_ERROR_INFOMATION    99      // ‹L˜^î•ñ—ÊF‚X‚XŒ
-#define ERROR_INFO_RENEWAL      0x55aa  // ‹L˜^¯•Êq
-#define IIF_BUILT_IN_RENEWAL    0x55aa  // ‹L˜^¯•Êq
-struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
-    unsigned char   vStart;             // ŠJnƒGƒŠƒA
-    unsigned short  Record_identifier;  // ‹L˜^¯•Êq
-    ubool            Start_record;       // ‹L˜^ŠJnƒtƒ‰ƒO
-    unsigned short  History_rec_index;  // ‹L˜^ƒCƒ“ƒfƒbƒNƒX
-    ubool            Full_history_rec;   // ‘S‹L˜^ƒGƒŠƒAg—pƒtƒ‰ƒO
+#define MAX_ERROR_INFOMATION    99      // ï¿½Lï¿½^ï¿½ï¿½ï¿½ÊFï¿½Xï¿½Xï¿½ï¿½
+#define ERROR_INFO_RENEWAL      0x55aa  // ï¿½Lï¿½^ï¿½ï¿½ï¿½Êq
+#define IIF_BUILT_IN_RENEWAL    0x55aa  // ï¿½Lï¿½^ï¿½ï¿½ï¿½Êq
+struct gtt_Error_History{   // ï¿½Gï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½ï¿½Ì\ï¿½ï¿½ï¿½ï¿½
+    unsigned char   vStart;             // ï¿½Jï¿½nï¿½Gï¿½ï¿½ï¿½A
+    unsigned short  Record_identifier;  // ï¿½Lï¿½^ï¿½ï¿½ï¿½Êq
+    ubool            Start_record;       // ï¿½Lï¿½^ï¿½Jï¿½nï¿½tï¿½ï¿½ï¿½O
+    unsigned short  History_rec_index;  // ï¿½Lï¿½^ï¿½Cï¿½ï¿½ï¿½fï¿½bï¿½Nï¿½X
+    ubool            Full_history_rec;   // ï¿½Sï¿½Lï¿½^ï¿½Gï¿½ï¿½ï¿½Aï¿½gï¿½pï¿½tï¿½ï¿½ï¿½O
     struct{
-        unsigned short  Error_No;           // ƒGƒ‰[”Ô†
-        unsigned char   Year;               // ”­¶“úi”Nj
-        unsigned char   Month;              // ”­¶“úiŒj
-        unsigned char   Day;                // ”­¶“úi“új
-        unsigned char   Hour;               // ”­¶“úij
-        unsigned char   Minute;             // ”­¶“úi•ªj
-        unsigned char   Second;             // ”­¶“úi•bj
-    } Info[MAX_ERROR_INFOMATION];       // ‹L˜^î•ñ
-    unsigned char   vEnd;               // I—¹ƒAƒŠƒA
+        unsigned short  Error_No;           // ï¿½Gï¿½ï¿½ï¿½[ï¿½Ôï¿½
+        unsigned char   Year;               // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Nï¿½j
+        unsigned char   Month;              // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½j
+        unsigned char   Day;                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½j
+        unsigned char   Hour;               // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½j
+        unsigned char   Minute;             // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½j
+        unsigned char   Second;             // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½bï¿½j
+    } Info[MAX_ERROR_INFOMATION];       // ï¿½Lï¿½^ï¿½ï¿½ï¿½
+    unsigned char   vEnd;               // ï¿½Iï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½A
 };
 #endif
 //--------------------------------------------
@@ -1696,51 +1696,51 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
 
 
 #ifdef __MAIN_PROG
-        uchar          IdentificationCode;      // ‹@í”Ô†
-	    extern void Hardware_Initialize(void);  // ƒVƒXƒeƒ€‰Šú‰»ƒƒCƒ“ŠO•”QÆéŒ¾
+        uchar          IdentificationCode;      // ï¿½@ï¿½ï¿½Ôï¿½
+	    extern void Hardware_Initialize(void);  // ï¿½Vï¿½Xï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½Qï¿½ÆéŒ¾
         //extern void WeldAdjOut_Proc( int ); //ihara 2005.12.27
 
-//        const unsigned char   guc_Attribute_dps_no[3]         = "188";  //DPS”Ô† 2007.6.28’Ç‰Á
-//        const unsigned char   guc_Attribute_dps_no[3]         = "288";  //DPS”Ô† 2008.4.1 YD-350AZR–{”Ô‹@ & YD-350GBR–{”Ô‹@A—\”õ‹@
-//        const unsigned char   guc_Attribute_dps_no[3]         = "388";  //DPS”Ô† 2008.4.1 YD-350AZR—\”õ‹@
-//        const unsigned char   guc_Attribute_dps_no[3]         = "052";  //DPS”Ô† 2009.12.28 500BP4 2010.03.25 •œ‹A
-          const unsigned char   guc_Attribute_dps_no[3]         = "048";  //DPS”Ô† 2011.09.28 300BP4
-//        const unsigned char   guc_Attribute_dps_no[3]         = "C33";  //DPS”Ô† 500BP4“c’†ƒeƒXƒg@2010.03.23
-//2010.02.10        const unsigned char   guc_Attribute_dps_no[3]         = "052";  //2010.02.06 »•iR¸—p
-//        const unsigned char   guc_Attribute_version[3]        = "F28";  //ROMver@i‚R•¶šj;//2009.12.28 500BP4 2010.03.24 Œ±”ÅF28
-//        const unsigned char   guc_Attribute_version[3]        = "103";  //ROMver@i‚R•¶šj;//2010.03.25 •œ‹A 2010.04.08 Ver101 2010.11.02 Ver102	 2011.09.01 Ver103
-//        const unsigned char   guc_Attribute_version[3]        = "E07";  //ROMver@i‚R•¶šj;//2011.10.04 Œ±”ÅE07
-//        const unsigned char   guc_Attribute_version[3]        = "F02";  //ROMver@i‚R•¶šj;//2011.10.07 Œ±”ÅF02	EXTERNAL IIF NEW
-//        const unsigned char   guc_Attribute_version[3]        = "F03";  //ROMver@i‚R•¶šj;//2011.10.12 Œ±”ÅF03	<EXTERNAL IIF NEW(Phase 2)>	2011.10.12 by @Tny
-//        const unsigned char   guc_Attribute_version[3]        = "F04";  //ROMver@i‚R•¶šj;//2011.10.13 Œ±”ÅF04	<EXTERNAL IIF NEW(Phase 4)>	2011.10.13 by @Tny
-//        const unsigned char   guc_Attribute_version[3]        = "F05";  //ROMver@i‚R•¶šj;//2011.10.26 Œ±”ÅF05	<EXTERNAL IIF NEW(Phase 5)><NAVI Enhancements(Phase 1)>	2011.10.26	/	<NAVI Enhancements(Phase 2)> 2011.10.27
-//        const unsigned char   guc_Attribute_version[3]        = "F06";  //ROMver@i‚R•¶šj;//2011.10.26 Œ±”ÅF06	<EXTERNAL IIF NEW(Phase 5)><NAVI Enhancements(Phase 1)>	2011.10.26	/	<NAVI Enhancements(Phase 2)> 2011.10.27 / u”÷ãƒ‚[ƒhv‚Ì’Ç‰Á	2011.10.28
-//        const unsigned char   guc_Attribute_version[3]        = "F07";  //ROMver@i‚R•¶šj;//2011.10.31 Œ±”ÅF07	<EXTERNAL IIF NEW(Phase 6)>	2011.10.30
-//        const unsigned char   guc_Attribute_version[3]        = "F08";  //ROMver@i‚R•¶šj;//2011.10.31 Œ±”ÅF08	FPGA•ÏX
-//        const unsigned char   guc_Attribute_version[3]        = "F09";  //ROMver@i‚R•¶šj;//2011.10.31 Œ±”ÅF09	ƒƒ{ƒbƒg’ÊM•s‹ï‡‘Î‰ 2011.10.31
-//        const unsigned char   guc_Attribute_version[3]        = "F10";  //ROMver@i‚R•¶šj;//2011.11.07 Œ±”ÅF10	ƒƒ{ƒbƒg’ÊM•s‹ï‡‘Î‰
-//        const unsigned char   guc_Attribute_version[3]        = "F11";  //ROMver@i‚R•¶šj;//2011.11.07 Œ±”ÅF11	ƒT[ƒrƒXƒ}ƒ“ƒƒjƒ…[‚ÉuŒğ—¬”gŒ`o—Íƒ‚[ƒhv‚ğ’Ç‰Á	2011.11.08
-//        const unsigned char   guc_Attribute_version[3]        = "F12";  //ROMver@i‚R•¶šj;//2011.11.07 Œ±”ÅF12	ƒ}ƒCƒ‹ƒhƒpƒ‹ƒX•ÏXiDSPj
-//        const unsigned char   guc_Attribute_version[3]        = "F14";  //ROMver@i‚R•¶šj;//2011.11.14 Œ±”ÅF14	DSPƒpƒ‹ƒXØ‘Öü”g”•ÏXB
-//		  const unsigned char   guc_Attribute_version[3]        = "F15";  //ROMver@i‚R•¶šj;//2011.11.16 Œ±”ÅF15	Err05•\¦•‹L‰¯’x‰„ŠÔ•ÏX
-//        const unsigned char   guc_Attribute_version[3]        = "F16";  //ROMver@i‚R•¶šj;//2011.11.18 Œ±”ÅF16	<EXTERNAL IIF NEW(Phase 12)> 2011.11.18
-//        const unsigned char   guc_Attribute_version[3]        = "200";  //ROMver@i‚R•¶šj;//2011.11.22 Ver2.00 FIX UP
-//        const unsigned char   guc_Attribute_version[3]        = "2F2";  //ROMver@i‚R•¶šj;//2011.12.08
-//        const unsigned char   guc_Attribute_version[3]        = "200";  //ROMver@i‚R•¶šj;//2011.12.08 Ver2.00 FIX UP
-//        const unsigned char   guc_Attribute_version[3]        = "201";  //ROMver@i‚R•¶šj;//2012.02.08 Ver2.01 FIX UP
-//          const unsigned char   guc_Attribute_version[3]        = "202";  //ROMver@i‚R•¶šj;//2012.05.23 Ver2.02
-          const unsigned char   guc_Attribute_version[3]        = "203";  //ROMver@i‚R•¶šj;//2014.06.11 Ver2.03
-        //<><> BP4‚É•ÏX 2009.07.10 <><><>
-        const unsigned char   guc_Attribute_kind_code         = 'C';    //í•Êi‚cF‚l‚`‚f@‚bF‚s‚h‚f@‚P•¶šj
-//      const unsigned char   guc_Attribute_capacity_code[3]  = "500";  //’èŠio—Í@i‚R•¶šj2009.12.28 500BP4
-        const unsigned char   guc_Attribute_capacity_code[3]  = "300";  //’èŠio—Í@i‚R•¶šj//2011.09.28 300BP4
-        const unsigned char   guc_Attribute_model_code[3]     = "BP4";  //‹@íi‚R•¶šj
-        const unsigned char   guc_Attribute_special_code[3]   = "   ";  //“Áê•ii‚R•¶šjF•W€•i‚ÍƒXƒy[ƒX‚RŒÂ
+//        const unsigned char   guc_Attribute_dps_no[3]         = "188";  //DPSï¿½Ôï¿½ 2007.6.28ï¿½Ç‰ï¿½
+//        const unsigned char   guc_Attribute_dps_no[3]         = "288";  //DPSï¿½Ôï¿½ 2008.4.1 YD-350AZRï¿½{ï¿½Ô‹@ & YD-350GBRï¿½{ï¿½Ô‹@ï¿½Aï¿½\ï¿½ï¿½ï¿½@
+//        const unsigned char   guc_Attribute_dps_no[3]         = "388";  //DPSï¿½Ôï¿½ 2008.4.1 YD-350AZRï¿½\ï¿½ï¿½ï¿½@
+//        const unsigned char   guc_Attribute_dps_no[3]         = "052";  //DPSï¿½Ôï¿½ 2009.12.28 500BP4 2010.03.25 ï¿½ï¿½ï¿½A
+          const unsigned char   guc_Attribute_dps_no[3]         = "048";  //DPSï¿½Ôï¿½ 2011.09.28 300BP4
+//        const unsigned char   guc_Attribute_dps_no[3]         = "C33";  //DPSï¿½Ôï¿½ 500BP4ï¿½cï¿½ï¿½ï¿½eï¿½Xï¿½gï¿½@2010.03.23
+//2010.02.10        const unsigned char   guc_Attribute_dps_no[3]         = "052";  //2010.02.06 ï¿½ï¿½ï¿½iï¿½Rï¿½ï¿½ï¿½p
+//        const unsigned char   guc_Attribute_version[3]        = "F28";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2009.12.28 500BP4 2010.03.24 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F28
+//        const unsigned char   guc_Attribute_version[3]        = "103";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2010.03.25 ï¿½ï¿½ï¿½A 2010.04.08 Ver101 2010.11.02 Ver102	 2011.09.01 Ver103
+//        const unsigned char   guc_Attribute_version[3]        = "E07";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.04 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½E07
+//        const unsigned char   guc_Attribute_version[3]        = "F02";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.07 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F02	EXTERNAL IIF NEW
+//        const unsigned char   guc_Attribute_version[3]        = "F03";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.12 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F03	<EXTERNAL IIF NEW(Phase 2)>	2011.10.12 by @Tny
+//        const unsigned char   guc_Attribute_version[3]        = "F04";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.13 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F04	<EXTERNAL IIF NEW(Phase 4)>	2011.10.13 by @Tny
+//        const unsigned char   guc_Attribute_version[3]        = "F05";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.26 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F05	<EXTERNAL IIF NEW(Phase 5)><NAVI Enhancements(Phase 1)>	2011.10.26	/	<NAVI Enhancements(Phase 2)> 2011.10.27
+//        const unsigned char   guc_Attribute_version[3]        = "F06";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.26 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F06	<EXTERNAL IIF NEW(Phase 5)><NAVI Enhancements(Phase 1)>	2011.10.26	/	<NAVI Enhancements(Phase 2)> 2011.10.27 / ï¿½uï¿½ï¿½ï¿½ãƒ‚ï¿½[ï¿½hï¿½vï¿½Ì’Ç‰ï¿½	2011.10.28
+//        const unsigned char   guc_Attribute_version[3]        = "F07";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.31 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F07	<EXTERNAL IIF NEW(Phase 6)>	2011.10.30
+//        const unsigned char   guc_Attribute_version[3]        = "F08";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.31 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F08	FPGAï¿½ÏX
+//        const unsigned char   guc_Attribute_version[3]        = "F09";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.10.31 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F09	ï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½ÊMï¿½sï¿½ï‡ï¿½Î‰ï¿½ 2011.10.31
+//        const unsigned char   guc_Attribute_version[3]        = "F10";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.07 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F10	ï¿½ï¿½ï¿½{ï¿½bï¿½gï¿½ÊMï¿½sï¿½ï‡ï¿½Î‰ï¿½
+//        const unsigned char   guc_Attribute_version[3]        = "F11";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.07 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F11	ï¿½Tï¿½[ï¿½rï¿½Xï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ï¿½Éuï¿½ğ—¬”gï¿½`ï¿½oï¿½Íƒï¿½ï¿½[ï¿½hï¿½vï¿½ï¿½Ç‰ï¿½	2011.11.08
+//        const unsigned char   guc_Attribute_version[3]        = "F12";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.07 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F12	ï¿½}ï¿½Cï¿½ï¿½ï¿½hï¿½pï¿½ï¿½ï¿½Xï¿½ÏXï¿½iDSPï¿½j
+//        const unsigned char   guc_Attribute_version[3]        = "F14";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.14 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F14	DSPï¿½pï¿½ï¿½ï¿½Xï¿½Ø‘Öï¿½ï¿½gï¿½ï¿½ï¿½ÏXï¿½B
+//		  const unsigned char   guc_Attribute_version[3]        = "F15";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.16 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F15	Err05ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½Ô•ÏX
+//        const unsigned char   guc_Attribute_version[3]        = "F16";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.18 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½F16	<EXTERNAL IIF NEW(Phase 12)> 2011.11.18
+//        const unsigned char   guc_Attribute_version[3]        = "200";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.11.22 Ver2.00 FIX UP
+//        const unsigned char   guc_Attribute_version[3]        = "2F2";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.12.08
+//        const unsigned char   guc_Attribute_version[3]        = "200";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2011.12.08 Ver2.00 FIX UP
+//        const unsigned char   guc_Attribute_version[3]        = "201";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2012.02.08 Ver2.01 FIX UP
+//          const unsigned char   guc_Attribute_version[3]        = "202";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2012.05.23 Ver2.02
+          const unsigned char   guc_Attribute_version[3]        = "203";  //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;//2014.06.11 Ver2.03
+        //<><> BP4ï¿½É•ÏX 2009.07.10 <><><>
+        const unsigned char   guc_Attribute_kind_code         = 'C';    //ï¿½ï¿½Êiï¿½cï¿½Fï¿½lï¿½`ï¿½fï¿½@ï¿½bï¿½Fï¿½sï¿½hï¿½fï¿½@ï¿½Pï¿½ï¿½ï¿½ï¿½ï¿½j
+//      const unsigned char   guc_Attribute_capacity_code[3]  = "500";  //ï¿½ï¿½iï¿½oï¿½Í@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j2009.12.28 500BP4
+        const unsigned char   guc_Attribute_capacity_code[3]  = "300";  //ï¿½ï¿½iï¿½oï¿½Í@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j//2011.09.28 300BP4
+        const unsigned char   guc_Attribute_model_code[3]     = "BP4";  //ï¿½@ï¿½ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j
+        const unsigned char   guc_Attribute_special_code[3]   = "   ";  //ï¿½ï¿½ï¿½ï¿½iï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½jï¿½Fï¿½Wï¿½ï¿½ï¿½iï¿½ÍƒXï¿½yï¿½[ï¿½Xï¿½Rï¿½ï¿½
         //<><><><><><><><><><><><><><><><>
-        //const unsigned char   guc_Attribute_kind_code         = 'D';    //í•Êi‚cF‚l‚`‚f@‚bF‚s‚h‚f@‚P•¶šj
-        //const unsigned char   guc_Attribute_capacity_code[3]  = "350";  //’èŠio—Í@i‚R•¶šj
-        //const unsigned char   guc_Attribute_model_code[3]     = "AZ3";  //‹@íi‚R•¶šj
-        //const unsigned char   guc_Attribute_special_code[3]   = "   ";  //“Áê•ii‚R•¶šjF•W€•i‚ÍƒXƒy[ƒX‚RŒÂ
+        //const unsigned char   guc_Attribute_kind_code         = 'D';    //ï¿½ï¿½Êiï¿½cï¿½Fï¿½lï¿½`ï¿½fï¿½@ï¿½bï¿½Fï¿½sï¿½hï¿½fï¿½@ï¿½Pï¿½ï¿½ï¿½ï¿½ï¿½j
+        //const unsigned char   guc_Attribute_capacity_code[3]  = "350";  //ï¿½ï¿½iï¿½oï¿½Í@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j
+        //const unsigned char   guc_Attribute_model_code[3]     = "AZ3";  //ï¿½@ï¿½ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j
+        //const unsigned char   guc_Attribute_special_code[3]   = "   ";  //ï¿½ï¿½ï¿½ï¿½iï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½jï¿½Fï¿½Wï¿½ï¿½ï¿½iï¿½ÍƒXï¿½yï¿½[ï¿½Xï¿½Rï¿½ï¿½
 
         BitSwitch	*p6;
         BitSwitch	*p9;
@@ -1770,7 +1770,7 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
         Sp_Table_Code   gtt_Sp_table_code[WELDNAME_TBLCNT];
         Com_Data        gtt_Com_rewrite_data;
         Com_Data        gtt_Internal_rewrite_data;
-        Parameter       gtt_Parameter; //2008.08.06•œ‹A
+        Parameter       gtt_Parameter; //2008.08.06ï¿½ï¿½ï¿½A
         Special_menu    gtt_Special_menu; //2008.08.22
         
         Calender        gtt_Calender;      //2008.08.25
@@ -1789,22 +1789,22 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
 // BP4 Phase14 by @Tny 2009.02.24
         Dital_attribute gtt_Rescue_attribute[RESCUE_DATA_NO];
 //---------------------------------------------------
-	    struct          gtt_Internal_pack	gtt_Internal_pack;// “à•”—pƒf[ƒ^EƒpƒbƒP[ƒW
+	    struct          gtt_Internal_pack	gtt_Internal_pack;// ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½fï¿½[ï¿½^ï¿½Eï¿½pï¿½bï¿½Pï¿½[ï¿½W
 
 #else
-        extern const char       DPS[];                     // ƒ\ƒtƒgƒEƒFƒAŠÇ—”Ô†
-        extern const char       Version[];                 // ƒo[ƒWƒ‡ƒ“”Ô†
-        extern const long       DataTime;                  // ÅIXV“ú
-        extern const long       BuildRelease;              // ƒrƒ‹ƒh”Ô†
-        //extern const uchar      IdentificationCode;        // ‹@í”Ô†
-        extern uchar      IdentificationCode;        // ‹@í”Ô†
+        extern const char       DPS[];                     // ï¿½\ï¿½tï¿½gï¿½Eï¿½Fï¿½Aï¿½Ç—ï¿½ï¿½Ôï¿½
+        extern const char       Version[];                 // ï¿½oï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½Ôï¿½
+        extern const long       DataTime;                  // ï¿½ÅIï¿½Xï¿½Vï¿½ï¿½
+        extern const long       BuildRelease;              // ï¿½rï¿½ï¿½ï¿½hï¿½Ôï¿½
+        //extern const uchar      IdentificationCode;        // ï¿½@ï¿½ï¿½Ôï¿½
+        extern uchar      IdentificationCode;        // ï¿½@ï¿½ï¿½Ôï¿½
 
-        extern const unsigned char   guc_Attribute_dps_no[];         //DPS”Ô† 2007.6.28’Ç‰Á
-        extern const unsigned char   guc_Attribute_version[];        //ROMver@i‚R•¶šj;
-        extern const unsigned char   guc_Attribute_kind_code;        //í•Êi‚cF‚l‚`‚f@‚bF‚s‚h‚f@‚P•¶šj
-        extern const unsigned char   guc_Attribute_capacity_code[];  //’èŠio—Í@i‚R•¶šj
-        extern const unsigned char   guc_Attribute_model_code[];     //‹@íi‚R•¶šj
-        extern const unsigned char   guc_Attribute_special_code[];   //“Áê•ii‚R•¶šjF•W€•i‚ÍƒXƒy[ƒX‚RŒÂ
+        extern const unsigned char   guc_Attribute_dps_no[];         //DPSï¿½Ôï¿½ 2007.6.28ï¿½Ç‰ï¿½
+        extern const unsigned char   guc_Attribute_version[];        //ROMverï¿½@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j;
+        extern const unsigned char   guc_Attribute_kind_code;        //ï¿½ï¿½Êiï¿½cï¿½Fï¿½lï¿½`ï¿½fï¿½@ï¿½bï¿½Fï¿½sï¿½hï¿½fï¿½@ï¿½Pï¿½ï¿½ï¿½ï¿½ï¿½j
+        extern const unsigned char   guc_Attribute_capacity_code[];  //ï¿½ï¿½iï¿½oï¿½Í@ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j
+        extern const unsigned char   guc_Attribute_model_code[];     //ï¿½@ï¿½ï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½j
+        extern const unsigned char   guc_Attribute_special_code[];   //ï¿½ï¿½ï¿½ï¿½iï¿½iï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½jï¿½Fï¿½Wï¿½ï¿½ï¿½iï¿½ÍƒXï¿½yï¿½[ï¿½Xï¿½Rï¿½ï¿½
 
 
         extern void xmemset(void *dst, int dat, size_t lgh);
@@ -1836,7 +1836,7 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
         extern Sp_Table_Code   gtt_Sp_table_code[];
         extern Com_Data        gtt_Com_rewrite_data;
         extern Com_Data        gtt_Internal_rewrite_data;
-	extern struct	gtt_Internal_pack	gtt_Internal_pack;// “à•”—pƒf[ƒ^EƒpƒbƒP[ƒW
+	extern struct	gtt_Internal_pack	gtt_Internal_pack;// ï¿½ï¿½ï¿½ï¿½ï¿½pï¿½fï¿½[ï¿½^ï¿½Eï¿½pï¿½bï¿½Pï¿½[ï¿½W
         extern Parameter       gtt_Parameter; //2008.02.25
         extern Parameter       gtt_Parameter_ch[CH]; //2008.08.07
         extern Special_menu    gtt_Special_menu; //2008.08.22
@@ -1863,10 +1863,10 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
 
 
 //
-//	‚»‚Ì‘¼‚Ìƒwƒbƒ_ƒtƒ@ƒCƒ‹
+//	ï¿½ï¿½ï¿½Ì‘ï¿½ï¿½Ìƒwï¿½bï¿½_ï¿½tï¿½@ï¿½Cï¿½ï¿½
 //
-#include        "SfrRegister.h"        // “à•”ƒŒƒWƒXƒ^ƒAƒhƒŒƒX’è‹`•”
-#include        "com.h"                // ’ÊMEƒwƒbƒ_•”
+#include        "SfrRegister.h"        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½Xï¿½^ï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½`ï¿½ï¿½
+#include        "com.h"                // ï¿½ÊMï¿½Eï¿½wï¿½bï¿½_ï¿½ï¿½
 
 #include        "weldtable.h"
 #include        "wipcb.h"
@@ -1874,10 +1874,10 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
 #include        "inout.h"
 #include        "ifdefine.h"
 
-#include        "FPGA.h"               // ‚e‚o‚f‚`§ŒäŒnƒwƒbƒ_•”
-#include        "hpiDSP.h"             // ‚c‚r‚o|‚g‚o‚h§ŒäŒnƒwƒbƒ_•”
-#include        "Timer.h"              // ƒtƒŠ[ƒ‰ƒ“Eƒ^ƒCƒ}[ƒwƒbƒ_•”
-#include        "ExternFunc.h"         // ‚»‚Ì‘¼‚ÌŠO•”ƒ‚ƒWƒ…[ƒ‹QÆéŒ¾•”
+#include        "FPGA.h"               // ï¿½eï¿½oï¿½fï¿½`ï¿½ï¿½ï¿½ï¿½nï¿½wï¿½bï¿½_ï¿½ï¿½
+#include        "hpiDSP.h"             // ï¿½cï¿½rï¿½oï¿½|ï¿½gï¿½oï¿½hï¿½ï¿½ï¿½ï¿½nï¿½wï¿½bï¿½_ï¿½ï¿½
+#include        "Timer.h"              // ï¿½tï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Eï¿½^ï¿½Cï¿½}ï¿½[ï¿½wï¿½bï¿½_ï¿½ï¿½
+#include        "ExternFunc.h"         // ï¿½ï¿½ï¿½Ì‘ï¿½ï¿½ÌŠOï¿½ï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½Qï¿½ÆéŒ¾ï¿½ï¿½
 #include        "moddef.h"
 #include        "dpr.h"
 
@@ -1886,13 +1886,17 @@ struct gtt_Error_History{   // ƒGƒ‰[—š—ğƒe[ƒuƒ‹‚Ì\‘¢‘Ì
 
 //--------- RTC by @Tny 2008/08/28 ------------
 #if true
-    #include    "I2C_RTC.h" // ‚h‚Q‚b|‚q‚s‚bƒwƒbƒ_
+    #include    "I2C_RTC.h" // ï¿½hï¿½Qï¿½bï¿½|ï¿½qï¿½sï¿½bï¿½wï¿½bï¿½_
 #endif
 //--------------------------------------------
 
 #ifndef __GLOBAL
 	#include "extern.h"
 #endif
+
+//+++++ [2026.02.20]+++++
+	#include "ANALOG.h"
+//----- [2026.02.20]-----
 
 //-------------------------------------------------
 #endif	// __YD400GZ3_H
